@@ -1,0 +1,125 @@
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+
+<http://drobilla.net/plugins/mdala/BeatBox>
+	lv2:symbol "mdaBBox" ;
+	doap:name "MDA BeatBox" ;
+	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
+	lv2:pluginProperty lv2:hardRTCapable ;
+	lv2:port [
+		a lv2:InputPort, lv2:ControlPort ;
+		lv2:index 0 ;
+		lv2:name "Hat Thr" ;
+		lv2:symbol "hat_thr" ;
+		lv2:default 0.3 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 1.0 ;
+	] , [
+		a lv2:InputPort, lv2:ControlPort ;
+		lv2:index 1 ;
+		lv2:name "Hat Rate" ;
+		lv2:symbol "hat_rate" ;
+		lv2:default 0.45 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 1.0 ;
+	] , [
+		a lv2:InputPort, lv2:ControlPort ;
+		lv2:index 2 ;
+		lv2:name "Hat Mix" ;
+		lv2:symbol "hat_mix" ;
+		lv2:default 0.5 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 1.0 ;
+	] , [
+		a lv2:InputPort, lv2:ControlPort ;
+		lv2:index 3 ;
+		lv2:name "Kik Thr" ;
+		lv2:symbol "kik_thr" ;
+		lv2:default 0.46 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 1.0 ;
+	] , [
+		a lv2:InputPort, lv2:ControlPort ;
+		lv2:index 4 ;
+		lv2:name "Kik Trig" ;
+		lv2:symbol "kik_trig" ;
+		lv2:default 0.15 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 1.0 ;
+	] , [
+		a lv2:InputPort, lv2:ControlPort ;
+		lv2:index 5 ;
+		lv2:name "Kik Mix" ;
+		lv2:symbol "kik_mix" ;
+		lv2:default 0.5 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 1.0 ;
+	] , [
+		a lv2:InputPort, lv2:ControlPort ;
+		lv2:index 6 ;
+		lv2:name "Snr Thr" ;
+		lv2:symbol "snr_thr" ;
+		lv2:default 0.5 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 1.0 ;
+	] , [
+		a lv2:InputPort, lv2:ControlPort ;
+		lv2:index 7 ;
+		lv2:name "Snr Trig" ;
+		lv2:symbol "snr_trig" ;
+		lv2:default 0.7 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 1.0 ;
+	] , [
+		a lv2:InputPort, lv2:ControlPort ;
+		lv2:index 8 ;
+		lv2:name "Snr Mix" ;
+		lv2:symbol "snr_mix" ;
+		lv2:default 0.5 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 1.0 ;
+	] , [
+		a lv2:InputPort, lv2:ControlPort ;
+		lv2:index 9 ;
+		lv2:name "Dynamics" ;
+		lv2:symbol "dynamics" ;
+		lv2:default 0 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 1.0 ;
+	] , [
+		a lv2:InputPort, lv2:ControlPort ;
+		lv2:index 10 ;
+		lv2:name "Record" ;
+		lv2:symbol "record" ;
+		lv2:default 0 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 1.0 ;
+	] , [
+		a lv2:InputPort, lv2:ControlPort ;
+		lv2:index 11 ;
+		lv2:name "Thru Mix" ;
+		lv2:symbol "thru_mix" ;
+		lv2:default 0 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 1.0 ;
+	] , [
+		a lv2:InputPort, lv2:AudioPort ;
+		lv2:index 12 ;
+		lv2:symbol "in1" ;
+		lv2:name "Input 1" ;
+	] , [
+		a lv2:InputPort, lv2:AudioPort ;
+		lv2:index 13 ;
+		lv2:symbol "in2" ;
+		lv2:name "Input 2" ;
+	] , [
+		a lv2:OutputPort, lv2:AudioPort ;
+		lv2:index 14 ;
+		lv2:symbol "out1" ;
+		lv2:name "Output 1" ;
+	] , [
+		a lv2:OutputPort, lv2:AudioPort ;
+		lv2:index 15 ;
+		lv2:symbol "out2" ;
+		lv2:name "Output 2" ;
+	] .
