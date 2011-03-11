@@ -2,6 +2,7 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 
 <http://drobilla.net/plugins/mdala/JX10>
+	a lv2:Plugin , lv2:InstrumentPlugin ;
 	lv2:symbol "mdaJX10" ;
 	doap:name "MDA JX10 Synth" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

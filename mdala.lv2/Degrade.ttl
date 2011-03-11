@@ -2,6 +2,7 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 
 <http://drobilla.net/plugins/mdala/Degrade>
+	a lv2:Plugin , lv2:DistortionPlugin ;
 	lv2:symbol "mdaDegrade" ;
 	doap:name "MDA Degrade" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

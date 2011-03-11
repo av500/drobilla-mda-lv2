@@ -2,6 +2,7 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 
 <http://drobilla.net/plugins/mdala/Detune>
+	a lv2:Plugin , lv2:PitchPlugin ;
 	lv2:symbol "mdaDetune" ;
 	doap:name "mda Detune" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

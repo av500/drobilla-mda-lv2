@@ -2,6 +2,7 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 
 <http://drobilla.net/plugins/mdala/Vocoder>
+	a lv2:Plugin , lv2:FilterPlugin ;
 	lv2:symbol "mdaVocoder" ;
 	doap:name "MDA Vocoder" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

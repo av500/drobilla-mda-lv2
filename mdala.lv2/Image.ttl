@@ -2,6 +2,7 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 
 <http://drobilla.net/plugins/mdala/Image>
+	a lv2:Plugin , lv2:SpatialPlugin ;
 	lv2:symbol "mdaImage" ;
 	doap:name "MDA Image" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

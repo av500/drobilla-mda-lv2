@@ -2,6 +2,7 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 
 <http://drobilla.net/plugins/mdala/Transient>
+	a lv2:Plugin , lv2:DynamicsPlugin ;
 	lv2:symbol "mdaTransient" ;
 	doap:name "MDA Transient" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
