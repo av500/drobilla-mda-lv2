@@ -96,13 +96,13 @@ write_plugin(AudioEffectX* effect, const string& lib_file_name)
 	fstream os(data_file_name.c_str(), ios::out);
 	effect->getProductString(name_buf);
 
-	os << "@prefix : <http://lv2plug.in/ns/lv2core#> ." << endl;
+	os << "@prefix lv2: <http://lv2plug.in/ns/lv2core#> ." << endl;
 	os << "@prefix doap: <http://usefulinc.com/ns/doap#> ." << endl << endl;
 	os << "<" << effect->getURI() << ">" << endl;
-	os << "\t:symbol \"" << effect->getUniqueID() << "\" ;" << endl;
+	os << "\tlv2:symbol \"" << effect->getUniqueID() << "\" ;" << endl;
 	os << "\tdoap:name \"" << name_buf << "\" ;" << endl;
 	os << "\tdoap:license <http://usefulinc.com/doap/licenses/gpl> ;" << endl;
-	os << "\t:pluginProperty :hardRTCapable";
+	os << "\tlv2:pluginProperty lv2:hardRTCapable";
 
 	uint32_t num_params     = effect->getNumParameters();
 	uint32_t num_audio_ins  = effect->getNumInputs();
@@ -110,7 +110,7 @@ write_plugin(AudioEffectX* effect, const string& lib_file_name)
 	uint32_t num_ports      = num_params + num_audio_ins + num_audio_outs;
 
 	if (num_ports > 0)
-		os << " ;" << endl << "\t:port [" << endl;
+		os << " ;" << endl << "\tlv2:port [" << endl;
 	else
 		os << " ." << endl;
 
@@ -118,29 +118,29 @@ write_plugin(AudioEffectX* effect, const string& lib_file_name)
 
 	for (uint32_t i = idx; i < num_params; ++i, ++idx) {
 		effect->getParameterName(i, name_buf);
-		os << "\t\ta :InputPort, :ControlPort ;" << endl;
-		os << "\t\t:index" << " " << idx << " ;" << endl;
-		os << "\t\t:name \"" << name_buf << "\" ;" << endl;
-		os << "\t\t:symbol \"" << symbolify(name_buf) << "\" ;" << endl;
-		os << "\t\t:default " << effect->getParameter(i) << " ;" << endl;
-		os << "\t\t:minimum 0.0 ;" << endl;
-		os << "\t\t:maximum 1.0 ;" << endl;
+		os << "\t\ta lv2:InputPort, lv2:ControlPort ;" << endl;
+		os << "\t\tlv2:index" << " " << idx << " ;" << endl;
+		os << "\t\tlv2:name \"" << name_buf << "\" ;" << endl;
+		os << "\t\tlv2:symbol \"" << symbolify(name_buf) << "\" ;" << endl;
+		os << "\t\tlv2:default " << effect->getParameter(i) << " ;" << endl;
+		os << "\t\tlv2:minimum 0.0 ;" << endl;
+		os << "\t\tlv2:maximum 1.0 ;" << endl;
 		os << ((idx == num_ports - 1) ? "\t] ." : "\t] , [") << endl;
 	}
 
 	for (uint32_t i = 0; i < num_audio_ins; ++i, ++idx) {
-		os << "\t\ta :InputPort, :AudioPort ;" << endl;
-		os << "\t\t:index" << " " << idx << " ;" << endl;
-		os << "\t\t:symbol \"in" << i+1 << "\" ;" << endl;
-		os << "\t\t:name \"Input " << i+1 << "\" ;" << endl;
+		os << "\t\ta lv2:InputPort, lv2:AudioPort ;" << endl;
+		os << "\t\tlv2:index" << " " << idx << " ;" << endl;
+		os << "\t\tlv2:symbol \"in" << i+1 << "\" ;" << endl;
+		os << "\t\tlv2:name \"Input " << i+1 << "\" ;" << endl;
 		os << ((idx == num_ports - 1) ? "\t] ." : "\t] , [") << endl;
 	}
 
 	for (uint32_t i = 0; i < num_audio_outs; ++i, ++idx) {
-		os << "\t\ta :OutputPort, :AudioPort ;" << endl;
-		os << "\t\t:index " << idx << " ;" << endl;
-		os << "\t\t:symbol \"out" << i+1 << "\" ;" << endl;
-		os << "\t\t:name \"Output " << i+1 << "\" ;" << endl;
+		os << "\t\ta lv2:OutputPort, lv2:AudioPort ;" << endl;
+		os << "\t\tlv2:index " << idx << " ;" << endl;
+		os << "\t\tlv2:symbol \"out" << i+1 << "\" ;" << endl;
+		os << "\t\tlv2:name \"Output " << i+1 << "\" ;" << endl;
 		os << ((idx == num_ports - 1) ? "\t] ." : "\t] , [") << endl;
 	}
 
@@ -179,14 +179,14 @@ write_gui(AEffEditor* gui, const string& lib_file_name)
 void
 write_manifest(ostream& os)
 {
-	os << "@prefix : <http://lv2plug.in/ns/lv2core#> ." << endl;
+	os << "@prefix lv2: <http://lv2plug.in/ns/lv2core#> ." << endl;
 	os << "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> ." << endl;
 	os << "@prefix uiext: <http://lv2plug.in/ns/extensions/ui#> ." << endl << endl;
 	for (Manifest::iterator i = manifest.begin(); i != manifest.end(); ++i) {
 		Record& r = i->second;
-		os << "<" << i->first << "> a :Plugin ;" << endl;
+		os << "<" << i->first << ">\n\ta lv2:Plugin ;" << endl;
 		os << "\trdfs:seeAlso <" << r.base_name << ".ttl> ;" << endl;
-		os << "\t:binary <" << r.base_name << ".so> ";
+		os << "\tlv2:binary <" << r.base_name << ".so> ";
 		for (Record::UIs::iterator j = r.uis.begin(); j != r.uis.end(); ++j)
 			os << ";" << endl << "\tuiext:ui <" << *j << "> ";
 		os << "." << endl << endl;
@@ -214,7 +214,7 @@ main(int argc, char** argv)
 	}
 
 	typedef AudioEffectX* (*new_effect_func)();
-	typedef AEffEditor* (*new_gui_func)();
+	typedef AEffEditor*   (*new_gui_func)();
 	typedef AudioEffectX* (*plugin_uri_func)();
 
 	new_effect_func constructor     = NULL;
