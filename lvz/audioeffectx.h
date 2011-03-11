@@ -1,5 +1,5 @@
 /* LVZ - A C++ interface for writing LV2 plugins.
- * Copyright (C) 2008-2009 David Robillard <http://drobilla.net>
+ * Copyright 2008-2011 David Robillard <http://drobilla.net>
  *
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the Free
@@ -16,8 +16,8 @@
  * 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#ifndef __LVZ_AUDIOEFFECTX_H
-#define __LVZ_AUDIOEFFECTX_H
+#ifndef LVZ_AUDIOEFFECTX_H
+#define LVZ_AUDIOEFFECTX_H
 
 #include <stdint.h>
 #include <string.h>
@@ -163,5 +163,5 @@ protected:
 	AEffect     cEffect;
 };
 
-#endif // __LVZ_AUDIOEFFECTX_H
+#endif // LVZ_AUDIOEFFECTX_H
 
