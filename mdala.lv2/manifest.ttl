@@ -102,10 +102,10 @@
 	rdfs:seeAlso <Overdrive.ttl> ;
 	lv2:binary <Overdrive.so> .
 
-<http://drobilla.net/plugins/mdala/Piano>
-	a lv2:Plugin ;
-	rdfs:seeAlso <Piano.ttl> ;
-	lv2:binary <Piano.so> .
+#<http://drobilla.net/plugins/mdala/Piano>
+#	a lv2:Plugin ;
+#	rdfs:seeAlso <Piano.ttl> ;
+#	lv2:binary <Piano.so> .
 
 <http://drobilla.net/plugins/mdala/RePsycho>
 	a lv2:Plugin ;
