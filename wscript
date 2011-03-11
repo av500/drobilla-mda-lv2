@@ -68,7 +68,6 @@ def build(bld):
 		Bandisto
 		BeatBox
 		Combo
-		DX10
 		DeEss
 		Degrade
 		Delay
@@ -76,9 +75,7 @@ def build(bld):
 		Dither
 		DubDelay
 		Dynamics
-		EPiano
 		Image
-		JX10
 		Leslie
 		Limiter
 		Loudness
@@ -101,6 +98,9 @@ def build(bld):
 		VocInput
 		Vocoder
 	'''.split()
+#		DX10
+#		EPiano
+#		JX10
 #		Looplex
 
 	# Build plugin libraries

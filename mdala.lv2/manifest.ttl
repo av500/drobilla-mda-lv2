@@ -22,10 +22,10 @@
 	rdfs:seeAlso <Combo.ttl> ;
 	lv2:binary <Combo.so> .
 
-<http://drobilla.net/plugins/mdala/DX10>
-	a lv2:Plugin ;
-	rdfs:seeAlso <DX10.ttl> ;
-	lv2:binary <DX10.so> .
+#<http://drobilla.net/plugins/mdala/DX10>
+#	a lv2:Plugin ;
+#	rdfs:seeAlso <DX10.ttl> ;
+#	lv2:binary <DX10.so> .
 
 <http://drobilla.net/plugins/mdala/DeEss>
 	a lv2:Plugin ;
@@ -62,20 +62,20 @@
 	rdfs:seeAlso <Dynamics.ttl> ;
 	lv2:binary <Dynamics.so> .
 
-<http://drobilla.net/plugins/mdala/EPiano>
-	a lv2:Plugin ;
-	rdfs:seeAlso <EPiano.ttl> ;
-	lv2:binary <EPiano.so> .
+#<http://drobilla.net/plugins/mdala/EPiano>
+#	a lv2:Plugin ;
+#	rdfs:seeAlso <EPiano.ttl> ;
+#	lv2:binary <EPiano.so> .
 
 <http://drobilla.net/plugins/mdala/Image>
 	a lv2:Plugin ;
 	rdfs:seeAlso <Image.ttl> ;
 	lv2:binary <Image.so> .
 
-<http://drobilla.net/plugins/mdala/JX10>
-	a lv2:Plugin ;
-	rdfs:seeAlso <JX10.ttl> ;
-	lv2:binary <JX10.so> .
+#<http://drobilla.net/plugins/mdala/JX10>
+#	a lv2:Plugin ;
+#	rdfs:seeAlso <JX10.ttl> ;
+#	lv2:binary <JX10.so> .
 
 <http://drobilla.net/plugins/mdala/Leslie>
 	a lv2:Plugin ;
