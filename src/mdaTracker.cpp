@@ -138,7 +138,7 @@ void mdaTracker::getParameterName(LvzInt32 index, char *label)
     case 1: strcpy(label, "Dynamics"); break;
     case 2: strcpy(label, "Mix"); break;
     case 3: strcpy(label, "Glide"); break;
-    case 4: strcpy(label, "Trnspose"); break;
+    case 4: strcpy(label, "Transpose"); break;
     case 5: strcpy(label, "Maximum"); break;
     case 6: strcpy(label, "Trigger"); break;
     case 7: strcpy(label, "Output"); break;
