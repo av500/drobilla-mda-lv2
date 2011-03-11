@@ -25,6 +25,9 @@
 #ifndef PLUGIN_URI_SUFFIX
 #error "This file requires PLUGIN_URI_SUFFIX to be defined"
 #endif
+#ifndef PLUGIN_HEADER
+#error "This file requires PLUGIN_HEADER to be defined"
+#endif
 
 #include <stdlib.h>
 #include "audioeffectx.h"
