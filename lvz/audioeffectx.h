@@ -24,22 +24,14 @@
 
 #include "AEffect.h"
 
-// Some plugins seem to use these names...
-#ifndef VstInt32
-#  define VstInt32 LvzInt32
-#  define VstInt16 LvzInt16
-#endif
-#define VstEvents LvzEvents
-#define VstMidiEvent LvzMidiEvent
-#define VstPinProperty LvzPinProperty
-
 typedef int16_t LvzInt16;
 typedef int32_t LvzInt32;
+
 typedef int (*audioMasterCallback)(int, int ver, int, int, int, int);
 
 class AEffEditor;
 
-struct VstFileSelect {
+struct LvzFileSelect {
 	int reserved;
 	char* returnPath;
 	size_t sizeReturnPath;
@@ -141,11 +133,11 @@ public:
 	virtual void setURI(const char* uri)     { URI = uri; }
 	virtual void setUniqueID(const char* id) { uniqueID = id; }
 	virtual void suspend()                   {}
-	virtual void beginEdit(VstInt32 index)   {}
-	virtual void endEdit(VstInt32 index)     {}
+	virtual void beginEdit(LvzInt32 index)   {}
+	virtual void endEdit(LvzInt32 index)     {}
 
-	virtual bool openFileSelector (VstFileSelect* sel)  { return false; }
-	virtual bool closeFileSelector (VstFileSelect* sel) { return false; }
+	virtual bool openFileSelector (LvzFileSelect* sel)  { return false; }
+	virtual bool closeFileSelector (LvzFileSelect* sel) { return false; }
 
 	virtual long dispatcher(long opCode, long index, long value, void *ptr, float opt) {
 		return 0;
