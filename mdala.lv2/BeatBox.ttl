@@ -2,8 +2,8 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 
 <http://drobilla.net/plugins/mdala/BeatBox>
-	lv2:symbol "mdaBBox" ;
-	doap:name "MDA BeatBox" ;
+	lv2:symbol "BBox" ;
+	doap:name "Mdala BeatBox" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
 	lv2:port [

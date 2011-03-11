@@ -3,8 +3,8 @@
 
 <http://drobilla.net/plugins/mdala/TalkBox>
 	a lv2:Plugin , lv2:FilterPlugin ;
-	lv2:symbol "mdaTalkBox" ;
-	doap:name "MDA TalkBox" ;
+	lv2:symbol "TalkBox" ;
+	doap:name "Mdala TalkBox" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
 	lv2:port [

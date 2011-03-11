@@ -3,8 +3,8 @@
 
 <http://drobilla.net/plugins/mdala/JX10>
 	a lv2:Plugin , lv2:InstrumentPlugin ;
-	lv2:symbol "mdaJX10" ;
-	doap:name "MDA JX10 Synth" ;
+	lv2:symbol "JX10" ;
+	doap:name "Mdala JX10 Synth" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
 	lv2:port [

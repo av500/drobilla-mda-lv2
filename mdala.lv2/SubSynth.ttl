@@ -2,8 +2,8 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 
 <http://drobilla.net/plugins/mdala/SubSynth>
-	lv2:symbol "mdaSubSynth" ;
-	doap:name "MDA SubSynth" ;
+	lv2:symbol "SubSynth" ;
+	doap:name "Mdala SubSynth" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
 	lv2:port [

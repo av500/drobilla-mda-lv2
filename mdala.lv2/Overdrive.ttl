@@ -3,8 +3,8 @@
 
 <http://drobilla.net/plugins/mdala/Overdrive>
 	a lv2:Plugin , lv2:DistortionPlugin ;
-	lv2:symbol "mdaOverdrive" ;
-	doap:name "MDA Overdrive" ;
+	lv2:symbol "Overdrive" ;
+	doap:name "Mdala Overdrive" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
 	lv2:port [

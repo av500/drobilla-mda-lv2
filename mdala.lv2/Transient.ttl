@@ -3,8 +3,8 @@
 
 <http://drobilla.net/plugins/mdala/Transient>
 	a lv2:Plugin , lv2:DynamicsPlugin ;
-	lv2:symbol "mdaTransient" ;
-	doap:name "MDA Transient" ;
+	lv2:symbol "Transient" ;
+	doap:name "Mdala Transient" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
 	lv2:port [

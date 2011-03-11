@@ -3,8 +3,8 @@
 
 <http://drobilla.net/plugins/mdala/Vocoder>
 	a lv2:Plugin , lv2:FilterPlugin ;
-	lv2:symbol "mdaVocoder" ;
-	doap:name "MDA Vocoder" ;
+	lv2:symbol "Vocoder" ;
+	doap:name "Mdala Vocoder" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
 	lv2:port [

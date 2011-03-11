@@ -3,8 +3,8 @@
 
 <http://drobilla.net/plugins/mdala/Bandisto>
 	a lv2:Plugin , lv2:DistortionPlugin ;
-	lv2:symbol "mdaBand" ;
-	doap:name "MDA Bandisto" ;
+	lv2:symbol "Band" ;
+	doap:name "Mdala Bandisto" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
 	lv2:port [

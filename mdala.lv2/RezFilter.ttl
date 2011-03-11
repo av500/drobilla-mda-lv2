@@ -3,8 +3,8 @@
 
 <http://drobilla.net/plugins/mdala/RezFilter>
 	a lv2:Plugin , lv2:FilterPlugin ;
-	lv2:symbol "mdaRezFilter" ;
-	doap:name "MDA RezFilter" ;
+	lv2:symbol "RezFilter" ;
+	doap:name "Mdala RezFilter" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
 	lv2:port [

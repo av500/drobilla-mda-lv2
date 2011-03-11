@@ -3,8 +3,8 @@
 
 <http://drobilla.net/plugins/mdala/Dither>
 	a lv2:Plugin , lv2:DistortionPlugin ;
-	lv2:symbol "mdaDither" ;
-	doap:name "MDA Dither" ;
+	lv2:symbol "Dither" ;
+	doap:name "Mdala Dither" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
 	lv2:port [

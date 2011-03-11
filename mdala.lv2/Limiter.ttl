@@ -3,8 +3,8 @@
 
 <http://drobilla.net/plugins/mdala/Limiter>
 	a lv2:Plugin , lv2:LimiterPlugin ;
-	lv2:symbol "mdaLimiter" ;
-	doap:name "MDA Limiter" ;
+	lv2:symbol "Limiter" ;
+	doap:name "Mdala Limiter" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
 	lv2:port [

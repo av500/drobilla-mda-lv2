@@ -3,8 +3,8 @@
 
 <http://drobilla.net/plugins/mdala/Image>
 	a lv2:Plugin , lv2:SpatialPlugin ;
-	lv2:symbol "mdaImage" ;
-	doap:name "MDA Image" ;
+	lv2:symbol "Image" ;
+	doap:name "Mdala Image" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
 	lv2:port [

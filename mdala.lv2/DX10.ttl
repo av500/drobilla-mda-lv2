@@ -3,8 +3,8 @@
 
 <http://drobilla.net/plugins/mdala/DX10>
 	a lv2:Plugin , lv2:InstrumentPlugin ;
-	lv2:symbol "mdaDX10" ;
-	doap:name "MDA DX10" ;
+	lv2:symbol "DX10" ;
+	doap:name "Mdala DX10" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
 	lv2:port [

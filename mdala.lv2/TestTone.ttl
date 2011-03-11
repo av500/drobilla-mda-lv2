@@ -3,8 +3,8 @@
 
 <http://drobilla.net/plugins/mdala/TestTone>
 	a lv2:Plugin , lv2:GeneratorPlugin ;
-	lv2:symbol "mdaTestTone" ;
-	doap:name "MDA TestTone" ;
+	lv2:symbol "TestTone" ;
+	doap:name "Mdala TestTone" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
 	lv2:port [
