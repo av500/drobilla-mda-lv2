@@ -143,13 +143,6 @@ lvz_run(LV2_Handle instance, uint32_t sample_count)
 	plugin->effect->processReplacing(plugin->inputs, plugin->outputs, sample_count);
 }
 
-static const AudioEffectX*
-lvz_get_audioeffectx(LV2_Handle instance)
-{
-	LVZPlugin* plugin = (LVZPlugin*)instance;
-	return plugin->effect;
-}
-
 static const void*
 lvz_extension_data(const char* uri)
 {
