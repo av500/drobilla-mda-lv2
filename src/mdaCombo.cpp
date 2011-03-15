@@ -85,7 +85,7 @@ void mdaCombo::setParameter(LvzInt32 index, float value)
             del2 = int(getSampleRate() / 3315.f);
             break;
 
-    case 5: trim = 0.59f; lpf = lpf = filterFreq(2795.f);
+    case 5: trim = 0.59f; lpf = filterFreq(2795.f);
             mix1 = -0.29f; mix2 = 0.38f;          //Marshall 4x12" celestion
             del1 = int(getSampleRate() / 982.f);
             del2 = int(getSampleRate() / 2402.f);
