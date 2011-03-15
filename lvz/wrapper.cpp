@@ -44,20 +44,20 @@ typedef struct {
 	float**       control_buffers;
 	float**       inputs;
 	float**       outputs;
-} MDAPlugin;
+} LVZPlugin;
 
 
 static void
-mda_cleanup(LV2_Handle instance)
+lvz_cleanup(LV2_Handle instance)
 {
 	free(instance);
 }
 
 
 static void
-mda_connect_port(LV2_Handle instance, uint32_t port, void* data)
+lvz_connect_port(LV2_Handle instance, uint32_t port, void* data)
 {
-	MDAPlugin* plugin = (MDAPlugin*)instance;
+	LVZPlugin* plugin = (LVZPlugin*)instance;
 
 	uint32_t num_params = plugin->effect->getNumParameters();
 	uint32_t num_inputs = plugin->effect->getNumInputs();
@@ -82,7 +82,7 @@ master_callback(int, int ver, int, int, int, int)
 
 
 static LV2_Handle
-mda_instantiate(const LV2_Descriptor*    descriptor,
+lvz_instantiate(const LV2_Descriptor*    descriptor,
                 double                   rate,
                 const char*              bundle_path,
                 const LV2_Feature*const* features)
@@ -95,7 +95,7 @@ mda_instantiate(const LV2_Descriptor*    descriptor,
 	uint32_t num_inputs = effect->getNumInputs();
 	uint32_t num_outputs = effect->getNumOutputs();
 
-	MDAPlugin* plugin = (MDAPlugin*)malloc(sizeof(MDAPlugin));
+	LVZPlugin* plugin = (LVZPlugin*)malloc(sizeof(LVZPlugin));
 	plugin->effect = effect;
 
 	if (num_params > 0) {
@@ -131,9 +131,9 @@ mda_instantiate(const LV2_Descriptor*    descriptor,
 
 
 static void
-mda_run(LV2_Handle instance, uint32_t sample_count)
+lvz_run(LV2_Handle instance, uint32_t sample_count)
 {
-	MDAPlugin* plugin = (MDAPlugin*)instance;
+	LVZPlugin* plugin = (LVZPlugin*)instance;
 
 	for (int32_t i = 0; i < plugin->effect->getNumParameters(); ++i) {
 		float val = plugin->control_buffers[i][0];
@@ -148,19 +148,19 @@ mda_run(LV2_Handle instance, uint32_t sample_count)
 
 
 static const AudioEffectX*
-mda_get_audioeffectx(LV2_Handle instance)
+lvz_get_audioeffectx(LV2_Handle instance)
 {
-	MDAPlugin* plugin = (MDAPlugin*)instance;
+	LVZPlugin* plugin = (LVZPlugin*)instance;
 	return plugin->effect;
 }
 
 
 static const void*
-mda_extension_data(const char* uri)
+lvz_extension_data(const char* uri)
 {
 	if (!strcmp(uri, "http://drobilla.net/ns/ext/vstgui")) {
 		// FIXME: shouldn't return function pointers directly
-		return (const void*)mda_get_audioeffectx;
+		return (const void*)lvz_get_audioeffectx;
 	} else {
 		return NULL;
 	}
@@ -168,30 +168,30 @@ mda_extension_data(const char* uri)
 
 
 static void
-mda_deactivate(LV2_Handle instance)
+lvz_deactivate(LV2_Handle instance)
 {
-	MDAPlugin* plugin = (MDAPlugin*)instance;
+	LVZPlugin* plugin = (LVZPlugin*)instance;
 	plugin->effect->suspend();
 }
 
 
 /* Library */
 
-static LV2_Descriptor *mda_descriptor = NULL;
+static LV2_Descriptor *lvz_descriptor = NULL;
 
 static void
 init_descriptor()
 {
-	mda_descriptor = (LV2_Descriptor*)malloc(sizeof(LV2_Descriptor));
+	lvz_descriptor = (LV2_Descriptor*)malloc(sizeof(LV2_Descriptor));
 
-	mda_descriptor->URI = URI_PREFIX PLUGIN_URI_SUFFIX;
-	mda_descriptor->instantiate = mda_instantiate;
-	mda_descriptor->connect_port = mda_connect_port;
-	mda_descriptor->activate = NULL;
-	mda_descriptor->run = mda_run;
-	mda_descriptor->deactivate = mda_deactivate;
-	mda_descriptor->cleanup = mda_cleanup;
-	mda_descriptor->extension_data = mda_extension_data;
+	lvz_descriptor->URI = URI_PREFIX PLUGIN_URI_SUFFIX;
+	lvz_descriptor->instantiate = lvz_instantiate;
+	lvz_descriptor->connect_port = lvz_connect_port;
+	lvz_descriptor->activate = NULL;
+	lvz_descriptor->run = lvz_run;
+	lvz_descriptor->deactivate = lvz_deactivate;
+	lvz_descriptor->cleanup = lvz_cleanup;
+	lvz_descriptor->extension_data = lvz_extension_data;
 }
 
 
@@ -199,12 +199,12 @@ LV2_SYMBOL_EXPORT
 const LV2_Descriptor*
 lv2_descriptor(uint32_t index)
 {
-	if (!mda_descriptor)
+	if (!lvz_descriptor)
 		init_descriptor();
 
 	switch (index) {
 	case 0:
-		return mda_descriptor;
+		return lvz_descriptor;
 	default:
 		return NULL;
 	}

@@ -109,6 +109,8 @@ public:
 	virtual void process         (float **inputs, float **outputs, LvzInt32 nframes) = 0;
 	virtual void processReplacing(float **inputs, float **outputs, LvzInt32 nframes) = 0;
 
+	virtual LvzInt32 processEvents(LvzEvents* ev) { return 0; }
+
 	virtual const char*  getURI()           { return URI; }
 	virtual const char*  getUniqueID()      { return uniqueID; }
 	virtual float        getSampleRate()    { return sampleRate; }
