@@ -158,12 +158,7 @@ lvz_get_audioeffectx(LV2_Handle instance)
 static const void*
 lvz_extension_data(const char* uri)
 {
-	if (!strcmp(uri, "http://drobilla.net/ns/ext/vstgui")) {
-		// FIXME: shouldn't return function pointers directly
-		return (const void*)lvz_get_audioeffectx;
-	} else {
-		return NULL;
-	}
+	return NULL;
 }
 
 
