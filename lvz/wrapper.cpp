@@ -177,34 +177,28 @@ lvz_deactivate(LV2_Handle instance)
 
 /* Library */
 
-static LV2_Descriptor *lvz_descriptor = NULL;
-
-static void
-init_descriptor()
-{
-	lvz_descriptor = (LV2_Descriptor*)malloc(sizeof(LV2_Descriptor));
-
-	lvz_descriptor->URI = URI_PREFIX PLUGIN_URI_SUFFIX;
-	lvz_descriptor->instantiate = lvz_instantiate;
-	lvz_descriptor->connect_port = lvz_connect_port;
-	lvz_descriptor->activate = NULL;
-	lvz_descriptor->run = lvz_run;
-	lvz_descriptor->deactivate = lvz_deactivate;
-	lvz_descriptor->cleanup = lvz_cleanup;
-	lvz_descriptor->extension_data = lvz_extension_data;
-}
-
+static LV2_Descriptor descriptor;
+static bool           initialised = false;
 
 LV2_SYMBOL_EXPORT
 const LV2_Descriptor*
 lv2_descriptor(uint32_t index)
 {
-	if (!lvz_descriptor)
-		init_descriptor();
+	if (!initialised) {
+		descriptor.URI            = URI_PREFIX PLUGIN_URI_SUFFIX;
+		descriptor.instantiate    = lvz_instantiate;
+		descriptor.connect_port   = lvz_connect_port;
+		descriptor.activate       = NULL;
+		descriptor.run            = lvz_run;
+		descriptor.deactivate     = lvz_deactivate;
+		descriptor.cleanup        = lvz_cleanup;
+		descriptor.extension_data = lvz_extension_data;
+		initialised = true;
+	}
 
 	switch (index) {
 	case 0:
-		return lvz_descriptor;
+		return &descriptor;
 	default:
 		return NULL;
 	}
