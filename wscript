@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-import autowaf
 import os
+from waflib.extras import autowaf as autowaf
 
 # Version of this package (even if built as a child)
 MDALA_VERSION = '0.0.0'
@@ -15,12 +15,12 @@ out = 'build'
 
 def options(opt):
 	autowaf.set_options(opt)
-	opt.tool_options('compiler_cxx')
+	opt.load('compiler_cxx')
 
 def configure(conf):
 	autowaf.configure(conf)
 	autowaf.display_header('Mdala Configuration')
-	conf.check_tool('compiler_cxx')
+	conf.load('compiler_cxx')
 
 	autowaf.check_header(conf, 'lv2/lv2plug.in/ns/lv2core/lv2.h')
 
@@ -36,7 +36,7 @@ def configure(conf):
 
 def build_plugin(bld, lang, bundle, name, source, cflags=[], libs=[]):
 	# Build plugin library
-	penv = bld.env.copy()
+	penv = bld.env.derive()
 	penv['cshlib_PATTERN']   = bld.env['pluginlib_PATTERN']
 	penv['cxxshlib_PATTERN'] = bld.env['pluginlib_PATTERN']
 	obj              = bld(features = '%s %sshlib' % (lang,lang))
