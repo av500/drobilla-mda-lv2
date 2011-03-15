@@ -46,13 +46,11 @@ typedef struct {
 	float**       outputs;
 } LVZPlugin;
 
-
 static void
 lvz_cleanup(LV2_Handle instance)
 {
 	free(instance);
 }
-
 
 static void
 lvz_connect_port(LV2_Handle instance, uint32_t port, void* data)
@@ -73,13 +71,11 @@ lvz_connect_port(LV2_Handle instance, uint32_t port, void* data)
 	}
 }
 
-
 static int
 master_callback(int, int ver, int, int, int, int)
 {
 	return 0;
 }
-
 
 static LV2_Handle
 lvz_instantiate(const LV2_Descriptor*    descriptor,
@@ -91,44 +87,45 @@ lvz_instantiate(const LV2_Descriptor*    descriptor,
 	effect->setURI(URI_PREFIX PLUGIN_URI_SUFFIX);
 	effect->setSampleRate(rate);
 
-	uint32_t num_params = effect->getNumParameters();
-	uint32_t num_inputs = effect->getNumInputs();
+	uint32_t num_params  = effect->getNumParameters();
+	uint32_t num_inputs  = effect->getNumInputs();
 	uint32_t num_outputs = effect->getNumOutputs();
 
 	LVZPlugin* plugin = (LVZPlugin*)malloc(sizeof(LVZPlugin));
 	plugin->effect = effect;
 
 	if (num_params > 0) {
-		plugin->controls = (float*)malloc(sizeof(float) * num_params);
+		plugin->controls        = (float*)malloc(sizeof(float) * num_params);
 		plugin->control_buffers = (float**)malloc(sizeof(float*) * num_params);
 		for (uint32_t i = 0; i < num_params; ++i) {
 			plugin->controls[i] = effect->getParameter(i);
 			plugin->control_buffers[i] = NULL;
 		}
 	} else {
-		plugin->controls = NULL;
+		plugin->controls        = NULL;
 		plugin->control_buffers = NULL;
 	}
 
 	if (num_inputs > 0) {
 		plugin->inputs = (float**)malloc(sizeof(float*) * num_inputs);
-		for (uint32_t i = 0; i < num_inputs; ++i)
+		for (uint32_t i = 0; i < num_inputs; ++i) {
 			plugin->inputs[i] = NULL;
+		}
 	} else {
 		plugin->inputs = NULL;
 	}
 
 	if (num_outputs > 0) {
 		plugin->outputs = (float**)malloc(sizeof(float*) * num_outputs);
-		for (uint32_t i = 0; i < num_outputs; ++i)
+		for (uint32_t i = 0; i < num_outputs; ++i) {
 			plugin->outputs[i] = NULL;
+		}
 	} else {
 		plugin->outputs = NULL;
 	}
 
 	return (LV2_Handle)plugin;
 }
-
 
 static void
 lvz_run(LV2_Handle instance, uint32_t sample_count)
@@ -146,7 +143,6 @@ lvz_run(LV2_Handle instance, uint32_t sample_count)
 	plugin->effect->processReplacing(plugin->inputs, plugin->outputs, sample_count);
 }
 
-
 static const AudioEffectX*
 lvz_get_audioeffectx(LV2_Handle instance)
 {
@@ -154,13 +150,11 @@ lvz_get_audioeffectx(LV2_Handle instance)
 	return plugin->effect;
 }
 
-
 static const void*
 lvz_extension_data(const char* uri)
 {
 	return NULL;
 }
-
 
 static void
 lvz_deactivate(LV2_Handle instance)
@@ -168,7 +162,6 @@ lvz_deactivate(LV2_Handle instance)
 	LVZPlugin* plugin = (LVZPlugin*)instance;
 	plugin->effect->suspend();
 }
-
 
 /* Library */
 
@@ -199,7 +192,7 @@ lv2_descriptor(uint32_t index)
 	}
 }
 
-
+/** Entry point for LVZ gendata */
 LV2_SYMBOL_EXPORT
 AudioEffectX*
 lvz_new_audioeffectx()
@@ -209,6 +202,4 @@ lvz_new_audioeffectx()
 	return effect;
 }
 
-
 } // extern "C"
-
