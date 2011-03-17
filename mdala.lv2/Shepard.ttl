@@ -1,5 +1,6 @@
-@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <http://drobilla.net/plugins/mdala/Shepard>
 	a lv2:Plugin , lv2:GeneratorPlugin ;
@@ -23,6 +24,7 @@
 		lv2:default 0.7 ;
 		lv2:minimum 0.0 ;
 		lv2:maximum 1.0 ;
+		rdfs:comment "Rate of tone increase." ;
 	] , [
 		a lv2:InputPort, lv2:ControlPort ;
 		lv2:index 2 ;
@@ -51,4 +53,5 @@
 		lv2:index 6 ;
 		lv2:symbol "out2" ;
 		lv2:name "Output 2" ;
-	] .
+	] ;
+	rdfs:comment "Continuously rising/falling tone generator." .
