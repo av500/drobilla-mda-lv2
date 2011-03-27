@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+import shutil
 from waflib.extras import autowaf as autowaf
 
 # Version of this package (even if built as a child)
@@ -31,7 +32,10 @@ def configure(conf):
 	if pat[0:3] == 'lib':
 		pat = pat[3:]
 	conf.env['pluginlib_PATTERN'] = pat
+	conf.env['pluginlib_EXT'] = pat[pat.rfind('.'):]
 
+	autowaf.display_msg(conf, "LV2 bundle directory",
+	                    conf.env['LV2DIR'])
 	print('')
 
 def build_plugin(bld, lang, bundle, name, source, cflags=[], libs=[]):
@@ -57,11 +61,24 @@ def build_plugin(bld, lang, bundle, name, source, cflags=[], libs=[]):
 
 def build(bld):
 	# Copy data files to build bundle (build/mdala.lv2)
-	for i in bld.path.ant_glob('mdala.lv2/*.ttl'):
-		bld(rule   = 'cp ${SRC} ${TGT}',
+	def do_copy(task):
+		src = task.inputs[0].abspath()
+		tgt = task.outputs[0].abspath()
+		return shutil.copy(src, tgt)
+		#cmd = 'cp %s %s' % (src, tgt)
+		#return task.exec_command(cmd)
+
+	for i in bld.path.ant_glob('mdala.lv2/[A-Z]*.ttl'):
+		bld(rule   = do_copy,
 		    source = i,
 		    target = bld.path.get_bld().make_node('mdala.lv2/%s' % i),
 		    install_path = '${LV2DIR}/mdala.lv2')
+
+	bld(features = 'subst',
+	    source   = 'mdala.lv2/manifest.ttl.in',
+	    target   = bld.path.get_bld().make_node('mdala.lv2/manifest.ttl'),
+	    LIB_EXT  = bld.env['pluginlib_EXT'],
+	    install_path = '${LV2DIR}/mdala.lv2')
 
 	plugins = '''
 		Ambience
@@ -110,6 +127,4 @@ def build(bld):
 					  '-DURI_PREFIX=\"http://drobilla.net/plugins/mdala/\"',
 					  '-DPLUGIN_URI_SUFFIX="%s"' % i,
 					  '-DPLUGIN_HEADER="src/mda%s.h"' % i])
-
-	bld.install_files('${LV2DIR}/mdala.lv2', 'mdala.lv2/manifest.ttl')
 
