@@ -15,116 +15,115 @@ top = '.'
 out = 'build'
 
 def options(opt):
-	autowaf.set_options(opt)
-	opt.load('compiler_cxx')
+    autowaf.set_options(opt)
+    opt.load('compiler_cxx')
 
 def configure(conf):
-	autowaf.configure(conf)
-	autowaf.display_header('Mdala Configuration')
-	conf.load('compiler_cxx')
+    autowaf.configure(conf)
+    autowaf.display_header('Mdala Configuration')
+    conf.load('compiler_cxx')
 
-	autowaf.check_header(conf, 'lv2/lv2plug.in/ns/lv2core/lv2.h')
+    autowaf.check_header(conf, 'lv2/lv2plug.in/ns/lv2core/lv2.h')
 
-	conf.env.append_value('CFLAGS', '-std=c99')
+    conf.env.append_value('CFLAGS', '-std=c99')
 
-	# Set env['pluginlib_PATTERN']
-	pat = conf.env['cshlib_PATTERN']
-	if pat[0:3] == 'lib':
-		pat = pat[3:]
-	conf.env['pluginlib_PATTERN'] = pat
-	conf.env['pluginlib_EXT'] = pat[pat.rfind('.'):]
+    # Set env['pluginlib_PATTERN']
+    pat = conf.env['cshlib_PATTERN']
+    if pat[0:3] == 'lib':
+        pat = pat[3:]
+    conf.env['pluginlib_PATTERN'] = pat
+    conf.env['pluginlib_EXT'] = pat[pat.rfind('.'):]
 
-	autowaf.display_msg(conf, "LV2 bundle directory",
-	                    conf.env['LV2DIR'])
-	print('')
+    autowaf.display_msg(conf, "LV2 bundle directory",
+                        conf.env['LV2DIR'])
+    print('')
 
 def build_plugin(bld, lang, bundle, name, source, cflags=[], libs=[]):
-	# Build plugin library
-	penv = bld.env.derive()
-	penv['cshlib_PATTERN']   = bld.env['pluginlib_PATTERN']
-	penv['cxxshlib_PATTERN'] = bld.env['pluginlib_PATTERN']
-	obj              = bld(features = '%s %sshlib' % (lang,lang))
-	obj.env          = penv
-	obj.source       = source + ['lvz/wrapper.cpp']
-	obj.includes     = [ '.', './lvz', './src' ]
-	obj.name         = name
-	obj.target       = os.path.join(bundle, name)
-	if cflags != []:
-		obj.cxxflags = cflags
-	if libs != []:
-		autowaf.use_lib(bld, obj, libs)
-	obj.install_path = '${LV2DIR}/' + bundle
+    # Build plugin library
+    penv = bld.env.derive()
+    penv['cshlib_PATTERN']   = bld.env['pluginlib_PATTERN']
+    penv['cxxshlib_PATTERN'] = bld.env['pluginlib_PATTERN']
+    obj              = bld(features = '%s %sshlib' % (lang,lang))
+    obj.env          = penv
+    obj.source       = source + ['lvz/wrapper.cpp']
+    obj.includes     = [ '.', './lvz', './src' ]
+    obj.name         = name
+    obj.target       = os.path.join(bundle, name)
+    if cflags != []:
+        obj.cxxflags = cflags
+    if libs != []:
+        autowaf.use_lib(bld, obj, libs)
+    obj.install_path = '${LV2DIR}/' + bundle
 
-	# Install data file
-	data_file = '%s.ttl' % name
-	bld.install_files('${LV2DIR}/' + bundle, os.path.join(bundle, data_file))
+    # Install data file
+    data_file = '%s.ttl' % name
+    bld.install_files('${LV2DIR}/' + bundle, os.path.join(bundle, data_file))
 
 def build(bld):
-	# Copy data files to build bundle (build/mdala.lv2)
-	def do_copy(task):
-		src = task.inputs[0].abspath()
-		tgt = task.outputs[0].abspath()
-		return shutil.copy(src, tgt)
-		#cmd = 'cp %s %s' % (src, tgt)
-		#return task.exec_command(cmd)
+    # Copy data files to build bundle (build/mdala.lv2)
+    def do_copy(task):
+        src = task.inputs[0].abspath()
+        tgt = task.outputs[0].abspath()
+        return shutil.copy(src, tgt)
+        #cmd = 'cp %s %s' % (src, tgt)
+        #return task.exec_command(cmd)
 
-	for i in bld.path.ant_glob('mdala.lv2/[A-Z]*.ttl'):
-		bld(rule   = do_copy,
-		    source = i,
-		    target = bld.path.get_bld().make_node('mdala.lv2/%s' % i),
-		    install_path = '${LV2DIR}/mdala.lv2')
+    for i in bld.path.ant_glob('mdala.lv2/[A-Z]*.ttl'):
+        bld(rule   = do_copy,
+            source = i,
+            target = bld.path.get_bld().make_node('mdala.lv2/%s' % i),
+            install_path = '${LV2DIR}/mdala.lv2')
 
-	bld(features = 'subst',
-	    source   = 'mdala.lv2/manifest.ttl.in',
-	    target   = bld.path.get_bld().make_node('mdala.lv2/manifest.ttl'),
-	    LIB_EXT  = bld.env['pluginlib_EXT'],
-	    install_path = '${LV2DIR}/mdala.lv2')
+    bld(features = 'subst',
+        source   = 'mdala.lv2/manifest.ttl.in',
+        target   = bld.path.get_bld().make_node('mdala.lv2/manifest.ttl'),
+        LIB_EXT  = bld.env['pluginlib_EXT'],
+        install_path = '${LV2DIR}/mdala.lv2')
 
-	plugins = '''
-		Ambience
-		Bandisto
-		BeatBox
-		Combo
-		DeEss
-		Degrade
-		Delay
-		Detune
-		Dither
-		DubDelay
-		Dynamics
-		Image
-		Leslie
-		Limiter
-		Loudness
-		MultiBand
-		Overdrive
-		Piano
-		RePsycho
-		RezFilter
-		RingMod
-		RoundPan
-		Shepard
-		Splitter
-		Stereo
-		SubSynth
-		TalkBox
-		TestTone
-		ThruZero
-		Tracker
-		Transient
-		VocInput
-		Vocoder
-	'''.split()
-#		DX10
-#		EPiano
-#		JX10
-#		Looplex
+    plugins = '''
+            Ambience
+            Bandisto
+            BeatBox
+            Combo
+            DeEss
+            Degrade
+            Delay
+            Detune
+            Dither
+            DubDelay
+            Dynamics
+            Image
+            Leslie
+            Limiter
+            Loudness
+            MultiBand
+            Overdrive
+            Piano
+            RePsycho
+            RezFilter
+            RingMod
+            RoundPan
+            Shepard
+            Splitter
+            Stereo
+            SubSynth
+            TalkBox
+            TestTone
+            ThruZero
+            Tracker
+            Transient
+            VocInput
+            Vocoder
+    '''.split()
+#               DX10
+#               EPiano
+#               JX10
+#               Looplex
 
-	# Build plugin libraries
-	for i in plugins:
-		build_plugin(bld, 'cxx', 'mdala.lv2', i, ['src/mda%s.cpp' % i],
-					 ['-DPLUGIN_CLASS=mda%s' % i,
-					  '-DURI_PREFIX=\"http://drobilla.net/plugins/mdala/\"',
-					  '-DPLUGIN_URI_SUFFIX="%s"' % i,
-					  '-DPLUGIN_HEADER="src/mda%s.h"' % i])
-
+    # Build plugin libraries
+    for i in plugins:
+        build_plugin(bld, 'cxx', 'mdala.lv2', i, ['src/mda%s.cpp' % i],
+                                 ['-DPLUGIN_CLASS=mda%s' % i,
+                                  '-DURI_PREFIX=\"http://drobilla.net/plugins/mdala/\"',
+                                  '-DPLUGIN_URI_SUFFIX="%s"' % i,
+                                  '-DPLUGIN_HEADER="src/mda%s.h"' % i])
