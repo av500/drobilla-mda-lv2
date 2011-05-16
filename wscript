@@ -20,6 +20,7 @@ def options(opt):
 
 def configure(conf):
     autowaf.configure(conf)
+    conf.line_just = 23
     autowaf.display_header('Mdala Configuration')
     conf.load('compiler_cxx')
 
