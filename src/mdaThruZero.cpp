@@ -219,7 +219,7 @@ void mdaThruZero::processReplacing(float **inputs, float **outputs, LvzInt32 sam
 	float a, b, f=fb, f1=fb1, f2=fb2, ph=phi;
   float ra=rat, de=dep, we=wet, dr=dry, ds=deps, dm=dem;
   LvzInt32  tmp, tmpi, bp=bufpos;
-  float tmpf, dpt;
+  float tmpf;
 
 	--in1;
 	--in2;
@@ -238,7 +238,7 @@ void mdaThruZero::processReplacing(float **inputs, float **outputs, LvzInt32 sam
     *(buffer2 + bp) = b + f * f2;
 
     //ds = 0.995f * (ds - de) + de;          //smoothed depth change ...try inc not mult
-    dpt = tmpf = dm + de * (1.0f - ph * ph); //delay mod shape
+    tmpf = dm + de * (1.0f - ph * ph); //delay mod shape
     tmp  = int(tmpf);
     tmpf -= tmp;
     tmp = (tmp + bp) & 0x7FF;

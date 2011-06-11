@@ -179,7 +179,7 @@ void mdaShepard::process(float **inputs, float **outputs, LvzInt32 sampleFrames)
 	float *in2 = inputs[1];
 	float *out1 = outputs[0];
 	float *out2 = outputs[1];
-	float a, b, c, d;
+	float a, b, c;//, d;
   float r=rate, dr=drate, o=out, p=pos, di;
   LvzInt32 x=max, m=mode, i1, i2;
 
@@ -192,7 +192,7 @@ void mdaShepard::process(float **inputs, float **outputs, LvzInt32 sampleFrames)
 	{
 		a = *++in1 + *++in2;
 		c = out1[1];
-		d = out2[1];
+		//d = out2[1];
 
     r *= dr;
     if(r>2.f)

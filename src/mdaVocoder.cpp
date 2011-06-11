@@ -79,7 +79,7 @@ void mdaVocoder::resume() ///update internal parameters...
 {
   float * param = programs[curProgram].param;
   double tpofs = 6.2831853/getSampleRate();
-  double rr, th, re;
+  double rr, th; //, re;
   float sh;
   LvzInt32 i;
 
@@ -93,7 +93,7 @@ void mdaVocoder::resume() ///update internal parameters...
   if(param[7]<0.5f)
   {
     nbnd=8;
-    re=0.003f;
+    //re=0.003f;
     f[1][2] = 3000.0f;
     f[2][2] = 2200.0f;
     f[3][2] = 1500.0f;
@@ -105,7 +105,7 @@ void mdaVocoder::resume() ///update internal parameters...
   else
   {
     nbnd=16;
-    re=0.0015f;
+    //re=0.0015f;
     f[ 1][2] = 5000.0f; //+1000
     f[ 2][2] = 4000.0f; //+750
     f[ 3][2] = 3250.0f; //+500
