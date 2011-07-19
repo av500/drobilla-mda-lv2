@@ -29,7 +29,7 @@ def configure(conf):
     conf.env.append_value('CFLAGS', '-std=c99')
 
     # Set env['pluginlib_PATTERN']
-    pat = conf.env['cshlib_PATTERN']
+    pat = conf.env['cxxshlib_PATTERN']
     if pat[0:3] == 'lib':
         pat = pat[3:]
     conf.env['pluginlib_PATTERN'] = pat
