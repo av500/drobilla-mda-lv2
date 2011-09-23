@@ -62,8 +62,6 @@ lvz_connect_port(LV2_Handle instance, uint32_t port, void* data)
 
 	if (port < num_params) {
 		plugin->control_buffers[port] = (float*)data;
-		if (data != NULL)
-			plugin->controls[port] = *(float*)data;
 	} else if (port < num_params + num_inputs) {
 		plugin->inputs[port - num_params] = (float*)data;
 	} else {
