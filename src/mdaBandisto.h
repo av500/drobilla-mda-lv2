@@ -47,9 +47,9 @@ protected:
 	float fParam1, fParam2, fParam3, fParam4;
 	float fParam5, fParam6, fParam7, fParam8;
   float fParam9, fParam10;
-  float gain1, driv1, trim1;
-  float gain2, driv2, trim2;
-  float gain3, driv3, trim3;
+  float driv1, trim1;
+  float driv2, trim2;
+  float driv3, trim3;
   float fi1, fb1, fo1, fi2, fb2, fo2, fb3, slev;
   int valve;
 	char programName[32];

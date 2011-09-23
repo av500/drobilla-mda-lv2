@@ -79,6 +79,7 @@ mdaBandisto::mdaBandisto(audioMasterCallback audioMaster)	: AudioEffectX(audioMa
   }
   fi1 = (float)pow(10.0,fParam2 - 1.70); fo1=(float)(1.0 - fi1);
   fi2 = (float)pow(10.0,fParam3 - 1.05); fo2=(float)(1.0 - fi2);
+  fb1 = fb2 = fb3 = 0.0f;
 }
 
 mdaBandisto::~mdaBandisto()
