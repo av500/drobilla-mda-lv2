@@ -26,7 +26,7 @@ def configure(conf):
 
     autowaf.check_header(conf, 'c', 'lv2/lv2plug.in/ns/lv2core/lv2.h')
 
-    conf.env.append_value('CFLAGS', '-std=c99')
+    conf.env.append_unique('CFLAGS', '-std=c99')
 
     # Set env['pluginlib_PATTERN']
     pat = conf.env['cxxshlib_PATTERN']
