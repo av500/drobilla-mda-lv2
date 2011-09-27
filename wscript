@@ -15,14 +15,14 @@ top = '.'
 out = 'build'
 
 def options(opt):
-    autowaf.set_options(opt)
     opt.load('compiler_cxx')
+    autowaf.set_options(opt)
 
 def configure(conf):
+    conf.load('compiler_cxx')
     autowaf.configure(conf)
     conf.line_just = 23
     autowaf.display_header('Mdala Configuration')
-    conf.load('compiler_cxx')
 
     autowaf.check_header(conf, 'c', 'lv2/lv2plug.in/ns/lv2core/lv2.h')
 
