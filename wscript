@@ -24,7 +24,7 @@ def configure(conf):
     conf.line_just = 23
     autowaf.display_header('Mdala Configuration')
 
-    autowaf.check_header(conf, 'c', 'lv2/lv2plug.in/ns/lv2core/lv2.h')
+    autowaf.check_pkg(conf, 'lv2core', uselib_store='LV2CORE')
 
     conf.env.append_unique('CFLAGS', '-std=c99')
 
@@ -55,6 +55,7 @@ def build_plugin(bld, lang, bundle, name, source, cflags=[], libs=[]):
     if libs != []:
         autowaf.use_lib(bld, obj, libs)
     obj.install_path = '${LV2DIR}/' + bundle
+    obj.uselib = ['LV2CORE']
 
     # Install data file
     data_file = '%s.ttl' % name
