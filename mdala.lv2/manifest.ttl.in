@@ -1,183 +1,197 @@
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix mdala: <http://drobilla.net/plugins/mdala/> .
+@prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix uiext: <http://lv2plug.in/ns/extensions/ui#> .
 
-<http://drobilla.net/plugins/mdala/Ambience>
+mdala:stereoIn
+	a pg:StereoGroup ,
+		pg:InputGroup ;
+	lv2:name "Input" ;
+	lv2:symbol "in" .
+
+mdala:stereoOut
+	a pg:StereoGroup ,
+		pg:OutputGroup ;
+	pg:source mdala:stereoIn ;
+	lv2:name "Output" ;
+	lv2:symbol "out" .
+
+mdala:Ambience
 	a lv2:Plugin ;
 	rdfs:seeAlso <Ambience.ttl> ;
 	lv2:binary <Ambience@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Bandisto>
+mdala:Bandisto
 	a lv2:Plugin ;
 	rdfs:seeAlso <Bandisto.ttl> ;
 	lv2:binary <Bandisto@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/BeatBox>
+mdala:BeatBox
 	a lv2:Plugin ;
 	rdfs:seeAlso <BeatBox.ttl> ;
 	lv2:binary <BeatBox@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Combo>
+mdala:Combo
 	a lv2:Plugin ;
 	rdfs:seeAlso <Combo.ttl> ;
 	lv2:binary <Combo@LIB_EXT@> .
 
-#<http://drobilla.net/plugins/mdala/DX10>
+#mdala:DX10
 #	a lv2:Plugin ;
 #	rdfs:seeAlso <DX10.ttl> ;
 #	lv2:binary <DX10@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/DeEss>
+mdala:DeEss
 	a lv2:Plugin ;
 	rdfs:seeAlso <DeEss.ttl> ;
 	lv2:binary <DeEss@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Degrade>
+mdala:Degrade
 	a lv2:Plugin ;
 	rdfs:seeAlso <Degrade.ttl> ;
 	lv2:binary <Degrade@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Delay>
+mdala:Delay
 	a lv2:Plugin ;
 	rdfs:seeAlso <Delay.ttl> ;
 	lv2:binary <Delay@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Detune>
+mdala:Detune
 	a lv2:Plugin ;
 	rdfs:seeAlso <Detune.ttl> ;
 	lv2:binary <Detune@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Dither>
+mdala:Dither
 	a lv2:Plugin ;
 	rdfs:seeAlso <Dither.ttl> ;
 	lv2:binary <Dither@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/DubDelay>
+mdala:DubDelay
 	a lv2:Plugin ;
 	rdfs:seeAlso <DubDelay.ttl> ;
 	lv2:binary <DubDelay@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Dynamics>
+mdala:Dynamics
 	a lv2:Plugin ;
 	rdfs:seeAlso <Dynamics.ttl> ;
 	lv2:binary <Dynamics@LIB_EXT@> .
 
-#<http://drobilla.net/plugins/mdala/EPiano>
+#mdala:EPiano
 #	a lv2:Plugin ;
 #	rdfs:seeAlso <EPiano.ttl> ;
 #	lv2:binary <EPiano@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Image>
+mdala:Image
 	a lv2:Plugin ;
 	rdfs:seeAlso <Image.ttl> ;
 	lv2:binary <Image@LIB_EXT@> .
 
-#<http://drobilla.net/plugins/mdala/JX10>
+#mdala:JX10
 #	a lv2:Plugin ;
 #	rdfs:seeAlso <JX10.ttl> ;
 #	lv2:binary <JX10@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Leslie>
+mdala:Leslie
 	a lv2:Plugin ;
 	rdfs:seeAlso <Leslie.ttl> ;
 	lv2:binary <Leslie@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Limiter>
+mdala:Limiter
 	a lv2:Plugin ;
 	rdfs:seeAlso <Limiter.ttl> ;
 	lv2:binary <Limiter@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Loudness>
+mdala:Loudness
 	a lv2:Plugin ;
 	rdfs:seeAlso <Loudness.ttl> ;
 	lv2:binary <Loudness@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/MultiBand>
+mdala:MultiBand
 	a lv2:Plugin ;
 	rdfs:seeAlso <MultiBand.ttl> ;
 	lv2:binary <MultiBand@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Overdrive>
+mdala:Overdrive
 	a lv2:Plugin ;
 	rdfs:seeAlso <Overdrive.ttl> ;
 	lv2:binary <Overdrive@LIB_EXT@> .
 
-#<http://drobilla.net/plugins/mdala/Piano>
+#mdala:Piano
 #	a lv2:Plugin ;
 #	rdfs:seeAlso <Piano.ttl> ;
 #	lv2:binary <Piano@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/RePsycho>
+mdala:RePsycho
 	a lv2:Plugin ;
 	rdfs:seeAlso <RePsycho.ttl> ;
 	lv2:binary <RePsycho@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/RezFilter>
+mdala:RezFilter
 	a lv2:Plugin ;
 	rdfs:seeAlso <RezFilter.ttl> ;
 	lv2:binary <RezFilter@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/RingMod>
+mdala:RingMod
 	a lv2:Plugin ;
 	rdfs:seeAlso <RingMod.ttl> ;
 	lv2:binary <RingMod@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/RoundPan>
+mdala:RoundPan
 	a lv2:Plugin ;
 	rdfs:seeAlso <RoundPan.ttl> ;
 	lv2:binary <RoundPan@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Shepard>
+mdala:Shepard
 	a lv2:Plugin ;
 	rdfs:seeAlso <Shepard.ttl> ;
 	lv2:binary <Shepard@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Splitter>
+mdala:Splitter
 	a lv2:Plugin ;
 	rdfs:seeAlso <Splitter.ttl> ;
 	lv2:binary <Splitter@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Stereo>
+mdala:Stereo
 	a lv2:Plugin ;
 	rdfs:seeAlso <Stereo.ttl> ;
 	lv2:binary <Stereo@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/SubSynth>
+mdala:SubSynth
 	a lv2:Plugin ;
 	rdfs:seeAlso <SubSynth.ttl> ;
 	lv2:binary <SubSynth@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/TalkBox>
+mdala:TalkBox
 	a lv2:Plugin ;
 	rdfs:seeAlso <TalkBox.ttl> ;
 	lv2:binary <TalkBox@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/TestTone>
+mdala:TestTone
 	a lv2:Plugin ;
 	rdfs:seeAlso <TestTone.ttl> ;
 	lv2:binary <TestTone@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/ThruZero>
+mdala:ThruZero
 	a lv2:Plugin ;
 	rdfs:seeAlso <ThruZero.ttl> ;
 	lv2:binary <ThruZero@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Tracker>
+mdala:Tracker
 	a lv2:Plugin ;
 	rdfs:seeAlso <Tracker.ttl> ;
 	lv2:binary <Tracker@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Transient>
+mdala:Transient
 	a lv2:Plugin ;
 	rdfs:seeAlso <Transient.ttl> ;
 	lv2:binary <Transient@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/VocInput>
+mdala:VocInput
 	a lv2:Plugin ;
 	rdfs:seeAlso <VocInput.ttl> ;
 	lv2:binary <VocInput@LIB_EXT@> .
 
-<http://drobilla.net/plugins/mdala/Vocoder>
+mdala:Vocoder
 	a lv2:Plugin ;
 	rdfs:seeAlso <Vocoder.ttl> ;
 	lv2:binary <Vocoder@LIB_EXT@> .

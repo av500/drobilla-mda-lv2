@@ -1,62 +1,84 @@
-@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix mdala: <http://drobilla.net/plugins/mdala/> .
+@prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
 
-<http://drobilla.net/plugins/mdala/TalkBox>
-	a lv2:Plugin , lv2:FilterPlugin ;
+mdala:TalkBox
+	a lv2:Plugin ,
+		lv2:FilterPlugin ;
 	lv2:symbol "TalkBox" ;
 	doap:name "Mdala TalkBox" ;
+	doap:shortdesc "High resolution vocoder" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
+	pg:mainInput mdala:mainIn ;
+	pg:mainOutput mdala:mainOut ;
 	lv2:port [
-		a lv2:InputPort, lv2:ControlPort ;
+		a lv2:InputPort ,
+			lv2:ControlPort ;
 		lv2:index 0 ;
 		lv2:name "Wet" ;
 		lv2:symbol "wet" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
+		lv2:maximum 1.0
 	] , [
-		a lv2:InputPort, lv2:ControlPort ;
+		a lv2:InputPort ,
+			lv2:ControlPort ;
 		lv2:index 1 ;
 		lv2:name "Dry" ;
 		lv2:symbol "dry" ;
 		lv2:default 0 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
+		lv2:maximum 1.0
 	] , [
-		a lv2:InputPort, lv2:ControlPort ;
+		a lv2:InputPort ,
+			lv2:ControlPort ;
 		lv2:index 2 ;
 		lv2:name "Carrier" ;
 		lv2:symbol "carrier" ;
 		lv2:default 0 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
+		lv2:maximum 1.0
 	] , [
-		a lv2:InputPort, lv2:ControlPort ;
+		a lv2:InputPort ,
+			lv2:ControlPort ;
 		lv2:index 3 ;
 		lv2:name "Quality" ;
 		lv2:symbol "quality" ;
 		lv2:default 1 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
+		lv2:maximum 1.0
 	] , [
-		a lv2:InputPort, lv2:AudioPort ;
+		a lv2:InputPort ,
+			lv2:AudioPort ;
 		lv2:index 4 ;
-		lv2:symbol "in1" ;
-		lv2:name "Input 1" ;
+		lv2:symbol "left_in" ;
+		lv2:name "Left In" ;
+		lv2:designation pg:left ;
+		pg:group mdala:mainIn
 	] , [
-		a lv2:InputPort, lv2:AudioPort ;
+		a lv2:InputPort ,
+			lv2:AudioPort ;
 		lv2:index 5 ;
-		lv2:symbol "in2" ;
-		lv2:name "Input 2" ;
+		lv2:symbol "right_in" ;
+		lv2:name "Right In" ;
+		lv2:designation pg:right ;
+		pg:group mdala:mainIn
 	] , [
-		a lv2:OutputPort, lv2:AudioPort ;
+		a lv2:OutputPort ,
+			lv2:AudioPort ;
 		lv2:index 6 ;
-		lv2:symbol "out1" ;
-		lv2:name "Output 1" ;
+		lv2:symbol "left_out" ;
+		lv2:name "Left Out" ;
+		lv2:designation pg:left ;
+		pg:group mdala:mainOut
 	] , [
-		a lv2:OutputPort, lv2:AudioPort ;
+		a lv2:OutputPort ,
+			lv2:AudioPort ;
 		lv2:index 7 ;
-		lv2:symbol "out2" ;
-		lv2:name "Output 2" ;
+		lv2:symbol "right_out" ;
+		lv2:name "Right Out" ;
+		lv2:designation pg:right ;
+		pg:group mdala:mainOut
 	] .

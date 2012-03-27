@@ -1,86 +1,111 @@
-@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix mdala: <http://drobilla.net/plugins/mdala/> .
+@prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
 
-<http://drobilla.net/plugins/mdala/RePsycho>
-	a lv2:Plugin , lv2:PitchPlugin ;
+mdala:RePsycho
+	a lv2:Plugin ,
+		lv2:PitchPlugin ;
 	lv2:symbol "RePsycho" ;
 	doap:name "Mdala RePsycho!" ;
+	doap:shortdesc "Drum loop pitch changer" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:pluginProperty lv2:hardRTCapable ;
+	pg:mainInput mdala:mainIn ;
+	pg:mainOutput mdala:mainOut ;
 	lv2:port [
-		a lv2:InputPort, lv2:ControlPort ;
+		a lv2:InputPort ,
+			lv2:ControlPort ;
 		lv2:index 0 ;
 		lv2:name "Tune" ;
 		lv2:symbol "tune" ;
 		lv2:default 1 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
+		lv2:maximum 1.0
 	] , [
-		a lv2:InputPort, lv2:ControlPort ;
+		a lv2:InputPort ,
+			lv2:ControlPort ;
 		lv2:index 1 ;
 		lv2:name "Fine" ;
 		lv2:symbol "fine" ;
 		lv2:default 1 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
+		lv2:maximum 1.0
 	] , [
-		a lv2:InputPort, lv2:ControlPort ;
+		a lv2:InputPort ,
+			lv2:ControlPort ;
 		lv2:index 2 ;
 		lv2:name "Decay" ;
 		lv2:symbol "decay" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
+		lv2:maximum 1.0
 	] , [
-		a lv2:InputPort, lv2:ControlPort ;
+		a lv2:InputPort ,
+			lv2:ControlPort ;
 		lv2:index 3 ;
 		lv2:name "Thresh" ;
 		lv2:symbol "thresh" ;
 		lv2:default 0.6 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
+		lv2:maximum 1.0
 	] , [
-		a lv2:InputPort, lv2:ControlPort ;
+		a lv2:InputPort ,
+			lv2:ControlPort ;
 		lv2:index 4 ;
 		lv2:name "Hold" ;
 		lv2:symbol "hold" ;
 		lv2:default 0.45 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
+		lv2:maximum 1.0
 	] , [
-		a lv2:InputPort, lv2:ControlPort ;
+		a lv2:InputPort ,
+			lv2:ControlPort ;
 		lv2:index 5 ;
 		lv2:name "Mix" ;
 		lv2:symbol "mix" ;
 		lv2:default 1 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
+		lv2:maximum 1.0
 	] , [
-		a lv2:InputPort, lv2:ControlPort ;
+		a lv2:InputPort ,
+			lv2:ControlPort ;
 		lv2:index 6 ;
 		lv2:name "Quality" ;
 		lv2:symbol "quality" ;
 		lv2:default 0.4 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
+		lv2:maximum 1.0
 	] , [
-		a lv2:InputPort, lv2:AudioPort ;
+		a lv2:InputPort ,
+			lv2:AudioPort ;
 		lv2:index 7 ;
-		lv2:symbol "in1" ;
-		lv2:name "Input 1" ;
+		lv2:symbol "left_in" ;
+		lv2:name "Left In" ;
+		lv2:designation pg:left ;
+		pg:group mdala:mainIn
 	] , [
-		a lv2:InputPort, lv2:AudioPort ;
+		a lv2:InputPort ,
+			lv2:AudioPort ;
 		lv2:index 8 ;
-		lv2:symbol "in2" ;
-		lv2:name "Input 2" ;
+		lv2:symbol "right_in" ;
+		lv2:name "Right In" ;
+		lv2:designation pg:right ;
+		pg:group mdala:mainIn
 	] , [
-		a lv2:OutputPort, lv2:AudioPort ;
+		a lv2:OutputPort ,
+			lv2:AudioPort ;
 		lv2:index 9 ;
-		lv2:symbol "out1" ;
-		lv2:name "Output 1" ;
+		lv2:symbol "left_out" ;
+		lv2:name "Left Out" ;
+		lv2:designation pg:left ;
+		pg:group mdala:mainOut
 	] , [
-		a lv2:OutputPort, lv2:AudioPort ;
+		a lv2:OutputPort ,
+			lv2:AudioPort ;
 		lv2:index 10 ;
-		lv2:symbol "out2" ;
-		lv2:name "Output 2" ;
+		lv2:symbol "right_out" ;
+		lv2:name "Right Out" ;
+		lv2:designation pg:right ;
+		pg:group mdala:mainOut
 	] .
