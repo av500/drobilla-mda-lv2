@@ -11,7 +11,7 @@
 	lv2:name "Envelope" ;
 	lv2:symbol "env" .
 
-mdala:Piano
+mdala:piano
 	a lv2:Plugin ,
 		lv2:InstrumentPlugin ;
 	lv2:symbol "Piano" ;

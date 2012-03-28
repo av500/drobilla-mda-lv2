@@ -3,7 +3,7 @@
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
 
-mdala:EPiano
+mdala:ePiano
 	a lv2:Plugin ,
 		lv2:InstrumentPlugin ;
 	lv2:symbol "EPiano" ;

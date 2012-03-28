@@ -18,7 +18,7 @@
 	lv2:name "Amp Envelope" ;
 	lv2:symbol "amp_env" .
 
-mdala:JX10
+mdala:jx10
 	a lv2:Plugin ,
 		lv2:InstrumentPlugin ;
 	lv2:symbol "JX10" ;
