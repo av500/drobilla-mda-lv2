@@ -4,7 +4,7 @@
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-mdala:roundPan
+mdala:RoundPan
 	a lv2:Plugin ,
 		lv2:SpatialPlugin ;
 	lv2:symbol "RoundPan" ;

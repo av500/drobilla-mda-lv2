@@ -16,182 +16,182 @@ mdala:stereoOut
 	lv2:name "Output" ;
 	lv2:symbol "out" .
 
-mdala:ambience
+mdala:Ambience
 	a lv2:Plugin ;
 	rdfs:seeAlso <Ambience.ttl> ;
 	lv2:binary <Ambience@LIB_EXT@> .
 
-mdala:bandisto
+mdala:Bandisto
 	a lv2:Plugin ;
 	rdfs:seeAlso <Bandisto.ttl> ;
 	lv2:binary <Bandisto@LIB_EXT@> .
 
-mdala:beatBox
+mdala:BeatBox
 	a lv2:Plugin ;
 	rdfs:seeAlso <BeatBox.ttl> ;
 	lv2:binary <BeatBox@LIB_EXT@> .
 
-mdala:combo
+mdala:Combo
 	a lv2:Plugin ;
 	rdfs:seeAlso <Combo.ttl> ;
 	lv2:binary <Combo@LIB_EXT@> .
 
-#mdala:dx10
+#mdala:DX10
 #	a lv2:Plugin ;
 #	rdfs:seeAlso <DX10.ttl> ;
 #	lv2:binary <DX10@LIB_EXT@> .
 
-mdala:deEss
+mdala:DeEss
 	a lv2:Plugin ;
 	rdfs:seeAlso <DeEss.ttl> ;
 	lv2:binary <DeEss@LIB_EXT@> .
 
-mdala:degrade
+mdala:Degrade
 	a lv2:Plugin ;
 	rdfs:seeAlso <Degrade.ttl> ;
 	lv2:binary <Degrade@LIB_EXT@> .
 
-mdala:delay
+mdala:Delay
 	a lv2:Plugin ;
 	rdfs:seeAlso <Delay.ttl> ;
 	lv2:binary <Delay@LIB_EXT@> .
 
-mdala:detune
+mdala:Detune
 	a lv2:Plugin ;
 	rdfs:seeAlso <Detune.ttl> ;
 	lv2:binary <Detune@LIB_EXT@> .
 
-mdala:dither
+mdala:Dither
 	a lv2:Plugin ;
 	rdfs:seeAlso <Dither.ttl> ;
 	lv2:binary <Dither@LIB_EXT@> .
 
-mdala:dubDelay
+mdala:DubDelay
 	a lv2:Plugin ;
 	rdfs:seeAlso <DubDelay.ttl> ;
 	lv2:binary <DubDelay@LIB_EXT@> .
 
-mdala:dynamics
+mdala:Dynamics
 	a lv2:Plugin ;
 	rdfs:seeAlso <Dynamics.ttl> ;
 	lv2:binary <Dynamics@LIB_EXT@> .
 
-#mdala:ePiano
+#mdala:EPiano
 #	a lv2:Plugin ;
 #	rdfs:seeAlso <EPiano.ttl> ;
 #	lv2:binary <EPiano@LIB_EXT@> .
 
-mdala:image
+mdala:Image
 	a lv2:Plugin ;
 	rdfs:seeAlso <Image.ttl> ;
 	lv2:binary <Image@LIB_EXT@> .
 
-#mdala:jx10
+#mdala:JX10
 #	a lv2:Plugin ;
 #	rdfs:seeAlso <JX10.ttl> ;
 #	lv2:binary <JX10@LIB_EXT@> .
 
-mdala:leslie
+mdala:Leslie
 	a lv2:Plugin ;
 	rdfs:seeAlso <Leslie.ttl> ;
 	lv2:binary <Leslie@LIB_EXT@> .
 
-mdala:limiter
+mdala:Limiter
 	a lv2:Plugin ;
 	rdfs:seeAlso <Limiter.ttl> ;
 	lv2:binary <Limiter@LIB_EXT@> .
 
-mdala:loudness
+mdala:Loudness
 	a lv2:Plugin ;
 	rdfs:seeAlso <Loudness.ttl> ;
 	lv2:binary <Loudness@LIB_EXT@> .
 
-mdala:multiBand
+mdala:MultiBand
 	a lv2:Plugin ;
 	rdfs:seeAlso <MultiBand.ttl> ;
 	lv2:binary <MultiBand@LIB_EXT@> .
 
-mdala:overdrive
+mdala:Overdrive
 	a lv2:Plugin ;
 	rdfs:seeAlso <Overdrive.ttl> ;
 	lv2:binary <Overdrive@LIB_EXT@> .
 
-#mdala:piano
+#mdala:Piano
 #	a lv2:Plugin ;
 #	rdfs:seeAlso <Piano.ttl> ;
 #	lv2:binary <Piano@LIB_EXT@> .
 
-mdala:rePsycho
+mdala:RePsycho
 	a lv2:Plugin ;
 	rdfs:seeAlso <RePsycho.ttl> ;
 	lv2:binary <RePsycho@LIB_EXT@> .
 
-mdala:rezFilter
+mdala:RezFilter
 	a lv2:Plugin ;
 	rdfs:seeAlso <RezFilter.ttl> ;
 	lv2:binary <RezFilter@LIB_EXT@> .
 
-mdala:ringMod
+mdala:RingMod
 	a lv2:Plugin ;
 	rdfs:seeAlso <RingMod.ttl> ;
 	lv2:binary <RingMod@LIB_EXT@> .
 
-mdala:roundPan
+mdala:RoundPan
 	a lv2:Plugin ;
 	rdfs:seeAlso <RoundPan.ttl> ;
 	lv2:binary <RoundPan@LIB_EXT@> .
 
-mdala:shepard
+mdala:Shepard
 	a lv2:Plugin ;
 	rdfs:seeAlso <Shepard.ttl> ;
 	lv2:binary <Shepard@LIB_EXT@> .
 
-mdala:splitter
+mdala:Splitter
 	a lv2:Plugin ;
 	rdfs:seeAlso <Splitter.ttl> ;
 	lv2:binary <Splitter@LIB_EXT@> .
 
-mdala:stereo
+mdala:Stereo
 	a lv2:Plugin ;
 	rdfs:seeAlso <Stereo.ttl> ;
 	lv2:binary <Stereo@LIB_EXT@> .
 
-mdala:subSynth
+mdala:SubSynth
 	a lv2:Plugin ;
 	rdfs:seeAlso <SubSynth.ttl> ;
 	lv2:binary <SubSynth@LIB_EXT@> .
 
-mdala:talkBox
+mdala:TalkBox
 	a lv2:Plugin ;
 	rdfs:seeAlso <TalkBox.ttl> ;
 	lv2:binary <TalkBox@LIB_EXT@> .
 
-mdala:testTone
+mdala:TestTone
 	a lv2:Plugin ;
 	rdfs:seeAlso <TestTone.ttl> ;
 	lv2:binary <TestTone@LIB_EXT@> .
 
-mdala:thruZero
+mdala:ThruZero
 	a lv2:Plugin ;
 	rdfs:seeAlso <ThruZero.ttl> ;
 	lv2:binary <ThruZero@LIB_EXT@> .
 
-mdala:tracker
+mdala:Tracker
 	a lv2:Plugin ;
 	rdfs:seeAlso <Tracker.ttl> ;
 	lv2:binary <Tracker@LIB_EXT@> .
 
-mdala:transient
+mdala:Transient
 	a lv2:Plugin ;
 	rdfs:seeAlso <Transient.ttl> ;
 	lv2:binary <Transient@LIB_EXT@> .
 
-mdala:vocInput
+mdala:VocInput
 	a lv2:Plugin ;
 	rdfs:seeAlso <VocInput.ttl> ;
 	lv2:binary <VocInput@LIB_EXT@> .
 
-mdala:vocoder
+mdala:Vocoder
 	a lv2:Plugin ;
 	rdfs:seeAlso <Vocoder.ttl> ;
 	lv2:binary <Vocoder@LIB_EXT@> .

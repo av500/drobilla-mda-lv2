@@ -11,7 +11,7 @@
 	lv2:name "Envelope" ;
 	lv2:symbol "env" .
 
-mdala:dx10
+mdala:DX10
 	a lv2:Plugin ,
 		lv2:InstrumentPlugin ;
 	lv2:symbol "DX10" ;

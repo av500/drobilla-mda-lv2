@@ -6,7 +6,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-mdala:subSynth
+mdala:SubSynth
 	lv2:symbol "SubSynth" ;
 	doap:name "Mdala SubSynth" ;
 	doap:shortdesc "Several low frequency enhancement methods" ;
