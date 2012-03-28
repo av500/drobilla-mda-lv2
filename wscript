@@ -7,7 +7,7 @@ from waflib.extras import autowaf as autowaf
 MDALA_VERSION = '0.0.0'
 
 # Variables for 'waf dist'
-APPNAME = 'mdala.lv2'
+APPNAME = 'mda.lv2'
 VERSION = MDALA_VERSION
 
 # Mandatory variables
@@ -22,7 +22,7 @@ def configure(conf):
     conf.load('compiler_cxx')
     autowaf.configure(conf)
     conf.line_just = 23
-    autowaf.display_header('Mdala Configuration')
+    autowaf.display_header('MDA.lv2 Configuration')
 
     autowaf.check_pkg(conf, 'lv2', atleast_version='0.1.0', uselib_store='LV2')
 
@@ -62,7 +62,7 @@ def build_plugin(bld, lang, bundle, name, source, cflags=[], libs=[]):
     bld.install_files('${LV2DIR}/' + bundle, os.path.join(bundle, data_file))
 
 def build(bld):
-    # Copy data files to build bundle (build/mdala.lv2)
+    # Copy data files to build bundle (build/mda.lv2)
     def do_copy(task):
         src = task.inputs[0].abspath()
         tgt = task.outputs[0].abspath()
@@ -70,17 +70,17 @@ def build(bld):
         #cmd = 'cp %s %s' % (src, tgt)
         #return task.exec_command(cmd)
 
-    for i in bld.path.ant_glob('mdala.lv2/[A-Z]*.ttl'):
+    for i in bld.path.ant_glob('mda.lv2/[A-Z]*.ttl'):
         bld(rule   = do_copy,
             source = i,
-            target = bld.path.get_bld().make_node('mdala.lv2/%s' % i),
-            install_path = '${LV2DIR}/mdala.lv2')
+            target = bld.path.get_bld().make_node('mda.lv2/%s' % i),
+            install_path = '${LV2DIR}/mda.lv2')
 
     bld(features = 'subst',
-        source   = 'mdala.lv2/manifest.ttl.in',
-        target   = bld.path.get_bld().make_node('mdala.lv2/manifest.ttl'),
+        source   = 'mda.lv2/manifest.ttl.in',
+        target   = bld.path.get_bld().make_node('mda.lv2/manifest.ttl'),
         LIB_EXT  = bld.env['pluginlib_EXT'],
-        install_path = '${LV2DIR}/mdala.lv2')
+        install_path = '${LV2DIR}/mda.lv2')
 
     plugins = '''
             Ambience
@@ -124,8 +124,8 @@ def build(bld):
 
     # Build plugin libraries
     for i in plugins:
-        build_plugin(bld, 'cxx', 'mdala.lv2', i, ['src/mda%s.cpp' % i],
-                                 ['-DPLUGIN_CLASS=mda%s' % i,
-                                  '-DURI_PREFIX=\"http://drobilla.net/plugins/mdala/\"',
-                                  '-DPLUGIN_URI_SUFFIX="%s"' % i,
-                                  '-DPLUGIN_HEADER="src/mda%s.h"' % i])
+        build_plugin(bld, 'cxx', 'mda.lv2', i, ['src/mda%s.cpp' % i],
+                     ['-DPLUGIN_CLASS=mda%s' % i,
+                      '-DURI_PREFIX=\"http://drobilla.net/plugins/mda/\"',
+                      '-DPLUGIN_URI_SUFFIX="%s"' % i,
+                      '-DPLUGIN_HEADER="src/mda%s.h"' % i])
