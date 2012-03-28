@@ -2,6 +2,8 @@
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 mdala:Bandisto
 	a lv2:Plugin ,
@@ -13,6 +15,7 @@ mdala:Bandisto
 	lv2:pluginProperty lv2:hardRTCapable ;
 	pg:mainInput mdala:mainIn ;
 	pg:mainOutput mdala:mainOut ;
+	rdfs:comment "This plug is like MultiBand but uses 3 bands of clipping instead of compression.  This is unlikely to be a plug you use every day, but when you want to recreate the sound of torn bass-bins you know where to come!" ;
 	lv2:port [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -21,7 +24,22 @@ mdala:Bandisto
 		lv2:symbol "listen" ;
 		lv2:default 1 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:portProperty lv2:enumeration ;
+		lv2:scalePoint [
+			rdfs:label "Low" ;
+			rdf:value 0.0
+		] , [
+			rdfs:label "Mid" ;
+			rdf:value 0.2
+		] , [
+			rdfs:label "High" ;
+			rdf:value 0.4
+		] , [
+			rdfs:label "Out" ;
+			rdf:value 0.6
+		] ;
+		rdfs:comment "Audition the low, mid and high bands individually"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -30,7 +48,8 @@ mdala:Bandisto
 		lv2:symbol "l_m" ;
 		lv2:default 0.4 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Low / mid crossover frequency"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -39,7 +58,8 @@ mdala:Bandisto
 		lv2:symbol "m_h" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Mid / high crossover frequency"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -48,7 +68,8 @@ mdala:Bandisto
 		lv2:symbol "l_dist" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Distortion amount for low band"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -57,7 +78,8 @@ mdala:Bandisto
 		lv2:symbol "m_dist" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Distortion amount for mid band"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -66,7 +88,8 @@ mdala:Bandisto
 		lv2:symbol "h_dist" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Distortion amount for high band"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -75,7 +98,8 @@ mdala:Bandisto
 		lv2:symbol "l_out" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Output level for low band"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -84,7 +108,8 @@ mdala:Bandisto
 		lv2:symbol "m_out" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Output level for mid band"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -93,7 +118,8 @@ mdala:Bandisto
 		lv2:symbol "h_out" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Output level for high band"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -102,7 +128,14 @@ mdala:Bandisto
 		lv2:symbol "mode" ;
 		lv2:default 0.4 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:scalePoint [
+			rdfs:label "Bipolar" ;
+			rdf:value 0.0
+		] , [
+			rdfs:label "Unipolar" ;
+			rdf:value 1.0
+		]
 	] , [
 		a lv2:InputPort ,
 			lv2:AudioPort ;

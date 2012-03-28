@@ -31,7 +31,7 @@ mdaLimiter::mdaLimiter(audioMasterCallback audioMaster)	: AudioEffectX(audioMast
   fParam2 = (float)0.60; //trim
   fParam3 = (float)0.15; //attack
   fParam4 = (float)0.50; //release
-  fParam5 = (float)0.40; //knee
+  fParam5 = (float)0.0; //knee
 
   setNumInputs(2);		    // stereo in
 	setNumOutputs(2);		    // stereo out
@@ -40,7 +40,7 @@ mdaLimiter::mdaLimiter(audioMasterCallback audioMaster)	: AudioEffectX(audioMast
 	canProcessReplacing();	// supports both accumulating and replacing output
 	strcpy(programName, "Limiter");	// default program name
 
-  if(fParam5>0.5) //soft knee
+  if(fParam5>0.0) //soft knee
   {
     thresh = (float)pow(10.0, 1.0 - (2.0 * fParam1));
   }
@@ -94,7 +94,7 @@ void mdaLimiter::setParameter(LvzInt32 index, float value)
     case 4: fParam5 = value; break;
   }
   //calcs here
-  if(fParam5>0.5) //soft knee
+  if(fParam5>0.0) //soft knee
   {
     thresh = (float)pow(10.0, 1.0 - (2.0 * fParam1));
   }
@@ -145,8 +145,8 @@ void mdaLimiter::getParameterDisplay(LvzInt32 index, char *text)
     case 1: int2strng((LvzInt32)(40.0*fParam2 - 20.0),text); break;
     case 3: int2strng((LvzInt32)(-301030.1 / (getSampleRate() * log10(1.0 - att))),text); break;
     case 2: int2strng((LvzInt32)(-301.0301 / (getSampleRate() * log10(1.0 - rel))),text); break;
-    case 4: if(fParam5<0.5) strcpy(text, "HARD");
-            else strcpy(text, "SOFT"); break;
+    case 4: if(fParam5>0.0) strcpy(text, "SOFT");
+            else strcpy(text, "HARD"); break;
   }
 
 }

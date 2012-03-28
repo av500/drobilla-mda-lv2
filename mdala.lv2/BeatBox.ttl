@@ -2,6 +2,8 @@
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 mdala:BeatBox
 	lv2:symbol "BBox" ;
@@ -11,6 +13,9 @@ mdala:BeatBox
 	lv2:pluginProperty lv2:hardRTCapable ;
 	pg:mainInput mdala:mainIn ;
 	pg:mainOutput mdala:mainOut ;
+	rdfs:comment """Contains three samples (kick, snare and hat) designed to be triggered by incoming audio in three frequency ranges.  The default samples are based on the Roland CR-78.
+
+To record your own sounds, use the Record control to monitor the plug's input, then with the source stopped select the slot to record into, play your sound, then with the source stopped again, switch back to monitoring. This process is easier in an 'off line' editor such as WaveLab, rather than during a live mixdown in Cubase.""" ;
 	lv2:port [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -19,7 +24,8 @@ mdala:BeatBox
 		lv2:symbol "hat_thr" ;
 		lv2:default 0.3 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Trigger threshold level"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -28,7 +34,8 @@ mdala:BeatBox
 		lv2:symbol "hat_rate" ;
 		lv2:default 0.45 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Maximum trigger rate"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -37,7 +44,8 @@ mdala:BeatBox
 		lv2:symbol "hat_mix" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Sample playback level"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -46,7 +54,8 @@ mdala:BeatBox
 		lv2:symbol "kik_thr" ;
 		lv2:default 0.46 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment """Trigger filter frequency - switches to "key listen" mode while adjusted"""
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -73,7 +82,8 @@ mdala:BeatBox
 		lv2:symbol "snr_thr" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Trigger filter frequency - increase if snare sample is triggered by kick drum"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -98,18 +108,36 @@ mdala:BeatBox
 		lv2:index 9 ;
 		lv2:name "Dynamics" ;
 		lv2:symbol "dynamics" ;
-		lv2:default 0 ;
+		lv2:default 0.0 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Apply input signal level variations to output"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
 		lv2:index 10 ;
 		lv2:name "Record" ;
 		lv2:symbol "record" ;
-		lv2:default 0 ;
+		lv2:default 0.0 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:portProperty lv2:enumeration ;
+		lv2:scalePoint [
+			rdfs:label "None" ;
+			rdf:value 0.0
+		] , [
+			rdfs:label "Monitor Input" ;
+			rdf:value 0.2
+		] , [
+			rdfs:label "Record Hat" ;
+			rdf:value 0.4
+		] , [
+			rdfs:label "Record Kick" ;
+			rdf:value 0.6
+		] , [
+			rdfs:label "Record Snare" ;
+			rdf:value 0.8
+		]
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -118,7 +146,8 @@ mdala:BeatBox
 		lv2:symbol "thru_mix" ;
 		lv2:default 0 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Allow some of the input signal to be mixed with the output"
 	] , [
 		a lv2:InputPort ,
 			lv2:AudioPort ;

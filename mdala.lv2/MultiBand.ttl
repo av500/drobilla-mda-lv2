@@ -1,7 +1,15 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
+@prefix param: <http://lv2plug.in/ns/ext/parameters#> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://drobilla.net/plugins/mdala/MultiBand/env>
+	a param:EnvelopeControls ,
+		pg:InputGroup ;
+	lv2:name "Envelope" ;
+	lv2:symbol "env" .
 
 mdala:MultiBand
 	a lv2:Plugin ,
@@ -13,6 +21,9 @@ mdala:MultiBand
 	lv2:pluginProperty lv2:hardRTCapable ;
 	pg:mainInput mdala:mainIn ;
 	pg:mainOutput mdala:mainOut ;
+	rdfs:comment """As well as just "squashing everything" this plug-in can be used to "overcook" the mid-frequencies while leaving the low end unprocessed, enhancing playback over small speakers without affecting the overall sound too much.
+
+To give more control when mastering (and to offer something different from other dynamics processors) in Mono mode this plug does not compress any stereo information, but in Stereo mode only the stereo component is processed giving control over ambience and space with a similar sound to strereo "shufflers" - but be careful with the levels!  The stereo width control works as a "mono depth" control in Stereo mode.""" ;
 	lv2:port [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -21,7 +32,8 @@ mdala:MultiBand
 		lv2:symbol "listen" ;
 		lv2:default 1 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Audition the low, mid and high bands individually"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -30,7 +42,8 @@ mdala:MultiBand
 		lv2:symbol "l_m" ;
 		lv2:default 0.103 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Low / mid crossover frequency"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -39,7 +52,8 @@ mdala:MultiBand
 		lv2:symbol "m_h" ;
 		lv2:default 0.878 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Mid / high crossover frequency"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -48,7 +62,8 @@ mdala:MultiBand
 		lv2:symbol "l_comp" ;
 		lv2:default 0.54 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Low compression amount"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -57,7 +72,8 @@ mdala:MultiBand
 		lv2:symbol "m_comp" ;
 		lv2:default 0 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Mid compression amount"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -66,7 +82,8 @@ mdala:MultiBand
 		lv2:symbol "h_comp" ;
 		lv2:default 0.6 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "High compression amount"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -75,7 +92,8 @@ mdala:MultiBand
 		lv2:symbol "l_out" ;
 		lv2:default 0.45 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Low output level trim"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -84,7 +102,8 @@ mdala:MultiBand
 		lv2:symbol "m_out" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Mid output level trim"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -93,7 +112,8 @@ mdala:MultiBand
 		lv2:symbol "h_out" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "High output level trim"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -102,7 +122,9 @@ mdala:MultiBand
 		lv2:symbol "attack" ;
 		lv2:default 0.22 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:attack ;
+		pg:group <http://drobilla.net/plugins/mdala/MultiBand/env>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -111,7 +133,9 @@ mdala:MultiBand
 		lv2:symbol "release" ;
 		lv2:default 0.602 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:release ;
+		pg:group <http://drobilla.net/plugins/mdala/MultiBand/env>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -120,7 +144,8 @@ mdala:MultiBand
 		lv2:symbol "stereo" ;
 		lv2:default 0.55 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Used to restore stereo width when heavy processing is applied to Mono component"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;

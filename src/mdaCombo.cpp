@@ -33,7 +33,7 @@ mdaCombo::mdaCombo(audioMasterCallback audioMaster)	: AudioEffectX(audioMaster, 
   fParam2 = 0.50f; //drive
   fParam3 = 0.50f; //bias
   fParam4 = 0.50f; //output
-  fParam5 = 0.40f; //stereo
+  fParam5 = 0.00f; //stereo
   fParam6 = 0.00f; //hpf freq
   fParam7 = 0.50f; //hpf reso
 
@@ -70,7 +70,7 @@ void mdaCombo::setParameter(LvzInt32 index, float value)
     case 6: fParam7 = value; break;
   }
   //calcs here
-  ster=0; if(fParam5>0.5) ster=1;
+  ster=0; if(fParam5>0.0) ster=1;
   hpf = filterFreq(25.f);
 	switch(int(fParam1*6.9))
   {
@@ -244,7 +244,7 @@ void mdaCombo::getParameterDisplay(LvzInt32 index, char *text)
     case 1: int2strng((LvzInt32)(200 * fParam2 - 100), text); break;
     case 2: int2strng((LvzInt32)(200 * fParam3 - 100), text); break;
     case 3: int2strng((LvzInt32)(40 * fParam4 - 20), text); break;
-    case 4: if(fParam5>0.5) strcpy(text, "STEREO");
+    case 4: if(fParam5>0.0) strcpy(text, "STEREO");
                        else strcpy(text, "MONO"); break;
     case 5: int2strng((LvzInt32)(100 * fParam6), text); break;
     case 6: int2strng((LvzInt32)(100 * fParam7), text); break;
@@ -288,7 +288,7 @@ void mdaCombo::process(float **inputs, float **outputs, LvzInt32 sampleFrames)
 	--out1;
 	--out2;
 
-  if(fParam5>0.5) //stereo
+  if(fParam5>0.0) //stereo
   {
     while(--sampleFrames >= 0)
 	  {

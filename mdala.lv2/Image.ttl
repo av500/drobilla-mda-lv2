@@ -2,6 +2,8 @@
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 mdala:Image
 	a lv2:Plugin ,
@@ -13,6 +15,7 @@ mdala:Image
 	lv2:pluginProperty lv2:hardRTCapable ;
 	pg:mainInput mdala:mainIn ;
 	pg:mainOutput mdala:mainOut ;
+	rdfs:comment "Allows the level and pan of mono and stereo components to be adjusted separately, or components to be separated for individual processing before recombining with a second Image plug-in." ;
 	lv2:port [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -21,7 +24,20 @@ mdala:Image
 		lv2:symbol "mode" ;
 		lv2:default 0.6 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:scalePoint [
+			rdfs:label "Stereo image adjustment" ;
+			rdf:value 0.0
+		] , [
+			rdfs:label "Encode to MS" ;
+			rdf:value 0.25
+		] , [
+			rdfs:label "Decode from MS" ;
+			rdf:value 0.5
+		] , [
+			rdfs:label "Decode from MS (input channels reversed)" ;
+			rdf:value 0.75
+		]
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -30,7 +46,8 @@ mdala:Image
 		lv2:symbol "s_width" ;
 		lv2:default 0.75 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Stereo width (level of stereo component)"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -39,7 +56,8 @@ mdala:Image
 		lv2:symbol "s_pan" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Stereo image skew"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -48,7 +66,8 @@ mdala:Image
 		lv2:symbol "m_level" ;
 		lv2:default 0.75 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Centre depth"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -57,7 +76,8 @@ mdala:Image
 		lv2:symbol "m_pan" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Centre pan"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -66,7 +86,8 @@ mdala:Image
 		lv2:symbol "output" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Level trim (a 6dB correction may be required for some MS encoded material)"
 	] , [
 		a lv2:InputPort ,
 			lv2:AudioPort ;

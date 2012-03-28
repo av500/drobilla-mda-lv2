@@ -2,6 +2,7 @@
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 mdala:DubDelay
 	a lv2:Plugin ,
@@ -21,7 +22,8 @@ mdala:DubDelay
 		lv2:symbol "delay" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Delay time (delay is mono for authenticity!)"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -30,7 +32,8 @@ mdala:DubDelay
 		lv2:symbol "feedback" ;
 		lv2:default 0.7 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Feedback - with soft saturation at maximum left position, hard clipping at maximum right"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -39,7 +42,8 @@ mdala:DubDelay
 		lv2:symbol "fb_tone" ;
 		lv2:default 0.4 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Feedback filtering - low-pass to left, high-pass to right"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -48,7 +52,8 @@ mdala:DubDelay
 		lv2:symbol "lfo_depth" ;
 		lv2:default 0 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Delay time modulation (sine wave)"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -57,7 +62,8 @@ mdala:DubDelay
 		lv2:symbol "lfo_rate" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Modulation rate"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -66,7 +72,8 @@ mdala:DubDelay
 		lv2:symbol "fx_mix" ;
 		lv2:default 0.33 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Wet / dry mix"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -75,7 +82,8 @@ mdala:DubDelay
 		lv2:symbol "output" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Level trim"
 	] , [
 		a lv2:InputPort ,
 			lv2:AudioPort ;

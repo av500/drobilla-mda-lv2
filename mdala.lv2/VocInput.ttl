@@ -2,6 +2,8 @@
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 mdala:VocInput
 	a lv2:Plugin ,
@@ -13,6 +15,7 @@ mdala:VocInput
 	lv2:pluginProperty lv2:hardRTCapable ;
 	pg:mainInput mdala:mainIn ;
 	pg:mainOutput mdala:mainOut ;
+	rdfs:comment "This plug-in produces a voice-like signal on the right channel to be used as a carrier signal with vocoder and other vocoder plug-ins. The input signal passes through on the left channel." ;
 	lv2:port [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -21,7 +24,18 @@ mdala:VocInput
 		lv2:symbol "tracking" ;
 		lv2:default 0.25 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:portProperty lv2:enumeration ;
+		lv2:scalePoint [
+			rdf:value 0.0 ;
+			rdfs:label "Constant pitch"
+		] , [
+			rdf:value 0.5 ;
+			rdfs:label "Track input pitch"
+		] , [
+			rdf:value 1.0 ;
+			rdfs:label "Track quantized input pitch"
+		]
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -30,7 +44,8 @@ mdala:VocInput
 		lv2:symbol "pitch" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Oscillator pitch, or pitch transpose in tracking modes"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -39,7 +54,8 @@ mdala:VocInput
 		lv2:symbol "breath" ;
 		lv2:default 0.2 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Amount of breath noise"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -48,7 +64,8 @@ mdala:VocInput
 		lv2:symbol "s_thresh" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Sensitivity for adding sibilance / fricative noise to consonants"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -57,7 +74,8 @@ mdala:VocInput
 		lv2:symbol "max_freq" ;
 		lv2:default 0.35 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Maximum allowed pitch - mainly used to reduce pitch tracking errors"
 	] , [
 		a lv2:InputPort ,
 			lv2:AudioPort ;

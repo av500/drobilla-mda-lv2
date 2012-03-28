@@ -2,6 +2,7 @@
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 mdala:Degrade
 	a lv2:Plugin ,
@@ -21,7 +22,8 @@ mdala:Degrade
 		lv2:symbol "headroom" ;
 		lv2:default 0.8 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Peak clipping threshold"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -30,7 +32,8 @@ mdala:Degrade
 		lv2:symbol "quant" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment """Bit depth (typically 8 or below for "telephone" quality)"""
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -39,16 +42,18 @@ mdala:Degrade
 		lv2:symbol "rate" ;
 		lv2:default 0.65 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Sample Rate (turn control to left or right for different sound characters)"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
 		lv2:index 3 ;
-		lv2:name "PostFilt" ;
+		lv2:name "Post Filter" ;
 		lv2:symbol "post_filt" ;
 		lv2:default 0.9 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Low-pass filter to muffle the distortion produced by the previous two controls"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -57,7 +62,8 @@ mdala:Degrade
 		lv2:symbol "non_lin" ;
 		lv2:default 0.58 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment """Additional harmonic distortion "thickening" (turn control to left or right for different sound characters)"""
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;

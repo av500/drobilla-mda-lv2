@@ -2,6 +2,7 @@
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 mdala:Dynamics
 	a lv2:Plugin ,
@@ -30,7 +31,8 @@ mdala:Dynamics
 		lv2:symbol "ratio" ;
 		lv2:default 0.4 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment """Very wide range allows "overcompression" where output gets quieter as input gets louder"""
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -39,7 +41,8 @@ mdala:Dynamics
 		lv2:symbol "output" ;
 		lv2:default 0.1 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Level trim"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -66,7 +69,8 @@ mdala:Dynamics
 		lv2:symbol "limiter" ;
 		lv2:default 1 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Limiter threshold - the limiter has zero attack time but uses the same release time as the compressor"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;

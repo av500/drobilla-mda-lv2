@@ -1,7 +1,15 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
+@prefix param: <http://lv2plug.in/ns/ext/parameters#> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://drobilla.net/plugins/mdala/Piano/env>
+	a param:EnvelopeControls ,
+		pg:InputGroup ;
+	lv2:name "Envelope" ;
+	lv2:symbol "env" .
 
 mdala:Piano
 	a lv2:Plugin ,
@@ -20,7 +28,9 @@ mdala:Piano
 		lv2:symbol "envelope_decay" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:decay ;
+		pg:group <http://drobilla.net/plugins/mdala/Piano/env>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -29,7 +39,9 @@ mdala:Piano
 		lv2:symbol "envelope_release" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:release ;
+		pg:group <http://drobilla.net/plugins/mdala/Piano/env>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -38,7 +50,8 @@ mdala:Piano
 		lv2:symbol "hardness_offset" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment """Adjusts sample keyranges up or down to change the "size" and brightness of the piano. Use "V" slider to adjust velocity control"""
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -74,7 +87,8 @@ mdala:Piano
 		lv2:symbol "velocity_sensitivity" ;
 		lv2:default 0.376 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment """Velocity curve: Mid point is normal "square law" response"""
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -92,7 +106,8 @@ mdala:Piano
 		lv2:symbol "polyphony" ;
 		lv2:default 0.33 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:portProperty lv2:integer
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;

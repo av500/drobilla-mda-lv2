@@ -2,6 +2,7 @@
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 mdala:Detune
 	a lv2:Plugin ,
@@ -13,6 +14,7 @@ mdala:Detune
 	lv2:pluginProperty lv2:hardRTCapable ;
 	pg:mainInput mdala:mainIn ;
 	pg:mainOutput mdala:mainOut ;
+	rdfs:comment "A low-quality stereo pitch shifter for the sort of chorus and detune effects found on multi-effects hardware." ;
 	lv2:port [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -21,7 +23,8 @@ mdala:Detune
 		lv2:symbol "detune" ;
 		lv2:default 0.2 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Detune amount in cents (left channel is lowered in pitch, right channel is raised)"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -30,7 +33,8 @@ mdala:Detune
 		lv2:symbol "mix" ;
 		lv2:default 0.9 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Wet / dry mix"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -39,7 +43,8 @@ mdala:Detune
 		lv2:symbol "output" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Level trim"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -48,7 +53,8 @@ mdala:Detune
 		lv2:symbol "latency" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Trade-off between latency and low-frequency response"
 	] , [
 		a lv2:InputPort ,
 			lv2:AudioPort ;

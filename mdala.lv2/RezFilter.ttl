@@ -1,7 +1,21 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
+@prefix param: <http://lv2plug.in/ns/ext/parameters#> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://drobilla.net/plugins/mdala/RezFilter/env>
+	a param:EnvelopeControls ,
+		pg:InputGroup ;
+	lv2:name "Envelope" ;
+	lv2:symbol "env" .
+
+<http://drobilla.net/plugins/mdala/RezFilter/filt>
+	a param:FilterControls ,
+		pg:InputGroup ;
+	lv2:name "Filter" ;
+	lv2:symbol "filt" .
 
 mdala:RezFilter
 	a lv2:Plugin ,
@@ -21,7 +35,9 @@ mdala:RezFilter
 		lv2:symbol "freq" ;
 		lv2:default 0.33 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:cutoffFrequency ;
+		pg:group <http://drobilla.net/plugins/mdala/RezFilter/filt>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -30,7 +46,9 @@ mdala:RezFilter
 		lv2:symbol "res" ;
 		lv2:default 0.7 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:resonance ;
+		pg:group <http://drobilla.net/plugins/mdala/RezFilter/filt>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -39,7 +57,8 @@ mdala:RezFilter
 		lv2:symbol "output" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Level trim"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -48,7 +67,8 @@ mdala:RezFilter
 		lv2:symbol "env_vcf" ;
 		lv2:default 0.85 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Positive or negative (squelchy!) envelope modulation of cut-off frequency"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -57,7 +77,9 @@ mdala:RezFilter
 		lv2:symbol "attack" ;
 		lv2:default 0 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:attack ;
+		pg:group <http://drobilla.net/plugins/mdala/RezFilter/env>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -66,7 +88,9 @@ mdala:RezFilter
 		lv2:symbol "release" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:release ;
+		pg:group <http://drobilla.net/plugins/mdala/RezFilter/env>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -75,7 +99,8 @@ mdala:RezFilter
 		lv2:symbol "lfo_vcf" ;
 		lv2:default 0.7 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "LFO modulation of cut-off frequency (turn to left for sample & hold LFO, right for sine)"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -84,7 +109,8 @@ mdala:RezFilter
 		lv2:symbol "lfo_rate" ;
 		lv2:default 0.4 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "LFO modulation speed"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -93,7 +119,8 @@ mdala:RezFilter
 		lv2:symbol "trigger" ;
 		lv2:default 0 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Envelope trigger level (normally set to minimum to acts as a free-running envelope follower)"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -102,7 +129,8 @@ mdala:RezFilter
 		lv2:symbol "max_freq" ;
 		lv2:default 0.75 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment """Limit maximum cut-off frequency for a mellower sound (the filter can sound "screechy" at high frequencies)"""
 	] , [
 		a lv2:InputPort ,
 			lv2:AudioPort ;

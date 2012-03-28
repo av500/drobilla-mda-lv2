@@ -2,6 +2,8 @@
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 mdala:Leslie
 	a lv2:Plugin ,
@@ -13,6 +15,7 @@ mdala:Leslie
 	lv2:pluginProperty lv2:hardRTCapable ;
 	pg:mainInput mdala:mainIn ;
 	pg:mainOutput mdala:mainOut ;
+	rdfs:comment "No overdrive or speaker cabinet simulation is added - you may want to combine this plug-in with Combo.  For a much thicker sound try combining two Leslie plug-ins in series!" ;
 	lv2:port [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -21,7 +24,17 @@ mdala:Leslie
 		lv2:symbol "mode" ;
 		lv2:default 0.66 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:scalePoint [
+			rdfs:label "Stop" ;
+			rdf:value 0.0
+		] , [
+			rdfs:label "Slow" ;
+			rdf:value 0.5
+		] , [
+			rdfs:label "Fast" ;
+			rdf:value 1.0
+		]
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -30,7 +43,8 @@ mdala:Leslie
 		lv2:symbol "lo_width" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Low rotor pan modulation"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -39,7 +53,8 @@ mdala:Leslie
 		lv2:symbol "lo_throb" ;
 		lv2:default 0.6 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Low rotor amplitude modulation"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -48,7 +63,8 @@ mdala:Leslie
 		lv2:symbol "hi_width" ;
 		lv2:default 0.7 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "High rotor pan modulation"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -57,7 +73,8 @@ mdala:Leslie
 		lv2:symbol "hi_depth" ;
 		lv2:default 0.6 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "High rotor frequency modulation (doppler)"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -66,7 +83,8 @@ mdala:Leslie
 		lv2:symbol "hi_throb" ;
 		lv2:default 0.7 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "High rotor amplitude modulation"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -75,7 +93,8 @@ mdala:Leslie
 		lv2:symbol "x_over" ;
 		lv2:default 0.48 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Crossover frequency between high and low rotors"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -84,7 +103,8 @@ mdala:Leslie
 		lv2:symbol "output" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Level trim"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -93,7 +113,8 @@ mdala:Leslie
 		lv2:symbol "speed" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Fine control for rotor speed"
 	] , [
 		a lv2:InputPort ,
 			lv2:AudioPort ;

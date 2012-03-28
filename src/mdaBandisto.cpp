@@ -39,7 +39,7 @@ mdaBandisto::mdaBandisto(audioMasterCallback audioMaster)	: AudioEffectX(audioMa
   fParam7 = (float)0.50; //L trim     (2)
   fParam8 = (float)0.50; //M trim
   fParam9 = (float)0.50; //H trim
-  fParam10 = (float)0.4; //transistor/valve
+  fParam10 = (float)0.0; //unipolar/bipolar
 
   setNumInputs(2);
 	setNumOutputs(2);
@@ -53,7 +53,7 @@ mdaBandisto::mdaBandisto(audioMasterCallback audioMaster)	: AudioEffectX(audioMa
   driv2 = (float)pow(10.0,(6.0 * fParam5 *fParam5) - 1.0);
   driv3 = (float)pow(10.0,(6.0 * fParam6 *fParam6) - 1.0);
 
-  valve = int(1.99 * fParam10);
+  valve = int(fParam10 > 0.0);
   if(valve)
   {
     trim1 = (float)(0.5);
@@ -131,7 +131,7 @@ void mdaBandisto::setParameter(LvzInt32 index, float value)
   driv2 = (float)pow(10.0,(6.0 * fParam5 *fParam5) - 1.0);
   driv3 = (float)pow(10.0,(6.0 * fParam6 *fParam6) - 1.0);
 
-  valve = int(1.99 * fParam10);
+  valve = int(fParam10 > 0.0);
   if(valve)
   {
     trim1 = (float)(0.5);
@@ -213,7 +213,7 @@ void mdaBandisto::getParameterDisplay(LvzInt32 index, char *text)
     case 6: sprintf(text, "%.0f", 40.0 * fParam7 - 20.0); break;
     case 7: sprintf(text, "%.0f", 40.0 * fParam8 - 20.0); break;
     case 8: sprintf(text, "%.0f", 40.0 * fParam9 - 20.0); break;
-    case 9: if(fParam10>0.5) { strcpy(text, "Unipolar"); }
+    case 9: if(fParam10>0.0) { strcpy(text, "Unipolar"); }
                         else { strcpy(text, "Bipolar"); } break;
   }
 }

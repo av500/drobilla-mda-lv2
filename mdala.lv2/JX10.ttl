@@ -1,7 +1,22 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
+@prefix param: <http://lv2plug.in/ns/ext/parameters#> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix units: <http://lv2plug.in/ns/ext/units#> .
+
+<http://drobilla.net/plugins/mdala/DX10/filt_env>
+	a param:EnvelopeControls ,
+		pg:InputGroup ;
+	lv2:name "Filter Envelope" ;
+	lv2:symbol "filt_env" .
+
+<http://drobilla.net/plugins/mdala/DX10/amp_env>
+	a param:EnvelopeControls ,
+		pg:InputGroup ;
+	lv2:name "Amp Envelope" ;
+	lv2:symbol "amp_env" .
 
 mdala:JX10
 	a lv2:Plugin ,
@@ -12,6 +27,8 @@ mdala:JX10
 	lv2:pluginProperty lv2:hardRTCapable ;
 	pg:mainInput mdala:mainIn ;
 	pg:mainOutput mdala:mainOut ;
+	rdfs:comment """When Vibrato is set to PWM, the two oscillators are phase-locked and will produce a square wave if set to the same pitch. Pitch modulation of one oscillator then causes Pulse Width Modulation. (pitch modulation of both oscillators for vibrato is still available from the modulation wheel). Unlike other synths, in PWM mode the oscillators can still be detuned to give a wider range of PWM effects.
+    """ ;
 	lv2:port [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -20,7 +37,8 @@ mdala:JX10
 		lv2:symbol "osc_mix" ;
 		lv2:default 1 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Level of second oscillator"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -29,7 +47,9 @@ mdala:JX10
 		lv2:symbol "osc_tune" ;
 		lv2:default 0.37 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		units:unit units:semitone12TET ;
+		rdfs:comment "Tuning of second oscillator in semitones"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -38,7 +58,9 @@ mdala:JX10
 		lv2:symbol "osc_fine" ;
 		lv2:default 0.25 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		units:unit units:cent ;
+		rdfs:comment "Tuning of second oscillator in cents"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -56,7 +78,8 @@ mdala:JX10
 		lv2:symbol "gld_rate" ;
 		lv2:default 0.32 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Pitch glide rate"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -65,7 +88,8 @@ mdala:JX10
 		lv2:symbol "gld_bend" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Initial pitch-glide offset, for pitch-envelope effects"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -74,7 +98,8 @@ mdala:JX10
 		lv2:symbol "vcf_freq" ;
 		lv2:default 0.9 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:cutoffFrequency
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -83,7 +108,8 @@ mdala:JX10
 		lv2:symbol "vcf_reso" ;
 		lv2:default 0.6 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:resonance
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -92,7 +118,8 @@ mdala:JX10
 		lv2:symbol "vcf_env" ;
 		lv2:default 0.12 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Cutoff modulation by VCF envelope"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -101,7 +128,8 @@ mdala:JX10
 		lv2:symbol "vcf_lfo" ;
 		lv2:default 0 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Cutoff modulation by LFO"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -110,7 +138,8 @@ mdala:JX10
 		lv2:symbol "vcf_vel" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Cutoff modulation by velocity"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -119,7 +148,9 @@ mdala:JX10
 		lv2:symbol "vcf_att" ;
 		lv2:default 0.9 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:attack ;
+		pg:group <http://drobilla.net/plugins/mdala/JX10/filt_env>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -128,7 +159,9 @@ mdala:JX10
 		lv2:symbol "vcf_dec" ;
 		lv2:default 0.89 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:decay ;
+		pg:group <http://drobilla.net/plugins/mdala/JX10/filt_env>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -137,7 +170,9 @@ mdala:JX10
 		lv2:symbol "vcf_sus" ;
 		lv2:default 0.9 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:sustain ;
+		pg:group <http://drobilla.net/plugins/mdala/JX10/filt_env>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -146,7 +181,9 @@ mdala:JX10
 		lv2:symbol "vcf_rel" ;
 		lv2:default 0.73 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:release ;
+		pg:group <http://drobilla.net/plugins/mdala/JX10/filt_env>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -155,7 +192,9 @@ mdala:JX10
 		lv2:symbol "env_att" ;
 		lv2:default 0 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:attack ;
+		pg:group <http://drobilla.net/plugins/mdala/JX10/amp_env>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -164,7 +203,9 @@ mdala:JX10
 		lv2:symbol "env_dec" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:decay ;
+		pg:group <http://drobilla.net/plugins/mdala/JX10/amp_env>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -173,7 +214,9 @@ mdala:JX10
 		lv2:symbol "env_sus" ;
 		lv2:default 1 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:sustain ;
+		pg:group <http://drobilla.net/plugins/mdala/JX10/amp_env>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -182,7 +225,9 @@ mdala:JX10
 		lv2:symbol "env_rel" ;
 		lv2:default 0.71 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		lv2:designation param:release ;
+		pg:group <http://drobilla.net/plugins/mdala/JX10/amp_env>
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -191,7 +236,8 @@ mdala:JX10
 		lv2:symbol "lfo_rate" ;
 		lv2:default 0.81 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "LFO rate (sine wave only)"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -200,7 +246,8 @@ mdala:JX10
 		lv2:symbol "vibrato" ;
 		lv2:default 0.65 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "LFO modulation of pitch - turn to left for PWM effects"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -209,7 +256,8 @@ mdala:JX10
 		lv2:symbol "noise" ;
 		lv2:default 0 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "White noise mix"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -218,7 +266,9 @@ mdala:JX10
 		lv2:symbol "octave" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		units:unit units:oct ;
+		rdfs:comment "Master tuning in octaves"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -227,7 +277,9 @@ mdala:JX10
 		lv2:symbol "tuning" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		units:unit units:cent ;
+		rdfs:comment "Master tuning in cents"
 	] , [
 		a lv2:OutputPort ,
 			lv2:AudioPort ;

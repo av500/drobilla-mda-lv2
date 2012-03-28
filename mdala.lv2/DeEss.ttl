@@ -2,6 +2,7 @@
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 mdala:DeEss
 	a lv2:Plugin ,
@@ -13,6 +14,9 @@ mdala:DeEss
 	lv2:pluginProperty lv2:hardRTCapable ;
 	pg:mainInput mdala:mainIn ;
 	pg:mainOutput mdala:mainOut ;
+	rdfs:comment """Reduce excessive sibilants (/s/ /t/ /sh/ etc.) in vocals and speech.
+
+For stronger de-essing you may want to use two plug-ins in series, or apply processing twice.""" ;
 	lv2:port [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -21,7 +25,8 @@ mdala:DeEss
 		lv2:symbol "thresh" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Set maximum level for high frequencies"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -30,7 +35,8 @@ mdala:DeEss
 		lv2:symbol "freq" ;
 		lv2:default 0.6 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Lowest frequency affected (a HF shelf is used for stronger de-essing than designs that work on a frequency band)"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -39,7 +45,8 @@ mdala:DeEss
 		lv2:symbol "hf_drive" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Boost high frequencies before de-essing - can be used to enhance breathy vocals"
 	] , [
 		a lv2:InputPort ,
 			lv2:AudioPort ;

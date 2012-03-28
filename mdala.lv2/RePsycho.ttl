@@ -2,6 +2,8 @@
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
 @prefix mdala: <http://drobilla.net/plugins/mdala/> .
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix units: <http://lv2plug.in/ns/ext/units#> .
 
 mdala:RePsycho
 	a lv2:Plugin ,
@@ -13,6 +15,11 @@ mdala:RePsycho
 	lv2:pluginProperty lv2:hardRTCapable ;
 	pg:mainInput mdala:mainIn ;
 	pg:mainOutput mdala:mainOut ;
+	rdfs:comment """Event-based pitch shifter
+
+Chops audio into individual beats and shifts each beat downwards in pitch. Only allowing downwards shifts helps keep timing very tight - depending on complexity, whole rhythm sections can be shifted!
+
+Alternative uses include a triggered flanger or sub-octave doubler (both with mix set to 50% or less) and a swing quantizer (with a high threshold so not all beats trigger).""" ;
 	lv2:port [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -21,7 +28,9 @@ mdala:RePsycho
 		lv2:symbol "tune" ;
 		lv2:default 1 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		units:unit units:semitone ;
+		rdfs:comment "Coarse tune (semitones)"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -30,7 +39,9 @@ mdala:RePsycho
 		lv2:symbol "fine" ;
 		lv2:default 1 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		units:unit units:cent ;
+		rdfs:comment "Fine tune (cents)"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -39,7 +50,8 @@ mdala:RePsycho
 		lv2:symbol "decay" ;
 		lv2:default 0.5 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Adjust envelope of each chunk (a fast decay can be useful while setting up)"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -48,7 +60,8 @@ mdala:RePsycho
 		lv2:symbol "thresh" ;
 		lv2:default 0.6 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Trigger level to divide the input into chunks"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -57,7 +70,8 @@ mdala:RePsycho
 		lv2:symbol "hold" ;
 		lv2:default 0.45 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Minimum chunk length"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -66,7 +80,8 @@ mdala:RePsycho
 		lv2:symbol "mix" ;
 		lv2:default 1 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "Mix original signal with output"
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
@@ -75,7 +90,8 @@ mdala:RePsycho
 		lv2:symbol "quality" ;
 		lv2:default 0.4 ;
 		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
+		lv2:maximum 1.0 ;
+		rdfs:comment "The High setting uses smoother pitch-shifting and allows processing of stereo signals"
 	] , [
 		a lv2:InputPort ,
 			lv2:AudioPort ;
