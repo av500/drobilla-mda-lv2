@@ -144,7 +144,7 @@ private:
   float oscmix, noisemix;
   float att, dec, sus, rel, fatt, fdec, fsus, frel;
   float lfo, dlfo, modwhl, press, pbend, ipbend, rezwhl;
-  float velsens, volume, voltrim;
+  float volume, voltrim;
   float vibrato, pwmdep, lfoHz, glide, glidedisp;
   int32_t  K, lastnote, veloff, mode;
   unsigned int noise;

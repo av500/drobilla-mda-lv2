@@ -115,7 +115,6 @@ private:
   void fillpatch(int32_t p, const char *name, float p0, float p1, float p2, float p3, float p4,
                  float p5, float p6, float p7, float p8, float p9, float p10,float p11);
 
-  float param[NPARAMS];
   mdaPianoProgram* programs;
   float Fs, iFs;
 

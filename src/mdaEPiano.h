@@ -123,8 +123,8 @@ private:
   int32_t  size, sustain;
   float lfo0, lfo1, dlfo, lmod, rmod;
   float treb, tfrq, tl, tr;
-  float tune, fine, random, stretch, overdrive;
-  float muff, muffvel, sizevel, velsens, volume, modwhl;
+  float fine, random, stretch, overdrive;
+  float muff, muffvel, velsens, volume, modwhl;
 };
 
 #endif
