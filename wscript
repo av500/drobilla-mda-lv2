@@ -105,3 +105,15 @@ def build(bld):
 
         # Install data file
         bld.install_files('${LV2DIR}/' + bundle, os.path.join(bundle, p + '.ttl'))
+
+def posts(ctx):
+    path = str(ctx.path.abspath())
+    autowaf.news_to_posts(
+        os.path.join(path, 'NEWS'),
+        {'title'        : 'MDA.LV2',
+         'description'  : autowaf.get_blurb(os.path.join(path, 'README')),
+         'dist_pattern' : 'http://download.drobilla.net/mda-lv2-%s.tar.bz2'},
+        { 'Author' : 'drobilla',
+          'Tags'   : 'LV2' },
+        os.path.join(out, 'posts'))
+        
