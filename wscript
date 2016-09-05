@@ -114,6 +114,6 @@ def posts(ctx):
          'description'  : autowaf.get_blurb(os.path.join(path, 'README')),
          'dist_pattern' : 'http://download.drobilla.net/mda-lv2-%s.tar.bz2'},
         { 'Author' : 'drobilla',
-          'Tags'   : 'LV2' },
+          'Tags'   : 'LV2, MDA.lv2' },
         os.path.join(out, 'posts'))
         
