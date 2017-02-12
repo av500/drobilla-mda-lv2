@@ -173,7 +173,8 @@ void mdaLoudness::getParameterDisplay(int32_t index, char *text)
   {
     case  0: sprintf(string, "%.1f", igain); break;
     case  2: if(programs[curProgram].param[index]>0.5f) strcpy (string, "ON");
-                              else strcpy (string, "OFF"); break;
+             else strcpy (string, "OFF");
+             break;
     default: sprintf(string, "%.1f", ogain); break;
   }
 	string[8] = 0;

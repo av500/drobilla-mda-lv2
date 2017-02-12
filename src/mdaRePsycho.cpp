@@ -170,7 +170,8 @@ void mdaRePsycho::getParameterDisplay(int32_t index, char *text)
     case 4: long2string((long)(1000.0 * dtim / getSampleRate()), text); break;
     case 1: long2string((long)(int(99.0 * fParam6) - 99.0), text); break;
     case 6: if(fParam7>0.0) strcpy(text, "HIGH");
-            else strcpy(text, "LOW"); break;
+            else strcpy(text, "LOW");
+            break;
   }
 }
 

@@ -246,7 +246,7 @@ void mdaTestTone::midi2string(float n, char *text)
   nn = int(n);
   if(nn>99) t[p++] = 48 + (int(0.01*n)%10);
   if(nn>9)  t[p++] = 48 + (int(0.10*n)%10);
-            t[p++] = 48 + (int(n)%10);
+  if(1)     t[p++] = 48 + (int(n)%10);
   t[p++] = ' ';
 
   o = int(nn/12.f); s = nn-(12*o); o -= 2;
@@ -367,11 +367,13 @@ void mdaTestTone::getParameterDisplay(int32_t index, char *text)
     case 2: if(fParam2>0.3f)
             { if(fParam2>0.7f) strcpy(text, "RIGHT");
               else strcpy(text, "CENTRE"); }
-            else strcpy(text, "LEFT"); break;
+            else strcpy(text, "LEFT");
+            break;
     case 3: strcpy(text, disp1); break;
     case 4: strcpy(text, disp2); break;
     case 6: if(fParam5==0) strcpy(text, "OFF");
-            else int2strng((int32_t)(40 * fParam5 - 40), text); break;
+            else int2strng((int32_t)(40 * fParam5 - 40), text);
+            break;
     case 5: int2strng(1000 + 500*int(62*fParam6), text); break;
     case 7: float2strng(cal, text); break;
   }

@@ -161,7 +161,8 @@ void mdaThruZero::getParameterDisplay(int32_t index, char *text)
   switch(index)
   {
     case  0: if(param[0]<0.01f) strcpy (string, "-");
-             else sprintf(string, "%.2f", (float)pow(10.0f ,2.0f - 3.0f * param[index])); break;
+             else sprintf(string, "%.2f", (float)pow(10.0f ,2.0f - 3.0f * param[index]));
+             break;
     case  1: sprintf(string, "%.2f", 1000.f * dep / getSampleRate()); break;
     case  3: sprintf(string, "%.0f", 200.0f * param[index] - 100.0f); break;
     default: sprintf(string, "%.0f", 100.0f * param[index]);

@@ -165,7 +165,8 @@ void mdaDither::getParameterDisplay(int32_t index, char *text)
     case 4: if(fParam4>0.1f)
             if(gain<0.0001f) strcpy(text, "-80");
                         else int2strng((int32_t)(20.0 * log10(gain)), text);
-                        else strcpy(text, "OFF"); break;
+                        else strcpy(text, "OFF");
+                        break;
   }
 }
 

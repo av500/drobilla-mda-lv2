@@ -311,7 +311,8 @@ void mdaEPiano::getParameterDisplay(int32_t index, char *text)
     case  4: if(param[index] > 0.5f)
                sprintf(string, "Trem %.0f", 200.0f * param[index] - 100.0f);
              else
-               sprintf(string, "Pan %.0f", 100.0f - 200.0f * param[index]); break;
+               sprintf(string, "Pan %.0f", 100.0f - 200.0f * param[index]);
+             break;
 
     case  5: sprintf(string, "%.2f", (float)exp(6.22f * param[5] - 2.61f)); break; //LFO Hz
     case  7: sprintf(string, "%.0f", 200.0f * param[index]); break;

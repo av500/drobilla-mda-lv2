@@ -146,7 +146,8 @@ void mdaLimiter::getParameterDisplay(int32_t index, char *text)
     case 3: int2strng((int32_t)(-301030.1 / (getSampleRate() * log10(1.0 - att))),text); break;
     case 2: int2strng((int32_t)(-301.0301 / (getSampleRate() * log10(1.0 - rel))),text); break;
     case 4: if(fParam5>0.0) strcpy(text, "SOFT");
-            else strcpy(text, "HARD"); break;
+            else strcpy(text, "HARD");
+            break;
   }
 
 }

@@ -176,9 +176,11 @@ void mdaDynamics::getParameterDisplay(int32_t index, char *text)
     case 3: int2strng((int32_t)(-301030.1 / (getSampleRate() * log10(1.0 - att))),text); break;
     case 4: int2strng((int32_t)(-301.0301 / (getSampleRate() * log10(1.0 - rel))),text); break;
     case 5: if(lthr==0.f) strcpy(text, "OFF");
-            else int2strng((int32_t)(30.0*fParam6 - 20.0),text); break;
+            else int2strng((int32_t)(30.0*fParam6 - 20.0),text);
+            break;
     case 6: if(xthr==0.f) strcpy(text, "OFF");
-            else int2strng((int32_t)(60.0*fParam7 - 60.0),text); break;
+            else int2strng((int32_t)(60.0*fParam7 - 60.0),text);
+            break;
     case 7: int2strng((int32_t)(-301030.1 / (getSampleRate() * log10(1.0 - gatt))),text); break;
     case 8: int2strng((int32_t)(-1806.0 / (getSampleRate() * log10(xrat))),text); break;
     case 9: int2strng((int32_t)(100.0*fParam10),text); break;

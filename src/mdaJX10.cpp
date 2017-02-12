@@ -404,10 +404,12 @@ void mdaJX10::getParameterDisplay(int32_t index, char *text)
     case  8:
     case 23: sprintf(string, "%.1f", 200.0f * param[index] - 100.0f); break;
     case 10: if(param[index]<0.05f) strcpy(string, "   OFF  ");
-               else sprintf(string, "%.0f", 200.0f * param[index] - 100.0f); break;
+             else sprintf(string, "%.0f", 200.0f * param[index] - 100.0f);
+             break;
     case 19: sprintf(string, "%.3f", lfoHz); break;
     case 20: if(param[index]<0.5f) sprintf(string, "PWM %3.0f", 100.0f - 200.0f * param[index]);
-               else sprintf(string, "%7.0f", 200.0f * param[index] - 100.0f); break;
+             else sprintf(string, "%7.0f", 200.0f * param[index] - 100.0f);
+             break;
     case 22: sprintf(string, "%d", (int32_t)(param[index] * 4.9f) - 2); break;
     default: sprintf(string, "%.0f", 100.0f * param[index]);
   }

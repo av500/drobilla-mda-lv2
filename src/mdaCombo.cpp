@@ -244,7 +244,8 @@ void mdaCombo::getParameterDisplay(int32_t index, char *text)
     case 2: int2strng((int32_t)(200 * fParam3 - 100), text); break;
     case 3: int2strng((int32_t)(40 * fParam4 - 20), text); break;
     case 4: if(fParam5>0.0) strcpy(text, "STEREO");
-                       else strcpy(text, "MONO"); break;
+                       else strcpy(text, "MONO");
+                       break;
     case 5: int2strng((int32_t)(100 * fParam6), text); break;
     case 6: int2strng((int32_t)(100 * fParam7), text); break;
   }

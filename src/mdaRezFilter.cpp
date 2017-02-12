@@ -184,7 +184,8 @@ void mdaRezFilter::getParameterDisplay(int32_t index, char *text)
     case 6: int2strng((int32_t)(200 * fParam6 - 100), text); break;
     case 7: float2strng((float)pow(10.0f, 4.f*fParam7 - 2.f), text); break;
     case 8: if(tthr==0.f) strcpy(text, "FREE RUN");
-            else int2strng((int32_t)(20*log10(0.5*tthr)), text); break;
+            else int2strng((int32_t)(20*log10(0.5*tthr)), text);
+            break;
     case 9: int2strng((int32_t)(100 * fParam9), text); break;
   }
 }

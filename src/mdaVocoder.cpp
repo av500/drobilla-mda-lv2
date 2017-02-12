@@ -224,7 +224,8 @@ void mdaVocoder::getParameterDisplay(int32_t index, char *text)
     case  0: if(swap) strcpy(string, "RIGHT"); else strcpy(string, "LEFT"); break;
     case  1: sprintf(string, "%.1f", 40.0f * param[index] - 20.0f); break;
     case  4: if(param[index]<0.05f) strcpy(string, "FREEZE");
-             else sprintf(string, "%.1f", (float)pow(10.0f, 1.0f + 3.0f * param[index])); break;
+             else sprintf(string, "%.1f", (float)pow(10.0f, 1.0f + 3.0f * param[index]));
+             break;
     case  6: sprintf(string, "%.0f", 800.0f * (float)pow(2.0f, 3.0f * param[index] - 2.0f)); break;
     case  7: if(nbnd==8) strcpy(string, "8 BAND"); else strcpy(string, "16 BAND"); break;
 

@@ -244,7 +244,8 @@ void mdaMultiBand::getParameterDisplay(int32_t index, char *text)
     case 10: int2strng((int32_t)(-301.0301 / (getSampleRate() * log10(1.0 - rel2))),text); break;
     case 11: int2strng((int32_t)(200.0 * fParam12), text); break;
     case 12: if(mswap) strcpy(text, "S");
-                  else strcpy(text, "M"); break;
+                  else strcpy(text, "M");
+                  break;
   }
 }
 

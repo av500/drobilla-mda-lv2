@@ -397,7 +397,8 @@ void mdaBeatBox::process(float **inputs, float **outputs, int32_t sampleFrames)
            case 3: if(recpos<kl) *(kbuf + recpos++) = e; else e=0.f; break;
            case 4: if(recpos<sl)
                    { *(sbuf+recpos)=a; *(sbuf2+recpos)=b; recpos++; }
-                   else e=0.f; break;
+                   else e=0.f;
+                   break;
         }
       }
       c = out1[1] + e;
@@ -489,7 +490,8 @@ void mdaBeatBox::processReplacing(float **inputs, float **outputs, int32_t sampl
            case 3: if(recpos<kl) *(kbuf + recpos++) = e; else e=0.f; break;
            case 4: if(recpos<sl)
                    { *(sbuf+recpos)=a; *(sbuf2+recpos)=b; recpos++; }
-                   else e=0.f; break;
+                   else e=0.f;
+                   break;
         }
       }
       *++out1 = e;

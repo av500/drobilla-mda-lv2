@@ -204,7 +204,8 @@ void mdaStereo::getParameterDisplay(int32_t index, char *text)
     case 1: float2strng((float)(1000.0 * fdel / getSampleRate()), text); break;
     case 2: int2strng((int32_t)(200.0 * (fParam3 - 0.5)), text); break;
     case 3: if(mod>0.f) float2strng((float)(1000.0 * mod / getSampleRate()), text);
-            else strcpy(text, "OFF"); break;
+            else strcpy(text, "OFF");
+            break;
     case 4: float2strng((float)pow(10.0,2.0 - 3.0 * fParam5), text); break;
   }
 }

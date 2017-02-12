@@ -145,7 +145,8 @@ void mdaVocInput::getParameterDisplay(int32_t index, char *text)
                              case 2: strcpy(string, "QUANT"); } break;
 
     case  1: if(track) sprintf(string, "%d", (int32_t)(48.0f * param[1] - 24.0f)); 
-                  else midi2string((int32_t)(48.0f * param[1] + 21.0f), string); break;
+             else midi2string((int32_t)(48.0f * param[1] + 21.0f), string);
+             break;
 
     case  4: midi2string((int32_t)(48.0f * param[4] + 45.0f), string); break;
 
