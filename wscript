@@ -18,13 +18,14 @@ def options(opt):
     autowaf.set_options(opt)
 
 def configure(conf):
-    conf.load('compiler_cxx')
-    conf.load('lv2')
-    autowaf.configure(conf)
     autowaf.display_header('MDA.lv2 Configuration')
+    conf.load('compiler_cxx', cache=True)
+    conf.load('lv2', cache=True)
+    conf.load('autowaf', cache=True)
 
     autowaf.check_pkg(conf, 'lv2', atleast_version='1.2.0', uselib_store='LV2')
 
+    autowaf.display_summary(conf)
     autowaf.display_msg(conf, "LV2 bundle directory", conf.env.LV2DIR)
     print('')
 
@@ -35,7 +36,7 @@ def build(bld):
         bld(features     = 'subst',
             is_copy      = True,
             source       = i,
-            target       = bld.path.get_bld().make_node('mda.lv2/%s' % i),
+            target       = 'mda.lv2/%s' % i.name,
             install_path = '${LV2DIR}/mda.lv2')
 
     # Make a pattern for shared objects without the 'lib' prefix
