@@ -22,6 +22,7 @@ def configure(conf):
     conf.load('compiler_cxx', cache=True)
     conf.load('lv2', cache=True)
     conf.load('autowaf', cache=True)
+    autowaf.set_c_lang(conf, 'c99')
 
     autowaf.check_pkg(conf, 'lv2', atleast_version='1.2.0', uselib_store='LV2')
 
