@@ -1,8 +1,10 @@
 #!/usr/bin/env python
+
 import os
 import re
 import shutil
-import waflib.extras.autowaf as autowaf
+
+from waflib.extras import autowaf
 
 MDA_VERSION = '1.2.2'
 
@@ -26,9 +28,7 @@ def configure(conf):
 
     autowaf.check_pkg(conf, 'lv2', atleast_version='1.2.0', uselib_store='LV2')
 
-    autowaf.display_summary(conf)
-    autowaf.display_msg(conf, "LV2 bundle directory", conf.env.LV2DIR)
-    print('')
+    autowaf.display_summary(conf, {'LV2 bundle directory': conf.env.LV2DIR})
 
 def build(bld):
     bundle = 'mda.lv2'
