@@ -17,17 +17,14 @@ out     = 'build'      # Build directory
 def options(opt):
     opt.load('compiler_cxx')
     opt.load('lv2')
-    autowaf.set_options(opt)
 
 def configure(conf):
-    autowaf.display_header('MDA.lv2 Configuration')
     conf.load('compiler_cxx', cache=True)
     conf.load('lv2', cache=True)
     conf.load('autowaf', cache=True)
     autowaf.set_c_lang(conf, 'c99')
-
     autowaf.check_pkg(conf, 'lv2', atleast_version='1.2.0', uselib_store='LV2')
-
+    conf.run_env.append_unique('LV2_PATH', [conf.build_path('lv2')])
     autowaf.display_summary(conf, {'LV2 bundle directory': conf.env.LV2DIR})
 
 def build(bld):
@@ -37,7 +34,7 @@ def build(bld):
         bld(features     = 'subst',
             is_copy      = True,
             source       = i,
-            target       = 'mda.lv2/%s' % i.name,
+            target       = 'lv2/mda.lv2/%s' % i.name,
             install_path = '${LV2DIR}/mda.lv2')
 
     # Make a pattern for shared objects without the 'lib' prefix
@@ -47,7 +44,7 @@ def build(bld):
     # Build manifest by substitution
     bld(features     = 'subst',
         source       = 'mda.lv2/manifest.ttl.in',
-        target       = bld.path.get_bld().make_node('mda.lv2/manifest.ttl'),
+        target       = 'lv2/mda.lv2/manifest.ttl',
         LIB_EXT      = module_ext,
         install_path = '${LV2DIR}/mda.lv2')
 
@@ -96,7 +93,7 @@ def build(bld):
                   source       = ['src/mda%s.cpp' % p, 'lvz/wrapper.cpp'],
                   includes     = ['.', './lvz', './src'],
                   name         = p,
-                  target       = os.path.join(bundle, p),
+                  target       = os.path.join('lv2', bundle, p),
                   install_path = '${LV2DIR}/' + bundle,
                   uselib       = ['LV2'],
                   defines      = ['PLUGIN_CLASS=mda%s' % p,
