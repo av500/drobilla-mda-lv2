@@ -19,7 +19,7 @@
 #include "mdaPianoData.h"
 #include "mdaPiano.h"
 
-#include "lv2/lv2plug.in/ns/ext/atom/util.h"
+#include "lv2/atom/util.h"
 
 #include <stdio.h>
 #include <math.h>

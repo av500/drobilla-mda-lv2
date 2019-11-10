@@ -31,10 +31,10 @@
 
 #include <stdlib.h>
 #include "audioeffectx.h"
-#include "lv2.h"
-#include "lv2/lv2plug.in/ns/ext/atom/atom.h"
-#include "lv2/lv2plug.in/ns/ext/midi/midi.h"
-#include "lv2/lv2plug.in/ns/ext/urid/urid.h"
+#include "lv2/atom/atom.h"
+#include "lv2/core/lv2.h"
+#include "lv2/midi/midi.h"
+#include "lv2/urid/urid.h"
 #include PLUGIN_HEADER
 
 extern "C" {
