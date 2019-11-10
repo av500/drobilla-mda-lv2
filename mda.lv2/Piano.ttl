@@ -9,7 +9,7 @@
 <http://drobilla.net/plugins/mda/Piano/env>
 	a param:EnvelopeControls ,
 		pg:InputGroup ;
-	lv2:name "Envelope" ;
+	rdfs:label "Envelope" ;
 	lv2:symbol "env" .
 
 mda:Piano

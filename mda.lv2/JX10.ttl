@@ -10,13 +10,13 @@
 <http://drobilla.net/plugins/mda/JX10/filt_env>
 	a param:EnvelopeControls ,
 		pg:InputGroup ;
-	lv2:name "Filter Envelope" ;
+	rdfs:label "Filter Envelope" ;
 	lv2:symbol "filt_env" .
 
 <http://drobilla.net/plugins/mda/JX10/amp_env>
 	a param:EnvelopeControls ,
 		pg:InputGroup ;
-	lv2:name "Amp Envelope" ;
+	rdfs:label "Amp Envelope" ;
 	lv2:symbol "amp_env" .
 
 mda:JX10

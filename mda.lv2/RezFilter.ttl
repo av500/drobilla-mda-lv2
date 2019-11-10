@@ -8,13 +8,13 @@
 <http://drobilla.net/plugins/mda/RezFilter/env>
 	a param:EnvelopeControls ,
 		pg:InputGroup ;
-	lv2:name "Envelope" ;
+	rdfs:label "Envelope" ;
 	lv2:symbol "env" .
 
 <http://drobilla.net/plugins/mda/RezFilter/filt>
 	a param:FilterControls ,
 		pg:InputGroup ;
-	lv2:name "Filter" ;
+	rdfs:label "Filter" ;
 	lv2:symbol "filt" .
 
 mda:RezFilter

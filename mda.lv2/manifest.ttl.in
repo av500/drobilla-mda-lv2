@@ -29,14 +29,14 @@ mda:
 mda:mainIn
 	a pg:StereoGroup ,
 		pg:InputGroup ;
-	lv2:name "Input" ;
+	rdfs:label "Input" ;
 	lv2:symbol "in" .
 
 mda:mainOut
 	a pg:StereoGroup ,
 		pg:OutputGroup ;
 	pg:source mda:mainIn ;
-	lv2:name "Output" ;
+	rdfs:label "Output" ;
 	lv2:symbol "out" .
 
 mda:Ambience
