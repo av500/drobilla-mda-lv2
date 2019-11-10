@@ -1,11 +1,13 @@
-mda-lv2 (1.2.3) unstable;
+mda-lv2 (1.2.4) stable;
 
+  * Fix a few minor metadata issues
   * Fix initial noise with Piano (zero comb filter and voices on startup)
   * Fix invalid Vocoder preset description
   * Fix misleading indentation warnings with GCC 6
+  * Update build system
   * Use rdfs:label for port groups
 
- -- David Robillard <d@drobilla.net>  Sun, 10 Nov 2019 14:41:05 +0000
+ -- David Robillard <d@drobilla.net>  Sun, 10 Nov 2019 22:28:33 +0000
 
 mda-lv2 (1.2.2) stable;
 

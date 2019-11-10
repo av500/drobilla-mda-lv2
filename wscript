@@ -6,7 +6,7 @@ import shutil
 
 from waflib.extras import autowaf
 
-MDA_VERSION = '1.2.2'
+MDA_VERSION = '1.2.4'
 
 # Mandatory waf variables
 APPNAME = 'mda-lv2'    # Package name for waf dist
