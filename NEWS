@@ -3,8 +3,9 @@ mda-lv2 (1.2.3) unstable;
   * Fix initial noise with Piano (zero comb filter and voices on startup)
   * Fix invalid Vocoder preset description
   * Fix misleading indentation warnings with GCC 6
+  * Use rdfs:label for port groups
 
- -- David Robillard <d@drobilla.net>  Sun, 12 Feb 2017 18:16:11 +0100
+ -- David Robillard <d@drobilla.net>  Sun, 10 Nov 2019 15:41:05 +0100
 
 mda-lv2 (1.2.2) stable;
 
