@@ -15,6 +15,7 @@ top     = '.'          # Source directory
 out     = 'build'      # Build directory
 
 # Release variables
+title        = 'MDA.lv2'
 uri          = 'http://drobilla.net/sw/mda.lv2'
 dist_pattern = 'http://download.drobilla.net/mda-lv2-%d.%d.%d.tar.bz2'
 post_tags    = ['LV2', 'MDA.lv2']
