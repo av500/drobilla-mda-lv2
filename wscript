@@ -28,7 +28,7 @@ def configure(conf):
     conf.load('lv2', cache=True)
     conf.load('autowaf', cache=True)
     autowaf.set_c_lang(conf, 'c99')
-    autowaf.check_pkg(conf, 'lv2', atleast_version='1.2.0', uselib_store='LV2')
+    conf.check_pkg('lv2 >= 1.2.0', uselib_store='LV2')
     conf.run_env.append_unique('LV2_PATH', [conf.build_path('lv2')])
     autowaf.display_summary(conf, {'LV2 bundle directory': conf.env.LV2DIR})
 
@@ -42,15 +42,11 @@ def build(bld):
             target       = 'lv2/mda.lv2/%s' % i.name,
             install_path = '${LV2DIR}/mda.lv2')
 
-    # Make a pattern for shared objects without the 'lib' prefix
-    module_pat = re.sub('^lib', '', bld.env.cxxshlib_PATTERN)
-    module_ext = module_pat[module_pat.rfind('.'):]
-
     # Build manifest by substitution
     bld(features     = 'subst',
         source       = 'mda.lv2/manifest.ttl.in',
         target       = 'lv2/mda.lv2/manifest.ttl',
-        LIB_EXT      = module_ext,
+        LIB_EXT      = bld.env.LV2_LIB_EXT,
         install_path = '${LV2DIR}/mda.lv2')
 
     plugins = '''
@@ -94,7 +90,7 @@ def build(bld):
 
     for p in plugins:
         # Build plugin library
-        obj = bld(features     = 'cxx cxxshlib',
+        obj = bld(features     = 'cxx cxxshlib lv2lib',
                   source       = ['src/mda%s.cpp' % p, 'lvz/wrapper.cpp'],
                   includes     = ['.', './lvz', './src'],
                   name         = p,
@@ -105,7 +101,6 @@ def build(bld):
                                   'URI_PREFIX="http://drobilla.net/plugins/mda/"',
                                   'PLUGIN_URI_SUFFIX="%s"' % p,
                                   'PLUGIN_HEADER="src/mda%s.h"' % p])
-        obj.env.cxxshlib_PATTERN = module_pat
 
         # Install data file
         bld.install_files('${LV2DIR}/' + bundle, os.path.join(bundle, p + '.ttl'))
