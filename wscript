@@ -14,6 +14,11 @@ VERSION = MDA_VERSION  # Package version for waf dist
 top     = '.'          # Source directory
 out     = 'build'      # Build directory
 
+# Release variables
+uri          = 'http://drobilla.net/sw/serd'
+dist_pattern = 'http://download.drobilla.net/mda-lv2-%d.%d.%d.tar.bz2'
+post_tags    = ['LV2', 'MDA.lv2']
+
 def options(opt):
     opt.load('compiler_cxx')
     opt.load('lv2')
@@ -104,15 +109,3 @@ def build(bld):
 
         # Install data file
         bld.install_files('${LV2DIR}/' + bundle, os.path.join(bundle, p + '.ttl'))
-
-def posts(ctx):
-    path = str(ctx.path.abspath())
-    autowaf.news_to_posts(
-        os.path.join(path, 'NEWS'),
-        {'title'        : 'MDA.LV2',
-         'description'  : autowaf.get_blurb(os.path.join(path, 'README')),
-         'dist_pattern' : 'http://download.drobilla.net/mda-lv2-%s.tar.bz2'},
-        { 'Author' : 'drobilla',
-          'Tags'   : 'LV2, MDA.lv2' },
-        os.path.join(out, 'posts'))
-        
