@@ -110,7 +110,6 @@ mda:Piano
 		lv2:default 0.33 ;
 		lv2:minimum 0.0 ;
 		lv2:maximum 1.0 ;
-		lv2:portProperty lv2:integer
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
