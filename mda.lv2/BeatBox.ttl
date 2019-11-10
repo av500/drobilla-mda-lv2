@@ -6,7 +6,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 mda:BeatBox
-	a lv2:Plugin ;
+	a lv2:Plugin ,
+		lv2:GeneratorPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "BBox" ;
 	doap:name "MDA BeatBox" ;
