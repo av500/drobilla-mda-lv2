@@ -9,6 +9,8 @@ mda:Delay
 		lv2:DelayPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "Delay" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA Delay" ;
 	doap:shortdesc "Simple stereo delay with feedback tone control" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

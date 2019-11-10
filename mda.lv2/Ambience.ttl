@@ -8,6 +8,8 @@ mda:Ambience
 		lv2:ReverbPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "Amb" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA Ambience" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:optionalFeature lv2:hardRTCapable ;

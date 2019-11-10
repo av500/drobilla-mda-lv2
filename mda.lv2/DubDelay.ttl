@@ -9,6 +9,8 @@ mda:DubDelay
 		lv2:DelayPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "DubDelay" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA DubDelay" ;
 	doap:shortdesc "Delay with feedback saturation and time/pitch modulation" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

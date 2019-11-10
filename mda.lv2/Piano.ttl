@@ -17,6 +17,8 @@ mda:Piano
 		lv2:InstrumentPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "Piano" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA Piano" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:optionalFeature lv2:hardRTCapable ;

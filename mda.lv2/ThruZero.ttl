@@ -9,6 +9,8 @@ mda:ThruZero
 		lv2:FlangerPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "ThruZero" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA ThruZero" ;
 	doap:shortdesc "Classic tape-flanging simulation" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

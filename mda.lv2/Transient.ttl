@@ -8,6 +8,8 @@ mda:Transient
 		lv2:DynamicsPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "Transient" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA Transient" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:optionalFeature lv2:hardRTCapable ;

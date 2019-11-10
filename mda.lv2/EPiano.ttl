@@ -9,6 +9,8 @@ mda:EPiano
 		lv2:InstrumentPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "EPiano" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA ePiano" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:optionalFeature lv2:hardRTCapable ;

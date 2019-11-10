@@ -9,6 +9,8 @@ mda:Detune
 		lv2:PitchPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "Detune" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA Detune" ;
 	doap:shortdesc "Simple up/down pitch shifting thickener" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

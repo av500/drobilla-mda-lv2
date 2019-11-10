@@ -9,6 +9,8 @@ mda:DeEss
 		lv2:DynamicsPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "DeEss" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA De-ess" ;
 	doap:shortdesc "High frequency dynamics processor" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

@@ -8,6 +8,8 @@ mda:Stereo
 		lv2:SpatialPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "Stereo" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA Stereo" ;
 	doap:shortdesc "Haas delay and comb filtering" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

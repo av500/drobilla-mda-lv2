@@ -17,6 +17,8 @@ mda:MultiBand
 		lv2:MultiEQPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "MultiBand" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA MultiBand" ;
 	doap:shortdesc "Multi-band compressor with M-S processing modes" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

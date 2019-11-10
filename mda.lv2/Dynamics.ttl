@@ -9,6 +9,8 @@ mda:Dynamics
 		lv2:DynamicsPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "Dynamics" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA Dynamics" ;
 	doap:shortdesc "Compressor / Limiter / Gate" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

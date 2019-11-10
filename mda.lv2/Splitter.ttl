@@ -10,6 +10,8 @@ mda:Splitter
 		lv2:DynamicsPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "Splitter" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA Splitter" ;
 	doap:shortdesc "Frequency/level crossover for setting up dynamic processing" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

@@ -10,6 +10,8 @@ mda:TestTone
 		lv2:GeneratorPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "TestTone" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA TestTone" ;
 	doap:shortdesc "Signal generator with pink and white noise, impulses and sweeps" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

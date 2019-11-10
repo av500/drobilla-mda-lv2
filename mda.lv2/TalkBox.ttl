@@ -8,6 +8,8 @@ mda:TalkBox
 		lv2:FilterPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "TalkBox" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA TalkBox" ;
 	doap:shortdesc "High resolution vocoder" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

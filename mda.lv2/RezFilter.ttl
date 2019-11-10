@@ -22,6 +22,8 @@ mda:RezFilter
 		lv2:FilterPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "RezFilter" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA RezFilter" ;
 	doap:shortdesc "Resonant filter with LFO and envelope follower" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

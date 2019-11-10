@@ -9,6 +9,8 @@ mda:Degrade
 		lv2:DistortionPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "Degrade" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA Degrade" ;
 	doap:shortdesc "Sample quality reduction" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;

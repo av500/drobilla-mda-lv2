@@ -10,6 +10,8 @@ mda:Limiter
 		lv2:LimiterPlugin ;
 	lv2:project mda: ;
 	lv2:symbol "Limiter" ;
+	lv2:microVersion 0 ;
+	lv2:minorVersion 2 ;
 	doap:name "MDA Limiter" ;
 	doap:shortdesc "Opto-electronic style limiter" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
