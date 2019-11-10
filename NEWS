@@ -5,23 +5,23 @@ mda-lv2 (1.2.3) unstable;
   * Fix misleading indentation warnings with GCC 6
   * Use rdfs:label for port groups
 
- -- David Robillard <d@drobilla.net>  Sun, 10 Nov 2019 15:41:05 +0100
+ -- David Robillard <d@drobilla.net>  Sun, 10 Nov 2019 14:41:05 +0000
 
 mda-lv2 (1.2.2) stable;
 
   * Fix compilation against LV2 < 1.8.0
 
- -- David Robillard <d@drobilla.net>  Sun, 05 Jan 2014 12:52:18 -0500
+ -- David Robillard <d@drobilla.net>  Sun, 05 Jan 2014 17:52:18 +0000
 
 mda-lv2 (1.2.0) stable;
 
-  * Fix tuning of Piano and EPiano at sample rates other than 44.1 kHz
   * Fix const-violating casts
+  * Fix tuning of Piano and EPiano at sample rates other than 44.1 kHz
 
- -- David Robillard <d@drobilla.net>  Sat, 04 Jan 2014 17:47:04 -0500
+ -- David Robillard <d@drobilla.net>  Sat, 04 Jan 2014 22:47:04 +0000
 
 mda-lv2 (1.0.0) stable;
 
   * Initial release
 
- -- David Robillard <d@drobilla.net>  Sat, 21 Apr 2012 15:00:00 -0500
+ -- David Robillard <d@drobilla.net>  Sat, 21 Apr 2012 20:00:00 +0000
