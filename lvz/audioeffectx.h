@@ -23,6 +23,7 @@
 #include <string.h>
 
 #include "lv2/atom/atom.h"
+#include "lv2/core/lv2.h"
 #include "lv2/urid/urid.h"
 
 class AudioEffect;
@@ -145,7 +146,7 @@ protected:
 };
 
 extern "C" {
-AudioEffectX* lvz_new_audioeffectx();
+LV2_SYMBOL_EXPORT AudioEffectX* lvz_new_audioeffectx();
 }
 
 #endif // LVZ_AUDIOEFFECTX_H
