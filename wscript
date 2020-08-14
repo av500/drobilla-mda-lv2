@@ -29,7 +29,7 @@ def configure(conf):
     conf.load('lv2', cache=True)
     conf.load('autowaf', cache=True)
     autowaf.set_c_lang(conf, 'c99')
-    conf.check_pkg('lv2 >= 1.2.0', uselib_store='LV2')
+    conf.check_pkg('lv2 >= 1.16.0', uselib_store='LV2')
     conf.run_env.append_unique('LV2_PATH', [conf.build_path('lv2')])
     autowaf.display_summary(conf, {'LV2 bundle directory': conf.env.LV2DIR})
 
