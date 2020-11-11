@@ -30,7 +30,8 @@ AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
   return new mdaLoudness(audioMaster);
 }
 
-float loudness[14][3] = { {402.f,  0.0025f,  0.00f},  //-60dB
+static float loudness[14][3] = {
+                          {402.f,  0.0025f,  0.00f},  //-60dB
                           {334.f,  0.0121f,  0.00f},
                           {256.f,  0.0353f,  0.00f},
                           {192.f,  0.0900f,  0.00f},
