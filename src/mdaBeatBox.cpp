@@ -193,7 +193,7 @@ void mdaBeatBox::suspend()
 void mdaBeatBox::synth()
 {
 	int32_t t; 
-  float e=0.00012f, de, o, o1=0.f, o2=0.f, p=0.2f, dp;
+  float e=0.00012f, de, o=0.0f, o1=0.f, o2=0.f, p=0.2f, dp;
 
   memset(hbuf, 0, hbuflen * sizeof(float)); //generate hi-hat
   de = (float)pow(10.0,-36.0/getSampleRate());
