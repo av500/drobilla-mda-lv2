@@ -4,6 +4,7 @@ import os
 import re
 import shutil
 
+from waflib import Options
 from waflib.extras import autowaf
 
 MDA_VERSION = '1.2.4'
@@ -29,6 +30,39 @@ def configure(conf):
     conf.load('lv2', cache=True)
     conf.load('autowaf', cache=True)
     autowaf.set_c_lang(conf, 'c99')
+
+    if Options.options.ultra_strict:
+        autowaf.add_compiler_flags(conf.env, 'cxx', {
+            'clang': [
+                '-Wno-comma',
+                '-Wno-deprecated-copy-dtor',
+                '-Wno-double-promotion',
+                '-Wno-float-equal',
+                '-Wno-implicit-float-conversion',
+                '-Wno-old-style-cast',
+                '-Wno-padded',
+                '-Wno-reserved-id-macro',
+                '-Wno-shorten-64-to-32',
+                '-Wno-sign-conversion',
+                '-Wno-unused-parameter',
+                '-Wno-weak-vtables',
+                '-Wno-zero-as-null-pointer-constant',
+            ],
+            'gcc': [
+                '-Wno-conversion',
+                '-Wno-double-promotion',
+                '-Wno-duplicated-branches',
+                '-Wno-effc++',
+                '-Wno-float-conversion',
+                '-Wno-float-equal',
+                '-Wno-old-style-cast',
+                '-Wno-padded',
+                '-Wno-suggest-override',
+                '-Wno-unused-parameter',
+                '-Wno-useless-cast',
+            ]
+        })
+
     conf.check_pkg('lv2 >= 1.16.0', uselib_store='LV2')
     conf.run_env.append_unique('LV2_PATH', [conf.build_path('lv2')])
     autowaf.display_summary(conf, {'LV2 bundle directory': conf.env.LV2DIR})
