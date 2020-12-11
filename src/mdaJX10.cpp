@@ -153,7 +153,7 @@ mdaJX10::mdaJX10(audioMasterCallback audioMaster) : AudioEffectX(audioMaster, NP
     voice[v].saw  = voice[v].p     = voice[v].p2    = 0.0f;
     voice[v].env  = voice[v].envd  = voice[v].envl  = 0.0f;
     voice[v].fenv = voice[v].fenvd = voice[v].fenvl = 0.0f;
-    voice[v].f0   = voice[v].f1    = voice[v].f2    = 0.0f;
+    voice[v].f0   = voice[v].f1    = voice[v].f2    = voice[v].ff    = 0.0f;
     voice[v].note = 0;
   }
   lfo = modwhl = filtwhl = press = fzip = 0.0f; 
