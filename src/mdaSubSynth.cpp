@@ -18,8 +18,9 @@
 
 #include "mdaSubSynth.h"
 
-#include <math.h>
-#include <stdio.h>
+#include <cmath>
+#include <cstdio>
+#include <cstring>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {

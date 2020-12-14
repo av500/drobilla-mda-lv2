@@ -18,8 +18,10 @@
 
 #include "mdaTestTone.h"
 
-#include <math.h>
-#include <stdlib.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -83,7 +85,6 @@ bool mdaTestTone::getProgramNameIndexed (int32_t category, int32_t index, char* 
 	return false;
 }
 
-#include <stdio.h>
 static void int2strng(int32_t value, char *string) { sprintf(string, "%d", value); }
 static void float2strng(float value, char *string) { sprintf(string, "%.2f", value); }
 

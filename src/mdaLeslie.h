@@ -21,6 +21,8 @@
 
 #include "audioeffectx.h"
 
+#include <cstdint>
+
 #define NPARAMS  9      //number of parameters
 #define NPROGS   3      //number of programs
 

@@ -18,8 +18,9 @@
 
 #include "mdaDelay.h"
 
-#include <math.h>
-#include <float.h>
+#include <cmath>
+#include <cstdio>
+#include <cstring>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -172,7 +173,6 @@ void mdaDelay::getParameterName(int32_t index, char *label)
   }
 }
 
-#include <stdio.h>
 static void int2strng(int32_t value, char *string) { sprintf(string, "%d", value); }
 
 void mdaDelay::getParameterDisplay(int32_t index, char *text)

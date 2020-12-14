@@ -19,9 +19,11 @@
 #ifndef __mdaEPiano__
 #define __mdaEPiano__
 
-#include <string.h>
-
 #include "audioeffectx.h"
+
+#include "lv2/atom/atom.h"
+
+#include <cstdint>
 
 #define NPARAMS 12       //number of parameters
 #define NPROGS   5       //number of programs

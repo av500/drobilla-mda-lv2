@@ -21,6 +21,8 @@
 
 #include "audioeffectx.h"
 
+#include <cstdint>
+
 class mdaRingMod : public AudioEffectX
 {
 public:

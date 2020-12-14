@@ -21,6 +21,8 @@
 
 #include "audioeffectx.h"
 
+#include <cstdint>
+
 class mdaRePsycho : public AudioEffectX
 {
 public:

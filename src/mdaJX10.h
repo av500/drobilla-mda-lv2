@@ -19,9 +19,11 @@
 #ifndef __mdaJX10__
 #define __mdaJX10__
 
-#include <string.h>
-
 #include "audioeffectx.h"
+
+#include "lv2/atom/atom.h"
+
+#include <cstdint>
 
 #define NPARAMS  24      //number of parameters
 #define NPROGS   64      //number of programs

@@ -18,6 +18,8 @@
 
 #include "audioeffectx.h"
 
+#include <cstdint>
+
 #define NPARAMS            4  ///number of parameters
 #define NPROGS             1  ///number of programs
 #define BUF_MAX         1600

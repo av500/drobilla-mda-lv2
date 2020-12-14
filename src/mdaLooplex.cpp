@@ -18,15 +18,14 @@
 
 #include "mdaLooplex.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
 #if __linux__
 #include <pthread.h>
 #include <unistd.h>
 #endif
 
+#include <cstdio>
+#include <cstdlib>
+#include <cmath>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {

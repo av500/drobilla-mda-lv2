@@ -18,10 +18,10 @@
 
 #include "mdaVocInput.h"
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <float.h>
-#include <math.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {

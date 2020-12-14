@@ -18,6 +18,8 @@
 
 #include "audioeffectx.h"
 
+#include <cstdint>
+
 class mdaSubSynth : public AudioEffectX
 {
 public:

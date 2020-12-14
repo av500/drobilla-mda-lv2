@@ -18,12 +18,10 @@
 
 #include "mdaTalkBox.h"
 
-#include <assert.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <float.h>
-#include <math.h>
-
+#include <cassert>
+#include <cmath>
+#include <cstdio>
+#include <cstring>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {

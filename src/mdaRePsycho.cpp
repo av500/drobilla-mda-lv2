@@ -18,8 +18,9 @@
 
 #include "mdaRePsycho.h"
 
-#include <math.h>
-#include <float.h>
+#include <cmath>
+#include <cstdio>
+#include <cstring>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -156,7 +157,6 @@ void mdaRePsycho::getParameterName(int32_t index, char *label)
   }
 }
 
-#include <stdio.h>
 static void long2string(long value, char *string) { sprintf(string, "%ld", value); }
 
 void mdaRePsycho::getParameterDisplay(int32_t index, char *text)

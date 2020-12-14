@@ -25,6 +25,8 @@
 
 #include "audioeffectx.h"
 
+#include <cstdint>
+
 struct mdaDetuneProgram
 {
   friend class mdaDetune;

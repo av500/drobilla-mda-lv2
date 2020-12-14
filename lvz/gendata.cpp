@@ -16,16 +16,16 @@
   along with this software. If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include "audioeffectx.h"
+
+#include <dlfcn.h>
+
 #include <cassert>
 #include <fstream>
 #include <iostream>
 #include <list>
 #include <map>
 #include <string>
-
-#include <dlfcn.h>
-
-#include "audioeffectx.h"
 
 using namespace std;
 

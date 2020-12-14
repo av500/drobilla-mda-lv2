@@ -18,10 +18,9 @@
 
 #include "mdaVocoder.h"
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <float.h>
-#include <math.h>
+#include <cmath>
+#include <cstdio>
+#include <cstring>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {

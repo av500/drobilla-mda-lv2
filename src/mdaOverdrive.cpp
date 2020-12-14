@@ -18,8 +18,9 @@
 
 #include "mdaOverdrive.h"
 
-#include <math.h>
-
+#include <cmath>
+#include <cstdio>
+#include <cstring>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -107,7 +108,6 @@ void mdaOverdrive::getParameterName(int32_t index, char *label)
   }
 }
 
-#include <stdio.h>
 static void int2strng(int32_t value, char *string) { sprintf(string, "%d", value); }
 
 void mdaOverdrive::getParameterDisplay(int32_t index, char *text)

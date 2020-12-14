@@ -29,13 +29,18 @@
 #error "This file requires PLUGIN_HEADER to be defined"
 #endif
 
-#include <stdlib.h>
+#include PLUGIN_HEADER
+
 #include "audioeffectx.h"
+
 #include "lv2/atom/atom.h"
 #include "lv2/core/lv2.h"
 #include "lv2/midi/midi.h"
 #include "lv2/urid/urid.h"
-#include PLUGIN_HEADER
+
+#include <cstdlib>
+#include <cstring>
+#include <cstdint>
 
 extern "C" {
 

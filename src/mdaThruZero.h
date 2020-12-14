@@ -25,6 +25,7 @@
 
 #include "audioeffectx.h"
 
+#include <cstdint>
 
 class mdaThruZeroProgram
 {

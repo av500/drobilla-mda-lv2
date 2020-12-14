@@ -18,11 +18,12 @@
 
 #include "mdaDX10.h"
 
+#include "lv2/atom/atom.h"
 #include "lv2/atom/util.h"
 
-#include <stdio.h>
-#include <stdlib.h> //rand()
-#include <math.h>
+#include <cmath>
+#include <cstdio>
+#include <cstring>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
