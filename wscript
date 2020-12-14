@@ -44,6 +44,8 @@ def configure(conf):
                 '-Wno-reserved-id-macro',
                 '-Wno-shorten-64-to-32',
                 '-Wno-sign-conversion',
+                '-Wno-suggest-override',
+                '-Wno-suggest-destructor-override',
                 '-Wno-unused-parameter',
                 '-Wno-weak-vtables',
                 '-Wno-zero-as-null-pointer-constant',
