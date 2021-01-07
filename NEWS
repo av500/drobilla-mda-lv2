@@ -1,3 +1,9 @@
+mda-lv2 (1.2.6) stable;
+
+  * Various minor code quality improvements
+
+ -- David Robillard <d@drobilla.net>  Thu, 07 Jan 2021 22:24:40 +0000
+
 mda-lv2 (1.2.4) stable;
 
   * Fix a few minor metadata issues
