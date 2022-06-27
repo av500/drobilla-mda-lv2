@@ -1,3 +1,21 @@
+/*
+  Copyright 2008-2020 David Robillard <d@drobilla.net>
+  Copyright 1999-2000 Paul Kellett (Maxim Digital Audio)
+
+  This is free software: you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License,
+  or (at your option) any later version.
+
+  This software is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  See the GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this software. If not, see <http://www.gnu.org/licenses/>.
+*/
+
 static short epianoData[] = {
 -7,-23,-28,-16,-30,-17,-28,-16,-31,-15,-34,-12,-35,-6,-42,4,-58,44,-227,-1690,
 -1412,-1295,-1059,-908,-685,-518,-308,-152,31,182,368,531,731,948,1195,1439,1694,1950,2228,2487,

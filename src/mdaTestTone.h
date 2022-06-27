@@ -1,6 +1,7 @@
 /*
-  Copyright 2008-2011 David Robillard <http://drobilla.net>
+  Copyright 2008-2020 David Robillard <d@drobilla.net>
   Copyright 1999-2000 Paul Kellett (Maxim Digital Audio)
+  SPDX-License-Identifier: GPL-2.0-or-later or MIT
 
   This is free software: you can redistribute it and/or modify it
   under the terms of the GNU General Public License as published by
