@@ -11,6 +11,7 @@
 	a foaf:Person ;
 	foaf:name "David Robillard" ;
 	foaf:mbox <mailto:d@drobilla.net> ;
+	foaf:homepage <http://drobilla.net/> ;
 	rdfs:seeAlso <http://drobilla.net/drobilla> .
 
 mda:
