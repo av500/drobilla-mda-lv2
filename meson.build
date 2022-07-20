@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: CC0-1.0 OR MIT
 
 project('mda-lv2', ['cpp'],
-        version: '1.2.7',
+        version: '1.2.8',
         license: 'GPLv2+',
         meson_version: '>= 0.56.0',
         default_options: [

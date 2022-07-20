@@ -1,10 +1,10 @@
-mda-lv2 (1.2.7) unstable; urgency=medium
+mda-lv2 (1.2.8) stable; urgency=medium
 
   * Add REUSE licensing metadata
   * Add lv2lint test
   * Switch to meson build system
 
- -- David Robillard <d@drobilla.net>  Wed, 20 Jul 2022 19:43:30 +0000
+ -- David Robillard <d@drobilla.net>  Sat, 13 Aug 2022 20:51:22 +0000
 
 mda-lv2 (1.2.6) stable; urgency=medium
 
