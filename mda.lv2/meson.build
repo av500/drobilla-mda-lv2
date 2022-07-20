@@ -40,7 +40,8 @@ plugins = [
   'Vocoder',
 ]
 
-foreach plugin: plugins
+modules = []
+foreach plugin : plugins
   plugin_sources = files(
     '../lvz/wrapper.cpp',
     '../src/mda@0@.cpp'.format(plugin),
@@ -74,6 +75,8 @@ foreach plugin: plugins
     install_dir: lv2dir / 'mda.lv2',
     output: data_filename,
   )
+
+  modules += [module]
 endforeach
 
 # Configure bundle manifest
@@ -83,3 +86,22 @@ configure_file(
   install_dir: lv2dir / 'mda.lv2',
   output: 'manifest.ttl',
 )
+
+# Run lv2lint test on all plugins
+if not get_option('tests').disabled() and not meson.is_subproject()
+  lv2lint = find_program('lv2lint', required: get_option('tests'))
+  if lv2lint.found()
+    plugin_uris = []
+    foreach plugin : plugins
+      plugin_uris += ['http://drobilla.net/plugins/mda/' + plugin]
+    endforeach
+
+    test(
+      'lint',
+      lv2lint,
+      args: ['-I', meson.current_build_dir(), '-E', 'warn'] + plugin_uris,
+      depends: modules,
+      suite: 'plugins',
+    )
+  endif
+endif
