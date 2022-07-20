@@ -71,4 +71,12 @@ if not get_option('tests').disabled() and not meson.is_subproject()
       suite: 'data',
     )
   endif
+
+  # Check licensing metadata
+  reuse = find_program('reuse', required: get_option('tests'))
+  if reuse.found()
+    test('REUSE', reuse,
+         args: ['--root', meson.current_source_dir(), 'lint'],
+         suite: 'data')
+  endif
 endif
