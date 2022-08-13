@@ -1,8 +1,8 @@
-mda-lv2 (1.2.9) unstable; urgency=medium
+mda-lv2 (1.2.10) stable; urgency=medium
 
   * Fix preset installation
 
- -- David Robillard <d@drobilla.net>  Sat, 13 Aug 2022 23:42:59 +0000
+ -- David Robillard <d@drobilla.net>  Sat, 13 Aug 2022 23:50:38 +0000
 
 mda-lv2 (1.2.8) stable; urgency=medium
 
