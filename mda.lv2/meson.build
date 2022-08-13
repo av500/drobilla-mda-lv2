@@ -40,6 +40,18 @@ plugins = [
   'Vocoder',
 ]
 
+preset_files = [
+  'DX10-presets.ttl',
+  'Detune-presets.ttl',
+  'EPiano-presets.ttl',
+  'JX10-presets.ttl',
+  'Leslie-presets.ttl',
+  'Piano-presets.ttl',
+  'Splitter-presets.ttl',
+  'ThruZero-presets.ttl',
+  'Vocoder-presets.ttl',
+]
+
 modules = []
 foreach plugin : plugins
   plugin_sources = files(
@@ -86,6 +98,9 @@ configure_file(
   install_dir: lv2dir / 'mda.lv2',
   output: 'manifest.ttl',
 )
+
+# Install additional data files
+install_data(preset_files, install_dir: lv2dir / 'mda.lv2')
 
 # Run lv2lint test on all plugins
 if not get_option('tests').disabled() and not meson.is_subproject()
