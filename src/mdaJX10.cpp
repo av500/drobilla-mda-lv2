@@ -468,7 +468,7 @@ void mdaJX10::processReplacing(float **inputs, float **outputs, int32_t sampleFr
         
         noise = (noise * 196314165) + 907633515;
         r = (noise & 0x7FFFFF) + 0x40000000; //generate noise + fast convert to float
-        w = *(float *)&r;
+        memcpy(&w, &r, sizeof(float));
         w = ww * (w - 3.0f);
 
         if(--k<0)

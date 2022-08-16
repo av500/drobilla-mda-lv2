@@ -82,11 +82,5 @@ if is_variable('cpp')
     endif
   endif
 
-  if cpp.get_id() == 'gcc'
-    cpp_suppressions += [
-      '-Wno-strict-aliasing',
-    ]
-  endif
-  
   cpp_suppressions = cpp.get_supported_arguments(cpp_suppressions)
 endif

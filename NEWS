@@ -1,3 +1,9 @@
+mda-lv2 (1.2.11) unstable; urgency=medium
+
+  * Fix strict aliasing violation
+
+ -- David Robillard <d@drobilla.net>  Tue, 16 Aug 2022 21:03:43 +0000
+
 mda-lv2 (1.2.10) stable; urgency=medium
 
   * Fix preset installation
