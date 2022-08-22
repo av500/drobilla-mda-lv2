@@ -61,15 +61,17 @@ subdir('mda.lv2')
 #########
 
 if not get_option('tests').disabled() and not meson.is_subproject()
-  # Check release metadata
-  autoship = find_program('autoship', required: get_option('tests'))
-  if autoship.found()
-    test(
-      'autoship',
-      autoship,
-      args: ['test', meson.current_source_dir()],
-      suite: 'data',
-    )
+  if get_option('strict')
+    # Check release metadata
+    autoship = find_program('autoship', required: get_option('tests'))
+    if autoship.found()
+      test(
+        'autoship',
+        autoship,
+        args: ['test', meson.current_source_dir()],
+        suite: 'data',
+      )
+    endif
   endif
 
   # Check licensing metadata

@@ -35,6 +35,10 @@ command:
 
     meson setup -Dtests=false -Ddefault_library=static build
 
+Note that some options, such as `strict` and `werror` are for
+developer/maintainer use only.  Please don't file issues about anything that
+happens when they are enabled.
+
 Building
 --------
 
