@@ -1,5 +1,5 @@
 # Copyright 2020-2022 David Robillard <d@drobilla.net>
-# SPDX-License-Identifier: CC0-1.0 OR MIT
+# SPDX-License-Identifier: 0BSD OR MIT
 
 # General code to enable approximately all warnings in GCC 12, clang, and MSVC.
 #

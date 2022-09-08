@@ -1,5 +1,5 @@
 # Copyright 2021-2022 David Robillard <d@drobilla.net>
-# SPDX-License-Identifier: CC0-1.0 OR MIT
+# SPDX-License-Identifier: 0BSD OR MIT
 
 project('mda-lv2', ['cpp'],
         version: '1.2.10',
