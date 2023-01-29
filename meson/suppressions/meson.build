@@ -78,6 +78,7 @@ if is_variable('cpp')
         '/wd4996', # POSIX name for this item is deprecated
         '/wd5045', # will insert Spectre mitigation for memory load
         '/wd5219', # implicit conversion to float with possible loss of data
+        '/wd5264', # const variable is not used
       ]
     endif
   endif
