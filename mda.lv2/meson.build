@@ -103,7 +103,7 @@ configure_file(
 install_data(preset_files, install_dir: lv2dir / 'mda.lv2')
 
 # Run lv2lint test on all plugins
-if not get_option('tests').disabled() and not meson.is_subproject()
+if get_option('lint') and not meson.is_subproject()
   lv2lint = find_program('lv2lint', required: get_option('tests'))
   if lv2lint.found()
     plugin_uris = []
@@ -112,7 +112,7 @@ if not get_option('tests').disabled() and not meson.is_subproject()
     endforeach
 
     test(
-      'lint',
+      'lv2lint',
       lv2lint,
       args: ['-I', meson.current_build_dir(), '-E', 'warn'] + plugin_uris,
       depends: modules,
