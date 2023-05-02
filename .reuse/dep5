@@ -13,5 +13,5 @@ License: GPL-2.0-or-later or MIT
 
 Files: src/*.h src/*.cpp
 Copyright: 2008-2020 David Robillard <d@drobilla.net>
-Copyright: 1999-2000 Paul Kellett (Maxim Digital Audio)
+           1999-2000 Paul Kellett (Maxim Digital Audio)
 License: GPL-2.0-or-later or MIT
