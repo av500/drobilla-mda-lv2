@@ -1,8 +1,9 @@
 mda-lv2 (1.2.11) unstable; urgency=medium
 
   * Fix strict aliasing violation
+  * Fix use of uninitialized values in TalkBox
 
- -- David Robillard <d@drobilla.net>  Tue, 16 Aug 2022 21:03:43 +0000
+ -- David Robillard <d@drobilla.net>  Fri, 22 Sep 2023 03:22:43 +0000
 
 mda-lv2 (1.2.10) stable; urgency=medium
 

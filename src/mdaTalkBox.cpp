@@ -385,7 +385,7 @@ void mdaTalkBox::lpc_durbin(float *r, int p, float *k, float *g)
   int i, j;
   float a[ORD_MAX], at[ORD_MAX], e=r[0];
 
-  for(i=0; i<=p; i++) a[i] = at[i] = 0.0f; //probably don't need to clear at[] or k[]
+  for(i=0; i<=p; i++) a[i] = at[i] = k[i] = 0.0f;
 
   for(i=1; i<=p; i++)
   {
