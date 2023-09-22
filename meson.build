@@ -40,6 +40,7 @@ if cpp.get_id() in ['clang', 'emscripten']
       '-Wno-sign-conversion',
       '-Wno-suggest-destructor-override',
       '-Wno-suggest-override',
+      '-Wno-unsafe-buffer-usage',
       '-Wno-weak-vtables',
       '-Wno-zero-as-null-pointer-constant',
     ]
