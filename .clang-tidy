@@ -59,6 +59,7 @@ Checks: >
   -misc-confusable-identifiers,
   -misc-const-correctness,
   -misc-unused-parameters,
+  -misc-use-anonymous-namespace,
   -modernize-loop-convert,
   -modernize-macro-to-enum,
   -modernize-use-bool-literals,
