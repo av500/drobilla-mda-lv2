@@ -23,7 +23,7 @@ enum LvzPinFlags {
 };
 
 struct LvzPinProperties {
-	LvzPinProperties() : label(NULL), flags(0) {}
+	LvzPinProperties() : label{NULL}, flags{0} {}
 	char* label;
 	int   flags;
 };
@@ -63,15 +63,16 @@ public:
 class AudioEffectX : public AudioEffect {
 public:
 	AudioEffectX(audioMasterCallback audioMaster, int32_t progs, int32_t params)
-		: URI("NIL")
-		, uniqueID("NIL")
-		, eventInput(NULL)
-		, sampleRate(44100)
-		, curProgram(0)
-		, numInputs(0)
-		, numOutputs(0)
-		, numParams(params)
-		, numPrograms(progs)
+		: URI{"NIL"}
+		, uniqueID{"NIL"}
+		, eventInput{NULL}
+		, midiEventType{0}
+		, sampleRate{44100}
+		, curProgram{0}
+		, numInputs{0}
+		, numOutputs{0}
+		, numParams{params}
+		, numPrograms{progs}
 	{
 	}
 

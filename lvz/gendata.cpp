@@ -19,7 +19,7 @@ using namespace std;
 char name_buf[MAX_NAME_LENGTH];
 
 struct Record {
-	Record(const string& n) : base_name(n) {}
+	Record(const string& n) : base_name{n} {}
 	string base_name;
 	typedef list<string> UIs;
 	UIs uis;
