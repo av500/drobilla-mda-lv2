@@ -67,7 +67,7 @@ foreach plugin : plugins
       '-DPLUGIN_CLASS=mda@0@'.format(plugin),
       '-DURI_PREFIX="http://drobilla.net/plugins/mda/"',
       '-DPLUGIN_URI_SUFFIX="@0@"'.format(plugin),
-      '-DPLUGIN_HEADER="../src/mda@0@.h"'.format(plugin)
+      '-DPLUGIN_HEADER="../src/mda@0@.h"'.format(plugin),
     ],
     dependencies: [lv2_dep, m_dep],
     gnu_symbol_visibility: 'hidden',

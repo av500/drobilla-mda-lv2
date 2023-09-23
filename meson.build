@@ -1,15 +1,18 @@
 # Copyright 2021-2023 David Robillard <d@drobilla.net>
 # SPDX-License-Identifier: 0BSD OR MIT
 
-project('mda-lv2', ['cpp'],
-        version: '1.2.10',
-        license: 'GPLv2+',
-        meson_version: '>= 0.56.0',
-        default_options: [
-          'b_ndebug=if-release',
-          'buildtype=release',
-          'cpp_std=c++11',
-        ])
+project(
+  'mda-lv2',
+  ['cpp'],
+  default_options: [
+    'b_ndebug=if-release',
+    'buildtype=release',
+    'cpp_std=c++11',
+  ],
+  license: 'GPLv2+',
+  meson_version: '>= 0.56.0',
+  version: '1.2.10',
+)
 
 #######################
 # Compilers and Flags #
@@ -178,8 +181,11 @@ if not get_option('tests').disabled() and not meson.is_subproject()
   # Check licensing metadata
   reuse = find_program('reuse', required: get_option('tests'))
   if reuse.found()
-    test('REUSE', reuse,
-         args: ['--root', meson.current_source_dir(), 'lint'],
-         suite: 'data')
+    test(
+      'REUSE',
+      reuse,
+      args: ['--root', meson.current_source_dir(), 'lint'],
+      suite: 'data',
+    )
   endif
 endif
