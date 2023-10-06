@@ -32,6 +32,7 @@ if cpp.get_id() in ['clang', 'emscripten']
       '-Wno-cast-qual',
       '-Wno-comma',
       '-Wno-deprecated-copy-dtor',
+      '-Wno-deprecated-declarations',
       '-Wno-documentation-unknown-command',
       '-Wno-double-promotion',
       '-Wno-float-equal',
