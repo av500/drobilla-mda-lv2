@@ -1,4 +1,4 @@
-# Copyright 2020-2022 David Robillard <d@drobilla.net>
+# Copyright 2020-2024 David Robillard <d@drobilla.net>
 # SPDX-License-Identifier: 0BSD OR MIT
 
 Checks: >
@@ -18,6 +18,7 @@ Checks: >
   -bugprone-macro-parentheses,
   -bugprone-narrowing-conversions,
   -bugprone-reserved-identifier,
+  -bugprone-switch-missing-default-case,
   -cert-dcl37-c,
   -cert-dcl51-cpp,
   -cert-err33-c,
@@ -53,11 +54,13 @@ Checks: >
   -hicpp-no-array-decay,
   -hicpp-signed-bitwise,
   -hicpp-uppercase-literal-suffix,
+  -hicpp-use-nullptr,
   -llvm-header-guard,
   -llvm-include-order,
   -llvmlibc-*,
   -misc-confusable-identifiers,
   -misc-const-correctness,
+  -misc-include-cleaner,
   -misc-unused-parameters,
   -misc-use-anonymous-namespace,
   -modernize-loop-convert,
