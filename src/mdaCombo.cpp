@@ -38,6 +38,7 @@ mdaCombo::mdaCombo(audioMasterCallback audioMaster)	: AudioEffectX(audioMaster, 
   fParam6 = 0.00f; //hpf freq
   fParam7 = 0.50f; //hpf reso
 
+  trim = 0.5f;
   size = 1024;
   bufpos = 0;
 	buffer = new float[size];

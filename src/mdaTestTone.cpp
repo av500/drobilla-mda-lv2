@@ -46,6 +46,7 @@ mdaTestTone::mdaTestTone(audioMasterCallback audioMaster)	: AudioEffectX(audioMa
 	canProcessReplacing();
 	strcpy(programName, "Signal Generator");
 
+  updateRx = 0;
   updateTx = updateRx;
 
   suspend();
