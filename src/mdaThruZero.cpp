@@ -91,7 +91,7 @@ void mdaThruZero::resume() ///update internal parameters...
 
   wet = param[2];
   dry = 1.f - wet;
-  if(param[0]<0.01f) { rat=0.0f; phi=(float)0.0f; }
+  if(param[0]<0.01f) { rat=0.0f; phi=0.0f; }
   fb = 1.9f * param[3] - 0.95f;
 }
 

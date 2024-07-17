@@ -78,9 +78,9 @@ mdaBeatBox::mdaBeatBox(audioMasterCallback audioMaster)	: AudioEffectX(audioMast
   kthr = (float)(220.0 * pow(10.f, 2.f * fParam4 - 2.f));
   kdel = (int32_t)(0.10 * getSampleRate());
 
-  hlev = (float)(0.0001f + fParam3 * fParam3 * 4.f);
-  klev = (float)(0.0001f + fParam6 * fParam6 * 4.f);
-  slev = (float)(0.0001f + fParam9 * fParam9 * 4.f);
+  hlev = 0.0001f + fParam3 * fParam3 * 4.f;
+  klev = 0.0001f + fParam6 * fParam6 * 4.f;
+  slev = 0.0001f + fParam9 * fParam9 * 4.f;
 
   kww = (float)pow(10.0,-3.0 + 2.2 * fParam5);
   ksf1 = (float)cos(3.1415927 * kww);     //p
@@ -146,9 +146,9 @@ void mdaBeatBox::setParameter(int32_t index, float value)
   sthr = (float)(40.0 * pow(10.f, 2.f * fParam7 - 2.f));
   kthr = (float)(220.0 * pow(10.f, 2.f * fParam4 - 2.f));
 
-  hlev = (float)(0.0001f + fParam3 * fParam3 * 4.f);
-  klev = (float)(0.0001f + fParam6 * fParam6 * 4.f);
-  slev = (float)(0.0001f + fParam9 * fParam9 * 4.f);
+  hlev = 0.0001f + fParam3 * fParam3 * 4.f;
+  klev = 0.0001f + fParam6 * fParam6 * 4.f;
+  slev = 0.0001f + fParam9 * fParam9 * 4.f;
 
   wwx=ww;
   ww = (float)pow(10.0,-3.0 + 2.2 * fParam8);

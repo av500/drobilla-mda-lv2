@@ -84,7 +84,6 @@ Checks: >
   -readability-misleading-indentation,
   -readability-named-parameter,
   -readability-non-const-parameter,
-  -readability-redundant-casting,
   -readability-uppercase-literal-suffix,
 WarningsAsErrors: '*'
 HeaderFilterRegex: '.*'

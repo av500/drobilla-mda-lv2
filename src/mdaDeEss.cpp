@@ -30,9 +30,9 @@ AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 mdaDeEss::mdaDeEss(audioMasterCallback audioMaster)	: AudioEffectX(audioMaster, 1, 3)	// programs, parameters
 {
   //inits here!
-  fParam1 = (float)0.15f; //thresh
-  fParam2 = (float)0.60f; //f
-  fParam3 = (float)0.50f; //drive
+  fParam1 = 0.15f; //thresh
+  fParam2 = 0.60f; //f
+  fParam3 = 0.50f; //drive
   fbuf1 = 0.0f;
   fbuf2 = 0.0f;
   gai = 0.0f;

@@ -89,7 +89,7 @@ void mdaRezFilter::setParameter(int32_t index, float value)
 
   lfomode=0;
   flfo = 2.f * (fParam6 - 0.5f)*(fParam6 - 0.5f);
-  dphi = (float)(6.2832f * (float)pow(10.0f, 3.f * fParam7 - 1.5f) / getSampleRate());
+  dphi = 6.2832f * powf(10.0f, 3.f * fParam7 - 1.5f) / getSampleRate();
   if(fParam6<0.5) { lfomode=1; dphi *= 0.15915f; flfo *= 0.001f; } //S&H
 
   if(fParam8<0.1f) tthr=0.f; else tthr = 3.f * fParam8 * fParam8;
