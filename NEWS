@@ -1,9 +1,10 @@
 mda-lv2 (1.2.11) unstable; urgency=medium
 
+  * Fix build with MSVC 2022
   * Fix strict aliasing violation
   * Fix use of uninitialized values in TalkBox
 
- -- David Robillard <d@drobilla.net>  Fri, 22 Sep 2023 03:22:43 +0000
+ -- David Robillard <d@drobilla.net>  Sun, 01 Sep 2024 01:05:55 +0000
 
 mda-lv2 (1.2.10) stable; urgency=medium
 

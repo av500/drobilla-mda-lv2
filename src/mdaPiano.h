@@ -38,7 +38,6 @@ class mdaPianoProgram
   friend class mdaPiano;
 public:
 	mdaPianoProgram();
-	~mdaPianoProgram() {}
 
 private:
   float param[NPARAMS];

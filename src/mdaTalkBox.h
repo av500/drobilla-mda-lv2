@@ -31,7 +31,6 @@ class mdaTalkBoxProgram
 {
 public:
   mdaTalkBoxProgram();
-  ~mdaTalkBoxProgram() {}
 
 private:
   friend class mdaTalkBox;
