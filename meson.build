@@ -166,8 +166,8 @@ subdir('mda.lv2')
 # Tests #
 #########
 
-if not get_option('tests').disabled() and not meson.is_subproject()
-  if get_option('warning_level') == 'everything'
+if get_option('lint')
+  if not meson.is_subproject()
     # Check release metadata
     autoship = find_program('autoship', required: get_option('tests'))
     if autoship.found()
