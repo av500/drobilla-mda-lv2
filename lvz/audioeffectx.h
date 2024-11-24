@@ -4,9 +4,9 @@
 #ifndef LVZ_AUDIOEFFECTX_H
 #define LVZ_AUDIOEFFECTX_H
 
-#include "lv2/atom/atom.h"
-#include "lv2/core/lv2.h"
-#include "lv2/urid/urid.h"
+#include <lv2/atom/atom.h>
+#include <lv2/core/lv2.h>
+#include <lv2/urid/urid.h>
 
 #include <cstdint>
 #include <cstring>

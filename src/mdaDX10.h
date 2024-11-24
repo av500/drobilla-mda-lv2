@@ -21,7 +21,7 @@
 
 #include "audioeffectx.h"
 
-#include "lv2/atom/atom.h"
+#include <lv2/atom/atom.h>
 
 #include <cstdint>
 
