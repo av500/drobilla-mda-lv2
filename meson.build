@@ -111,8 +111,6 @@ elif cpp.get_id() == 'gcc'
 elif cpp.get_id() == 'msvc'
   if warning_level == 'everything'
     cpp_suppressions += [
-      '/wd4100', # unreferenced formal parameter
-      '/wd4244', # conversion with possible loss of data
       '/wd4365', # signed/unsigned mismatch
       '/wd4464', # relative include path contains '..'
       '/wd4514', # unreferenced inline function has been removed
@@ -120,12 +118,25 @@ elif cpp.get_id() == 'msvc'
       '/wd4710', # function not inlined
       '/wd4711', # function selected for automatic inline expansion
       '/wd4820', # padding added after construct
-      '/wd4996', # POSIX name for this item is deprecated
       '/wd5045', # will insert Spectre mitigation for memory load
       '/wd5219', # implicit conversion to float with possible loss of data
       '/wd5264', # const variable is not used
     ]
   endif
+
+  if warning_level in ['everything', '3']
+    cpp_suppressions += [
+      '/wd4100', # unreferenced formal parameter
+    ]
+  endif
+
+  if warning_level in ['everything', '3', '2']
+    cpp_suppressions += [
+      '/wd4244', # conversion from unsigned long to float
+      '/wd4996', # POSIX name for this item is deprecated
+    ]
+  endif
+
 endif
 
 cpp_suppressions = cpp.get_supported_arguments(cpp_suppressions)
