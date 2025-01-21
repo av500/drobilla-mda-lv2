@@ -147,7 +147,7 @@ cpp_suppressions = cpp.get_supported_arguments(cpp_suppressions)
 
 m_dep = cpp.find_library('m', required: false)
 
-lv2_dep = dependency('lv2', version: '>= 1.16.0', fallback: ['lv2', 'lv2_dep'])
+lv2_dep = dependency('lv2', version: '>= 1.16.0')
 
 #########
 # Paths #
