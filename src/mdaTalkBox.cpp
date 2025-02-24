@@ -349,6 +349,8 @@ void mdaTalkBox::lpc(float *buf, float *car, int32_t n, int32_t o)
   assert(o >= 0);
   float z[ORD_MAX], r[ORD_MAX], k[ORD_MAX], G, x;
   int32_t i, j, nn=n;
+  
+  r[0] = 0.0f;
 
   for(j=0; j<=o; j++, nn--)  //buf[] is already emphasized and windowed
   {
