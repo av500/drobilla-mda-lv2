@@ -1,15 +1,29 @@
-// Copyright 2008-2020 David Robillard <d@drobilla.net>
-// SPDX-License-Identifier: GPL-2.0-or-later or MIT
+/*
+  LVZ - An ugly C++ interface for writing LV2 plugins.
+  Copyright 2008-2012 David Robillard <http://drobilla.net>
+
+  This is free software: you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License,
+  or (at your option) any later version.
+
+  This software is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  See the GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this software. If not, see <http://www.gnu.org/licenses/>.
+*/
 
 #ifndef LVZ_AUDIOEFFECTX_H
 #define LVZ_AUDIOEFFECTX_H
 
-#include <lv2/atom/atom.h>
-#include <lv2/core/lv2.h>
-#include <lv2/urid/urid.h>
+#include <stdint.h>
+#include <string.h>
 
-#include <cstdint>
-#include <cstring>
+#include "lv2/lv2plug.in/ns/ext/atom/atom.h"
+#include "lv2/lv2plug.in/ns/ext/urid/urid.h"
 
 class AudioEffect;
 
@@ -23,7 +37,7 @@ enum LvzPinFlags {
 };
 
 struct LvzPinProperties {
-	LvzPinProperties() : label{NULL}, flags{0} {}
+	LvzPinProperties() : label(NULL), flags(0) {}
 	char* label;
 	int   flags;
 };
@@ -63,16 +77,17 @@ public:
 class AudioEffectX : public AudioEffect {
 public:
 	AudioEffectX(audioMasterCallback audioMaster, int32_t progs, int32_t params)
-		: URI{"NIL"}
-		, uniqueID{"NIL"}
-		, eventInput{NULL}
-		, midiEventType{0}
-		, sampleRate{44100}
-		, curProgram{0}
-		, numInputs{0}
-		, numOutputs{0}
-		, numParams{params}
-		, numPrograms{progs}
+		: URI("NIL")
+		, uniqueID("NIL")
+		, eventInput(NULL)
+		, sampleRate(48000)
+		, curProgram(0)
+		, numInputs(0)
+		, numOutputs(0)
+		, numParams(params)
+		, numPrograms(progs)
+		, flagIsSynth(false)
+		, flagWantEvents(false)
 	{
 	}
 
@@ -95,13 +110,14 @@ public:
 	virtual void getParameterName(int32_t index, char *label) = 0;
 	virtual bool getProductString(char* text)                 = 0;
 	virtual void getProgramName(char *name) { name[0] = '\0'; }
+	virtual bool getProgramNameIndexed(int32_t, int32_t, char*) { return false; }
 
 	virtual int32_t canDo(const char* text) { return false; }
 	virtual bool    canHostDo(const char* act) { return false; }
 	virtual void    canMono()                  {}
 	virtual void    canProcessReplacing()      {}
-	virtual void    isSynth()                  {}
-	virtual void    wantEvents()               {}
+	virtual void    isSynth()                  { flagIsSynth = true; }
+	virtual void    wantEvents()               { flagWantEvents = true; }
 
 	virtual void setBlockSize(int32_t size)  {}
 	virtual void setNumInputs(int32_t num)   { numInputs = num; }
@@ -111,6 +127,7 @@ public:
 	virtual void setURI(const char* uri)     { URI = uri; }
 	virtual void setUniqueID(const char* id) { uniqueID = id; }
 	virtual void suspend()                   {}
+	virtual void resume()                    {}
 	virtual void beginEdit(int32_t index)    {}
 	virtual void endEdit(int32_t index)      {}
 
@@ -129,10 +146,15 @@ protected:
 	int32_t                  numOutputs;
 	int32_t                  numParams;
 	int32_t                  numPrograms;
+
+public:
+	bool                     flagIsSynth;
+	bool                     flagWantEvents;
 };
 
 extern "C" {
-LV2_SYMBOL_EXPORT AudioEffectX* lvz_new_audioeffectx();
+AudioEffectX* lvz_new_audioeffectx();
 }
 
 #endif // LVZ_AUDIOEFFECTX_H
+
