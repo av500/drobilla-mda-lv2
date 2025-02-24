@@ -34,7 +34,6 @@ mda:DubDelay
         lv2:maximum 7500.0 ;
         lv2:portProperty epp:logarithmic ;
         units:unit units:ms ;
-        lv2:portProperty  mod:tapTempo , mod:tempoRelatedDynamicScalePoints;
         rdfs:comment "Delay time (delay is mono for authenticity!)"
     ] , [
         a lv2:InputPort ,
@@ -77,7 +76,6 @@ mda:DubDelay
         lv2:index 4 ;
         lv2:name "LFO Rate" ;
         lv2:shortName "Rate" ;
-        lv2:portProperty mod:tapTempo;
         lv2:symbol "lfo_rate" ;
         lv2:default 0.05 ;
         lv2:minimum 0.01 ;

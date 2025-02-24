@@ -10,11 +10,11 @@
 @prefix units: <http://lv2plug.in/ns/extensions/units#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
-<http://drobilla.net/plugins/mda/DX10/env>
-	a param:EnvelopeControls ,
-		pg:InputGroup ;
-	rdfs:label "Envelope" ;
-	lv2:symbol "env" .
+<http://moddevices.com/plugins/mda/DX10/env>
+    a param:EnvelopeControls ,
+        pg:InputGroup ;
+    lv2:name "Envelope" ;
+    lv2:symbol "env" .
 
 mda:DX10
 	a lv2:Plugin ,
@@ -214,7 +214,6 @@ mda:DX10
             lv2:ControlPort ;
         lv2:index 15 ;
         lv2:name "LFO Rate" ;
-        lv2:portProperty  mod:tapTempo , mod:tempoRelatedDynamicScalePoints;
         lv2:symbol "lfo_rate" ;
         lv2:default 10.35 ;
         lv2:minimum 0.0 ;

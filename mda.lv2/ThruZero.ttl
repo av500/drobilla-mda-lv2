@@ -29,7 +29,6 @@ This plug simulates tape-flanging, where two copies of a signal cancel out compl
             lv2:ControlPort ;
         lv2:index 0 ;
         lv2:name "Rate" ;
-        lv2:portProperty  mod:tapTempo , mod:tempoRelatedDynamicScalePoints;
         lv2:symbol "rate" ;
         lv2:default 0.08 ;
         lv2:minimum 0.01 ;
