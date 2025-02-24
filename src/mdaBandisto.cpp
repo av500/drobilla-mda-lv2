@@ -18,9 +18,9 @@
 
 #include "mdaBandisto.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstring>
+#include <stdio.h>
+#include <float.h>
+#include <math.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -157,6 +157,15 @@ void mdaBandisto::setParameter(int32_t index, float value)
   }
   fi1 = (float)pow(10.0,fParam2 - 1.70); fo1=(float)(1.0 - fi1);
   fi2 = (float)pow(10.0,fParam3 - 1.05); fo2=(float)(1.0 - fi2);
+  if (fi1>fi2){
+    if (index == 1){
+        fi2 = fi1;
+    }else{
+        fi1 = fi2;
+    }
+    fo1=(float)(1.0 - fi1);
+    fo2=(float)(1.0 - fi2);
+  }
 }
 
 float mdaBandisto::getParameter(int32_t index)

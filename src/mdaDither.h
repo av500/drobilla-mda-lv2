@@ -21,8 +21,6 @@
 
 #include "audioeffectx.h"
 
-#include <cstdint>
-
 class mdaDither : public AudioEffectX
 {
 public:

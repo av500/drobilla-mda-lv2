@@ -24,9 +24,6 @@
 
 #include "audioeffectx.h"
 
-#include <cstdint>
-#include <cstring>
-
 class mdaSplitterProgram
 {
 public:

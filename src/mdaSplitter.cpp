@@ -18,8 +18,10 @@
 
 #include "mdaSplitter.h"
 
-#include <cmath>
-#include <cstdio>
+#include <stdlib.h>
+#include <stdio.h>
+#include <float.h>
+#include <math.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {

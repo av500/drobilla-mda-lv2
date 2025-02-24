@@ -20,10 +20,7 @@
 #define __mdaDX10__
 
 #include "audioeffectx.h"
-
-#include <lv2/atom/atom.h>
-
-#include <cstdint>
+#include <string.h>
 
 #define NPARAMS 16       //number of parameters
 #define NPROGS  32       //number of programs

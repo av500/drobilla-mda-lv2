@@ -8,76 +8,99 @@
 	rdfs:label "5th Sweep Pad" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.37
-	] , [
+		pset:value 0.37 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.32
-	] , [
+		pset:value 0.32 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.9
-	] , [
+		pset:value 0.9 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.6
-	] , [
+		pset:value 0.6 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.12
-	] , [
+		pset:value 0.12 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.9
-	] , [
+		pset:value 0.9 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.89
-	] , [
+		pset:value 0.89 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.9
-	] , [
+		pset:value 0.9 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.73
-	] , [
+		pset:value 0.73 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.71
-	] , [
+		pset:value 0.71 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.65
-	] , [
+		pset:value 0.65 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-echo-pad>
@@ -86,76 +109,99 @@
 	rdfs:label "Echo Pad [SA]" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.88
-	] , [
+		pset:value 0.88 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.46
-	] , [
+		pset:value 0.46 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.69
-	] , [
+		pset:value 0.69 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.1
-	] , [
+		pset:value 0.1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.69
-	] , [
+		pset:value 0.69 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.86
-	] , [
+		pset:value 0.86 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.57
-	] , [
+		pset:value 0.57 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.8
-	] , [
+		pset:value 0.8 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.68
-	] , [
+		pset:value 0.68 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.66
-	] , [
+		pset:value 0.66 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.79
-	] , [
+		pset:value 0.79 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.13
-	] , [
+		pset:value 0.13 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.45
-	] , [
+		pset:value 0.45 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-space-chimes>
@@ -164,76 +210,99 @@
 	rdfs:label "Space Chimes [SA]" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.88
-	] , [
+		pset:value 0.88 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.16
-	] , [
+		pset:value 0.16 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.82
-	] , [
+		pset:value 0.82 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.66
-	] , [
+		pset:value 0.66 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.08
-	] , [
+		pset:value 0.08 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.89
-	] , [
+		pset:value 0.89 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.85
-	] , [
+		pset:value 0.85 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.69
-	] , [
+		pset:value 0.69 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.47
-	] , [
+		pset:value 0.47 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.12
-	] , [
+		pset:value 0.12 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.22
-	] , [
+		pset:value 0.22 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.55
-	] , [
+		pset:value 0.55 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.66
-	] , [
+		pset:value 0.66 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.89
-	] , [
+		pset:value 0.89 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.34
-	] , [
+		pset:value 0.34 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-solid-backing>
@@ -242,76 +311,99 @@
 	rdfs:label "Solid Backing" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.26
-	] , [
+		pset:value 0.26 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.14
-	] , [
+		pset:value 0.14 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.7
-	] , [
+		pset:value 0.7 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.63
-	] , [
+		pset:value 0.63 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-velocity-backing>
@@ -320,76 +412,99 @@
 	rdfs:label "Velocity Backing [SA]" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.41
-	] , [
+		pset:value 0.41 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.79
-	] , [
+		pset:value 0.79 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.08
-	] , [
+		pset:value 0.08 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.32
-	] , [
+		pset:value 0.32 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.01
-	] , [
+		pset:value 0.01 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.34
-	] , [
+		pset:value 0.34 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.93
-	] , [
+		pset:value 0.93 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.61
-	] , [
+		pset:value 0.61 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.87
-	] , [
+		pset:value 0.87 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.93
-	] , [
+		pset:value 0.93 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.11
-	] , [
+		pset:value 0.11 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.48
-	] , [
+		pset:value 0.48 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.98
-	] , [
+		pset:value 0.98 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.32
-	] , [
+		pset:value 0.32 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-rubber-backing-zf->
@@ -398,76 +513,99 @@
 	rdfs:label "Rubber Backing [ZF]" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.29
-	] , [
+		pset:value 0.29 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.26
-	] , [
+		pset:value 0.26 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.18
-	] , [
+		pset:value 0.18 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.15
-	] , [
+		pset:value 0.15 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.77
-	] , [
+		pset:value 0.77 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.14
-	] , [
+		pset:value 0.14 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.54
-	] , [
+		pset:value 0.54 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.42
-	] , [
+		pset:value 0.42 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.13
-	] , [
+		pset:value 0.13 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.21
-	] , [
+		pset:value 0.21 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.56
-	] , [
+		pset:value 0.56 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.32
-	] , [
+		pset:value 0.32 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.2
-	] , [
+		pset:value 0.2 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.58
-	] , [
+		pset:value 0.58 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.22
-	] , [
+		pset:value 0.22 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.53
-	] , [
+		pset:value 0.53 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-808-state-lead>
@@ -476,76 +614,99 @@
 	rdfs:label "808 State Lead" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.65
-	] , [
+		pset:value 0.65 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.24
-	] , [
+		pset:value 0.24 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.4
-	] , [
+		pset:value 0.4 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.34
-	] , [
+		pset:value 0.34 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.85
-	] , [
+		pset:value 0.85 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.65
-	] , [
+		pset:value 0.65 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.63
-	] , [
+		pset:value 0.63 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.16
-	] , [
+		pset:value 0.16 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.17
-	] , [
+		pset:value 0.17 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.03
-	] , [
+		pset:value 0.03 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.68
-	] , [
+		pset:value 0.68 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-mono-glide>
@@ -554,76 +715,99 @@
 	rdfs:label "Mono Glide" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.46
-	] , [
+		pset:value 0.46 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.37
-	] , [
+		pset:value 0.37 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.38
-	] , [
+		pset:value 0.38 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.62
-	] , [
+		pset:value 0.62 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-detuned-techno-lead>
@@ -632,154 +816,199 @@
 	rdfs:label "Detuned Techno Lead" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.84
-	] , [
+		pset:value 0.84 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.15
-	] , [
+		pset:value 0.15 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.45
-	] , [
+		pset:value 0.45 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.41
-	] , [
+		pset:value 0.41 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.42
-	] , [
+		pset:value 0.42 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.54
-	] , [
+		pset:value 0.54 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.01
-	] , [
+		pset:value 0.01 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.58
-	] , [
+		pset:value 0.58 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.21
-	] , [
+		pset:value 0.21 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.67
-	] , [
+		pset:value 0.67 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.09
-	] , [
+		pset:value 0.09 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.2
-	] , [
+		pset:value 0.2 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.85
-	] , [
+		pset:value 0.85 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.83
-	] , [
+		pset:value 0.83 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.09
-	] , [
+		pset:value 0.09 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.4
-	] , [
+		pset:value 0.4 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-hard-lead>
 	a pset:Preset ;
 	lv2:appliesTo <http://drobilla.net/plugins/mda/JX10> ;
-	rdfs:label "Hard Lead [SA]" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.71
-	] , [
+		pset:value 0.71 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.53
-	] , [
+		pset:value 0.53 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.18
-	] , [
+		pset:value 0.18 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.24
-	] , [
+		pset:value 0.24 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.56
-	] , [
+		pset:value 0.56 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.52
-	] , [
+		pset:value 0.52 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.69
-	] , [
+		pset:value 0.69 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.19
-	] , [
+		pset:value 0.19 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.7
-	] , [
+		pset:value 0.7 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.14
-	] , [
+		pset:value 0.14 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.65
-	] , [
+		pset:value 0.65 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.95
-	] , [
+		pset:value 0.95 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.07
-	] , [
+		pset:value 0.07 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.91
-	] , [
+		pset:value 0.91 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.15
-	] , [
+		pset:value 0.15 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.84
-	] , [
+		pset:value 0.84 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.33
-	] , [
+		pset:value 0.33 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-bubble>
@@ -788,76 +1017,99 @@
 	rdfs:label "Bubble" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.43
-	] , [
+		pset:value 0.43 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.71
-	] , [
+		pset:value 0.71 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.48
-	] , [
+		pset:value 0.48 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.23
-	] , [
+		pset:value 0.23 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.77
-	] , [
+		pset:value 0.77 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.8
-	] , [
+		pset:value 0.8 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.32
-	] , [
+		pset:value 0.32 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.63
-	] , [
+		pset:value 0.63 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.4
-	] , [
+		pset:value 0.4 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.18
-	] , [
+		pset:value 0.18 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.66
-	] , [
+		pset:value 0.66 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.14
-	] , [
+		pset:value 0.14 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.38
-	] , [
+		pset:value 0.38 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.65
-	] , [
+		pset:value 0.65 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.16
-	] , [
+		pset:value 0.16 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.48
-	] , [
+		pset:value 0.48 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.67
-	] , [
+		pset:value 0.67 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-monosynth>
@@ -866,74 +1118,97 @@
 	rdfs:label "Monosynth" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.62
-	] , [
+		pset:value 0.62 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.26
-	] , [
+		pset:value 0.26 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.79
-	] , [
+		pset:value 0.79 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.54
-	] , [
+		pset:value 0.54 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.64
-	] , [
+		pset:value 0.64 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.39
-	] , [
+		pset:value 0.39 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.65
-	] , [
+		pset:value 0.65 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.07
-	] , [
+		pset:value 0.07 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.52
-	] , [
+		pset:value 0.52 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.24
-	] , [
+		pset:value 0.24 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.84
-	] , [
+		pset:value 0.84 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.13
-	] , [
+		pset:value 0.13 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.21
-	] , [
+		pset:value 0.21 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.58
-	] , [
+		pset:value 0.58 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.36
-	] , [
+		pset:value 0.36 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
 		pset:value 0.5
 	] .
@@ -944,154 +1219,199 @@
 	rdfs:label "Moogcury Lite" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.21
-	] , [
+		pset:value 0.21 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.78
-	] , [
+		pset:value 0.78 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.15
-	] , [
+		pset:value 0.15 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.39
-	] , [
+		pset:value 0.39 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.17
-	] , [
+		pset:value 0.17 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.69
-	] , [
+		pset:value 0.69 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.4
-	] , [
+		pset:value 0.4 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.62
-	] , [
+		pset:value 0.62 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.47
-	] , [
+		pset:value 0.47 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.19
-	] , [
+		pset:value 0.19 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.37
-	] , [
+		pset:value 0.37 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.2
-	] , [
+		pset:value 0.2 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.33
-	] , [
+		pset:value 0.33 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.38
-	] , [
+		pset:value 0.38 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.53
-	] , [
+		pset:value 0.53 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.12
-	] , [
+		pset:value 0.12 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-gangsta-whine>
 	a pset:Preset ;
 	lv2:appliesTo <http://drobilla.net/plugins/mda/JX10> ;
-	rdfs:label "Gangsta Whine" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.52
-	] , [
+		pset:value 0.52 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.96
-	] , [
+		pset:value 0.96 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.44
-	] , [
+		pset:value 0.44 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.41
-	] , [
+		pset:value 0.41 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.46
-	] , [
+		pset:value 0.46 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.15
-	] , [
+		pset:value 0.15 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.32
-	] , [
+		pset:value 0.32 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.83
-	] , [
+		pset:value 0.83 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-higher-synth-zf->
@@ -1100,76 +1420,99 @@
 	rdfs:label "Higher Synth [ZF]" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.48
-	] , [
+		pset:value 0.48 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.22
-	] , [
+		pset:value 0.22 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.47
-	] , [
+		pset:value 0.47 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.73
-	] , [
+		pset:value 0.73 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.8
-	] , [
+		pset:value 0.8 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.1
-	] , [
+		pset:value 0.1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.07
-	] , [
+		pset:value 0.07 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.42
-	] , [
+		pset:value 0.42 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.22
-	] , [
+		pset:value 0.22 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.21
-	] , [
+		pset:value 0.21 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.59
-	] , [
+		pset:value 0.59 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.16
-	] , [
+		pset:value 0.16 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.98
-	] , [
+		pset:value 0.98 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-303-saw-bass>
@@ -1178,76 +1521,99 @@
 	rdfs:label "303 Saw Bass" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.83
-	] , [
+		pset:value 0.83 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.55
-	] , [
+		pset:value 0.55 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.69
-	] , [
+		pset:value 0.69 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.56
-	] , [
+		pset:value 0.56 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.56
-	] , [
+		pset:value 0.56 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.8
-	] , [
+		pset:value 0.8 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.24
-	] , [
+		pset:value 0.24 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.26
-	] , [
+		pset:value 0.26 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.07
-	] , [
+		pset:value 0.07 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-303-square-bass>
@@ -1256,154 +1622,199 @@
 	rdfs:label "303 Square Bass" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.83
-	] , [
+		pset:value 0.83 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.55
-	] , [
+		pset:value 0.55 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.69
-	] , [
+		pset:value 0.69 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.14
-	] , [
+		pset:value 0.14 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.39
-	] , [
+		pset:value 0.39 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.8
-	] , [
+		pset:value 0.8 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.24
-	] , [
+		pset:value 0.24 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.26
-	] , [
+		pset:value 0.26 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.07
-	] , [
+		pset:value 0.07 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-analog-bass>
 	a pset:Preset ;
 	lv2:appliesTo <http://drobilla.net/plugins/mda/JX10> ;
-	rdfs:label "Analog Bass" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.2
-	] , [
+		pset:value 0.2 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.19
-	] , [
+		pset:value 0.19 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.85
-	] , [
+		pset:value 0.85 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.09
-	] , [
+		pset:value 0.09 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.88
-	] , [
+		pset:value 0.88 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.21
-	] , [
+		pset:value 0.21 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.46
-	] , [
+		pset:value 0.46 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.27
-	] , [
+		pset:value 0.27 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-analog-bass-2>
@@ -1412,76 +1823,99 @@
 	rdfs:label "Analog Bass 2" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.2
-	] , [
+		pset:value 0.2 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.72
-	] , [
+		pset:value 0.72 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.19
-	] , [
+		pset:value 0.19 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.86
-	] , [
+		pset:value 0.86 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.48
-	] , [
+		pset:value 0.48 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.43
-	] , [
+		pset:value 0.43 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.94
-	] , [
+		pset:value 0.94 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.8
-	] , [
+		pset:value 0.8 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.61
-	] , [
+		pset:value 0.61 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.32
-	] , [
+		pset:value 0.32 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.27
-	] , [
+		pset:value 0.27 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-low-pulses>
@@ -1490,154 +1924,199 @@
 	rdfs:label "Low Pulses" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.97
-	] , [
+		pset:value 0.97 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.26
-	] , [
+		pset:value 0.26 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.8
-	] , [
+		pset:value 0.8 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.4
-	] , [
+		pset:value 0.4 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.52
-	] , [
+		pset:value 0.52 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.77
-	] , [
+		pset:value 0.77 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.16
-	] , [
+		pset:value 0.16 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
-
 <http://drobilla.net/plugins/mda/presets#JX10-sine-infra-bass>
 	a pset:Preset ;
 	lv2:appliesTo <http://drobilla.net/plugins/mda/JX10> ;
 	rdfs:label "Sine Infra-Bass" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.65
-	] , [
+		pset:value 0.65 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.33
-	] , [
+		pset:value 0.33 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.53
-	] , [
+		pset:value 0.53 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.55
-	] , [
+		pset:value 0.55 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.52
-	] , [
+		pset:value 0.52 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.14
-	] , [
+		pset:value 0.14 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-wobble-bass>
@@ -1646,76 +2125,99 @@
 	rdfs:label "Wobble Bass [SA]" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.26
-	] , [
+		pset:value 0.26 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.22
-	] , [
+		pset:value 0.22 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.64
-	] , [
+		pset:value 0.64 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.82
-	] , [
+		pset:value 0.82 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.59
-	] , [
+		pset:value 0.59 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.72
-	] , [
+		pset:value 0.72 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.47
-	] , [
+		pset:value 0.47 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.34
-	] , [
+		pset:value 0.34 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.34
-	] , [
+		pset:value 0.34 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.82
-	] , [
+		pset:value 0.82 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.2
-	] , [
+		pset:value 0.2 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.69
-	] , [
+		pset:value 0.69 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.15
-	] , [
+		pset:value 0.15 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.09
-	] , [
+		pset:value 0.09 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.07
-	] , [
+		pset:value 0.07 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.46
-	] , [
+		pset:value 0.46 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.24
-	] , [
+		pset:value 0.24 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-squelch-bass>
@@ -1724,76 +2226,99 @@
 	rdfs:label "Squelch Bass" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.26
-	] , [
+		pset:value 0.26 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.22
-	] , [
+		pset:value 0.22 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.71
-	] , [
+		pset:value 0.71 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.67
-	] , [
+		pset:value 0.67 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.7
-	] , [
+		pset:value 0.7 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.26
-	] , [
+		pset:value 0.26 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.48
-	] , [
+		pset:value 0.48 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.69
-	] , [
+		pset:value 0.69 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.15
-	] , [
+		pset:value 0.15 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.07
-	] , [
+		pset:value 0.07 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.46
-	] , [
+		pset:value 0.46 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.24
-	] , [
+		pset:value 0.24 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-rubber-bass-zf->
@@ -1802,76 +2327,99 @@
 	rdfs:label "Rubber Bass [ZF]" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.66
-	] , [
+		pset:value 0.66 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.36
-	] , [
+		pset:value 0.36 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.15
-	] , [
+		pset:value 0.15 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.2
-	] , [
+		pset:value 0.2 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.38
-	] , [
+		pset:value 0.38 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.6
-	] , [
+		pset:value 0.6 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.22
-	] , [
+		pset:value 0.22 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.19
-	] , [
+		pset:value 0.19 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.17
-	] , [
+		pset:value 0.17 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-soft-pick-bass>
@@ -1880,76 +2428,99 @@
 	rdfs:label "Soft Pick Bass" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.37
-	] , [
+		pset:value 0.37 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.77
-	] , [
+		pset:value 0.77 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.71
-	] , [
+		pset:value 0.71 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.22
-	] , [
+		pset:value 0.22 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.33
-	] , [
+		pset:value 0.33 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.47
-	] , [
+		pset:value 0.47 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.71
-	] , [
+		pset:value 0.71 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.16
-	] , [
+		pset:value 0.16 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.59
-	] , [
+		pset:value 0.59 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.04
-	] , [
+		pset:value 0.04 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.58
-	] , [
+		pset:value 0.58 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.22
-	] , [
+		pset:value 0.22 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.15
-	] , [
+		pset:value 0.15 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.44
-	] , [
+		pset:value 0.44 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.33
-	] , [
+		pset:value 0.33 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.15
-	] , [
+		pset:value 0.15 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-fretless-bass>
@@ -1958,76 +2529,99 @@
 	rdfs:label "Fretless Bass" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.17
-	] , [
+		pset:value 0.17 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.8
-	] , [
+		pset:value 0.8 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.34
-	] , [
+		pset:value 0.34 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.58
-	] , [
+		pset:value 0.58 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.67
-	] , [
+		pset:value 0.67 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.09
-	] , [
+		pset:value 0.09 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.2
-	] , [
+		pset:value 0.2 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.85
-	] , [
+		pset:value 0.85 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.7
-	] , [
+		pset:value 0.7 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-whistler>
@@ -2036,76 +2630,99 @@
 	rdfs:label "Whistler" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.23
-	] , [
+		pset:value 0.23 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.38
-	] , [
+		pset:value 0.38 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.33
-	] , [
+		pset:value 0.33 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.29
-	] , [
+		pset:value 0.29 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.68
-	] , [
+		pset:value 0.68 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.39
-	] , [
+		pset:value 0.39 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.58
-	] , [
+		pset:value 0.58 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.36
-	] , [
+		pset:value 0.36 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.64
-	] , [
+		pset:value 0.64 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.38
-	] , [
+		pset:value 0.38 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.92
-	] , [
+		pset:value 0.92 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-very-soft-pad>
@@ -2114,76 +2731,99 @@
 	rdfs:label "Very Soft Pad" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.39
-	] , [
+		pset:value 0.39 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.27
-	] , [
+		pset:value 0.27 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.38
-	] , [
+		pset:value 0.38 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.12
-	] , [
+		pset:value 0.12 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.78
-	] , [
+		pset:value 0.78 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.8
-	] , [
+		pset:value 0.8 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.7
-	] , [
+		pset:value 0.7 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-pizzicato>
@@ -2192,76 +2832,99 @@
 	rdfs:label "Pizzicato" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.23
-	] , [
+		pset:value 0.23 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.2
-	] , [
+		pset:value 0.2 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.22
-	] , [
+		pset:value 0.22 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.47
-	] , [
+		pset:value 0.47 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.8
-	] , [
+		pset:value 0.8 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-synth-strings>
@@ -2270,76 +2933,99 @@
 	rdfs:label "Synth Strings" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.24
-	] , [
+		pset:value 0.24 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.42
-	] , [
+		pset:value 0.42 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.26
-	] , [
+		pset:value 0.26 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.14
-	] , [
+		pset:value 0.14 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.69
-	] , [
+		pset:value 0.69 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.67
-	] , [
+		pset:value 0.67 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.55
-	] , [
+		pset:value 0.55 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.97
-	] , [
+		pset:value 0.97 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.82
-	] , [
+		pset:value 0.82 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.7
-	] , [
+		pset:value 0.7 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.42
-	] , [
+		pset:value 0.42 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.84
-	] , [
+		pset:value 0.84 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.67
-	] , [
+		pset:value 0.67 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.47
-	] , [
+		pset:value 0.47 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-synth-strings-2>
@@ -2348,76 +3034,99 @@
 	rdfs:label "Synth Strings 2" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.29
-	] , [
+		pset:value 0.29 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.55
-	] , [
+		pset:value 0.55 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.16
-	] , [
+		pset:value 0.16 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.69
-	] , [
+		pset:value 0.69 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.08
-	] , [
+		pset:value 0.08 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.2
-	] , [
+		pset:value 0.2 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.29
-	] , [
+		pset:value 0.29 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.46
-	] , [
+		pset:value 0.46 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.8
-	] , [
+		pset:value 0.8 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.39
-	] , [
+		pset:value 0.39 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.79
-	] , [
+		pset:value 0.79 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.27
-	] , [
+		pset:value 0.27 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.68
-	] , [
+		pset:value 0.68 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-leslie-organ>
@@ -2426,74 +3135,97 @@
 	rdfs:label "Leslie Organ" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.53
-	] , [
+		pset:value 0.53 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.13
-	] , [
+		pset:value 0.13 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.39
-	] , [
+		pset:value 0.39 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.38
-	] , [
+		pset:value 0.38 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.74
-	] , [
+		pset:value 0.74 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.54
-	] , [
+		pset:value 0.54 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.2
-	] , [
+		pset:value 0.2 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.55
-	] , [
+		pset:value 0.55 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.52
-	] , [
+		pset:value 0.52 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.31
-	] , [
+		pset:value 0.31 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.17
-	] , [
+		pset:value 0.17 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.73
-	] , [
+		pset:value 0.73 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.28
-	] , [
+		pset:value 0.28 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.87
-	] , [
+		pset:value 0.87 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.24
-	] , [
+		pset:value 0.24 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.29
-	] , [
+		pset:value 0.29 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
 		pset:value 0.5
 	] .
@@ -2504,76 +3236,99 @@
 	rdfs:label "Click Organ" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.77
-	] , [
+		pset:value 0.77 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.52
-	] , [
+		pset:value 0.52 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.44
-	] , [
+		pset:value 0.44 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.65
-	] , [
+		pset:value 0.65 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.16
-	] , [
+		pset:value 0.16 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.18
-	] , [
+		pset:value 0.18 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.8
-	] , [
+		pset:value 0.8 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.44
-	] , [
+		pset:value 0.44 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-hard-organ>
@@ -2582,76 +3337,99 @@
 	rdfs:label "Hard Organ" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.89
-	] , [
+		pset:value 0.89 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.91
-	] , [
+		pset:value 0.91 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.37
-	] , [
+		pset:value 0.37 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.62
-	] , [
+		pset:value 0.62 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.54
-	] , [
+		pset:value 0.54 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.37
-	] , [
+		pset:value 0.37 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.04
-	] , [
+		pset:value 0.04 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.08
-	] , [
+		pset:value 0.08 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.72
-	] , [
+		pset:value 0.72 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.04
-	] , [
+		pset:value 0.04 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.77
-	] , [
+		pset:value 0.77 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.58
-	] , [
+		pset:value 0.58 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-bass-clarinet>
@@ -2660,76 +3438,99 @@
 	rdfs:label "Bass Clarinet" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.37
-	] , [
+		pset:value 0.37 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.1
-	] , [
+		pset:value 0.1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.11
-	] , [
+		pset:value 0.11 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.65
-	] , [
+		pset:value 0.65 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.65
-	] , [
+		pset:value 0.65 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.32
-	] , [
+		pset:value 0.32 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.79
-	] , [
+		pset:value 0.79 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.2
-	] , [
+		pset:value 0.2 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-trumpet>
@@ -2738,76 +3539,99 @@
 	rdfs:label "Trumpet" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.82
-	] , [
+		pset:value 0.82 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.06
-	] , [
+		pset:value 0.06 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.57
-	] , [
+		pset:value 0.57 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.32
-	] , [
+		pset:value 0.32 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.15
-	] , [
+		pset:value 0.15 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.21
-	] , [
+		pset:value 0.21 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.15
-	] , [
+		pset:value 0.15 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.24
-	] , [
+		pset:value 0.24 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.6
-	] , [
+		pset:value 0.6 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.8
-	] , [
+		pset:value 0.8 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.1
-	] , [
+		pset:value 0.1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.55
-	] , [
+		pset:value 0.55 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.69
-	] , [
+		pset:value 0.69 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-soft-horn>
@@ -2816,76 +3640,99 @@
 	rdfs:label "Soft Horn" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.12
-	] , [
+		pset:value 0.12 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.9
-	] , [
+		pset:value 0.9 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.67
-	] , [
+		pset:value 0.67 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.21
-	] , [
+		pset:value 0.21 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.29
-	] , [
+		pset:value 0.29 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.12
-	] , [
+		pset:value 0.12 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.6
-	] , [
+		pset:value 0.6 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.36
-	] , [
+		pset:value 0.36 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.08
-	] , [
+		pset:value 0.08 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.27
-	] , [
+		pset:value 0.27 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.83
-	] , [
+		pset:value 0.83 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.1
-	] , [
+		pset:value 0.1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-brass-section>
@@ -2894,76 +3741,99 @@
 	rdfs:label "Brass Section" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.43
-	] , [
+		pset:value 0.43 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.23
-	] , [
+		pset:value 0.23 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.28
-	] , [
+		pset:value 0.28 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.36
-	] , [
+		pset:value 0.36 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.59
-	] , [
+		pset:value 0.59 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.24
-	] , [
+		pset:value 0.24 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.16
-	] , [
+		pset:value 0.16 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.91
-	] , [
+		pset:value 0.91 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.08
-	] , [
+		pset:value 0.08 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.17
-	] , [
+		pset:value 0.17 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.8
-	] , [
+		pset:value 0.8 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.45
-	] , [
+		pset:value 0.45 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.58
-	] , [
+		pset:value 0.58 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-synth-brass>
@@ -2972,76 +3842,99 @@
 	rdfs:label "Synth Brass" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.4
-	] , [
+		pset:value 0.4 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.28
-	] , [
+		pset:value 0.28 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.39
-	] , [
+		pset:value 0.39 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.15
-	] , [
+		pset:value 0.15 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.39
-	] , [
+		pset:value 0.39 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.82
-	] , [
+		pset:value 0.82 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.33
-	] , [
+		pset:value 0.33 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.74
-	] , [
+		pset:value 0.74 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.41
-	] , [
+		pset:value 0.41 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.47
-	] , [
+		pset:value 0.47 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.23
-	] , [
+		pset:value 0.23 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-detuned-syn-brass-zf->
@@ -3050,154 +3943,199 @@
 	rdfs:label "Detuned Syn Brass [ZF]" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.68
-	] , [
+		pset:value 0.68 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.93
-	] , [
+		pset:value 0.93 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.31
-	] , [
+		pset:value 0.31 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.62
-	] , [
+		pset:value 0.62 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.26
-	] , [
+		pset:value 0.26 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.07
-	] , [
+		pset:value 0.07 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.85
-	] , [
+		pset:value 0.85 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.66
-	] , [
+		pset:value 0.66 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.83
-	] , [
+		pset:value 0.83 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.05
-	] , [
+		pset:value 0.05 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.54
-	] , [
+		pset:value 0.54 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.32
-	] , [
+		pset:value 0.32 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.37
-	] , [
+		pset:value 0.37 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.29
-	] , [
+		pset:value 0.29 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.56
-	] , [
+		pset:value 0.56 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
-
 <http://drobilla.net/plugins/mda/presets#JX10-power-pwm>
 	a pset:Preset ;
 	lv2:appliesTo <http://drobilla.net/plugins/mda/JX10> ;
 	rdfs:label "Power PWM" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.27
-	] , [
+		pset:value 0.27 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.22
-	] , [
+		pset:value 0.22 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.82
-	] , [
+		pset:value 0.82 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.13
-	] , [
+		pset:value 0.13 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.24
-	] , [
+		pset:value 0.24 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.88
-	] , [
+		pset:value 0.88 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.34
-	] , [
+		pset:value 0.34 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.48
-	] , [
+		pset:value 0.48 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.71
-	] , [
+		pset:value 0.71 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.37
-	] , [
+		pset:value 0.37 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-water-velocity>
@@ -3206,76 +4144,99 @@
 	rdfs:label "Water Velocity [SA]" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.87
-	] , [
+		pset:value 0.87 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.67
-	] , [
+		pset:value 0.67 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.32
-	] , [
+		pset:value 0.32 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.09
-	] , [
+		pset:value 0.09 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.95
-	] , [
+		pset:value 0.95 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.56
-	] , [
+		pset:value 0.56 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.72
-	] , [
+		pset:value 0.72 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.04
-	] , [
+		pset:value 0.04 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.11
-	] , [
+		pset:value 0.11 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.46
-	] , [
+		pset:value 0.46 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.88
-	] , [
+		pset:value 0.88 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.72
-	] , [
+		pset:value 0.72 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.38
-	] , [
+		pset:value 0.38 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-ghost>
@@ -3284,76 +4245,99 @@
 	rdfs:label "Ghost [SA]" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.24
-	] , [
+		pset:value 0.24 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.45
-	] , [
+		pset:value 0.45 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.16
-	] , [
+		pset:value 0.16 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.48
-	] , [
+		pset:value 0.48 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.38
-	] , [
+		pset:value 0.38 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.58
-	] , [
+		pset:value 0.58 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.75
-	] , [
+		pset:value 0.75 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.16
-	] , [
+		pset:value 0.16 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.4
-	] , [
+		pset:value 0.4 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.31
-	] , [
+		pset:value 0.31 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.37
-	] , [
+		pset:value 0.37 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.54
-	] , [
+		pset:value 0.54 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.85
-	] , [
+		pset:value 0.85 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.83
-	] , [
+		pset:value 0.83 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.43
-	] , [
+		pset:value 0.43 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.46
-	] , [
+		pset:value 0.46 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-soft-e-piano>
@@ -3362,76 +4346,99 @@
 	rdfs:label "Soft E.Piano" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.31
-	] , [
+		pset:value 0.31 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.43
-	] , [
+		pset:value 0.43 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.34
-	] , [
+		pset:value 0.34 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.26
-	] , [
+		pset:value 0.26 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.53
-	] , [
+		pset:value 0.53 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.63
-	] , [
+		pset:value 0.63 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.22
-	] , [
+		pset:value 0.22 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.39
-	] , [
+		pset:value 0.39 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.8
-	] , [
+		pset:value 0.8 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.44
-	] , [
+		pset:value 0.44 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-thumb-piano>
@@ -3440,76 +4447,99 @@
 	rdfs:label "Thumb Piano" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.72
-	] , [
+		pset:value 0.72 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.82
-	] , [
+		pset:value 0.82 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.37
-	] , [
+		pset:value 0.37 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.47
-	] , [
+		pset:value 0.47 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.54
-	] , [
+		pset:value 0.54 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.45
-	] , [
+		pset:value 0.45 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.39
-	] , [
+		pset:value 0.39 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.39
-	] , [
+		pset:value 0.39 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.48
-	] , [
+		pset:value 0.48 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.6
-	] , [
+		pset:value 0.6 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.71
-	] , [
+		pset:value 0.71 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-steel-drums-zf->
@@ -3518,76 +4548,99 @@
 	rdfs:label "Steel Drums [ZF]" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.19
-	] , [
+		pset:value 0.19 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.18
-	] , [
+		pset:value 0.18 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.7
-	] , [
+		pset:value 0.7 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.4
-	] , [
+		pset:value 0.4 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.54
-	] , [
+		pset:value 0.54 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.17
-	] , [
+		pset:value 0.17 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.4
-	] , [
+		pset:value 0.4 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.42
-	] , [
+		pset:value 0.42 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.23
-	] , [
+		pset:value 0.23 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.47
-	] , [
+		pset:value 0.47 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.12
-	] , [
+		pset:value 0.12 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.48
-	] , [
+		pset:value 0.48 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.53
-	] , [
+		pset:value 0.53 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.36
-	] , [
+		pset:value 0.36 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.34
-	] , [
+		pset:value 0.34 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.56
-	] , [
+		pset:value 0.56 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-car-horn>
@@ -3596,76 +4649,99 @@
 	rdfs:label "Car Horn" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.57
-	] , [
+		pset:value 0.57 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.49
-	] , [
+		pset:value 0.49 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.31
-	] , [
+		pset:value 0.31 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.46
-	] , [
+		pset:value 0.46 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.68
-	] , [
+		pset:value 0.68 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.46
-	] , [
+		pset:value 0.46 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.23
-	] , [
+		pset:value 0.23 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.31
-	] , [
+		pset:value 0.31 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.38
-	] , [
+		pset:value 0.38 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-helicopter>
@@ -3674,76 +4750,99 @@
 	rdfs:label "Helicopter" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.08
-	] , [
+		pset:value 0.08 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.36
-	] , [
+		pset:value 0.36 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.69
-	] , [
+		pset:value 0.69 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.96
-	] , [
+		pset:value 0.96 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.92
-	] , [
+		pset:value 0.92 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.97
-	] , [
+		pset:value 0.97 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-arctic-wind>
@@ -3752,76 +4851,99 @@
 	rdfs:label "Arctic Wind" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.16
-	] , [
+		pset:value 0.16 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.85
-	] , [
+		pset:value 0.85 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.28
-	] , [
+		pset:value 0.28 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.37
-	] , [
+		pset:value 0.37 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.89
-	] , [
+		pset:value 0.89 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.89
-	] , [
+		pset:value 0.89 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.24
-	] , [
+		pset:value 0.24 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-thip>
@@ -3830,76 +4952,99 @@
 	rdfs:label "Thip" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.37
-	] , [
+		pset:value 0.37 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.51
-	] , [
+		pset:value 0.51 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.35
-	] , [
+		pset:value 0.35 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.97
-	] , [
+		pset:value 0.97 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.02
-	] , [
+		pset:value 0.02 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.2
-	] , [
+		pset:value 0.2 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.2
-	] , [
+		pset:value 0.2 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.46
-	] , [
+		pset:value 0.46 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.78
-	] , [
+		pset:value 0.78 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.48
-	] , [
+		pset:value 0.48 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-synth-tom>
@@ -3908,76 +5053,99 @@
 	rdfs:label "Synth Tom" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.94
-	] , [
+		pset:value 0.94 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.3
-	] , [
+		pset:value 0.3 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.33
-	] , [
+		pset:value 0.33 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.76
-	] , [
+		pset:value 0.76 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.68
-	] , [
+		pset:value 0.68 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.59
-	] , [
+		pset:value 0.59 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.59
-	] , [
+		pset:value 0.59 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.1
-	] , [
+		pset:value 0.1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.81
-	] , [
+		pset:value 0.81 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.7
-	] , [
+		pset:value 0.7 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .
 
 <http://drobilla.net/plugins/mda/presets#JX10-squelchy-frog>
@@ -3986,74 +5154,97 @@
 	rdfs:label "Squelchy Frog" ;
 	lv2:port [
 		lv2:symbol "osc_mix" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_tune" ;
-		pset:value 0.41
-	] , [
+		pset:value 0.41 ;
+	] ;
+	lv2:port [
 		lv2:symbol "osc_fine" ;
-		pset:value 0.23
-	] , [
+		pset:value 0.23 ;
+	] ;
+	lv2:port [
 		lv2:symbol "glide" ;
-		pset:value 0.45
-	] , [
+		pset:value 0.45 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_rate" ;
-		pset:value 0.77
-	] , [
+		pset:value 0.77 ;
+	] ;
+	lv2:port [
 		lv2:symbol "gld_bend" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_freq" ;
-		pset:value 0.4
-	] , [
+		pset:value 0.4 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_reso" ;
-		pset:value 0.65
-	] , [
+		pset:value 0.65 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_env" ;
-		pset:value 0.95
-	] , [
+		pset:value 0.95 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_lfo" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_vel" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_att" ;
-		pset:value 0.33
-	] , [
+		pset:value 0.33 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_dec" ;
-		pset:value 0.5
-	] , [
+		pset:value 0.5 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_sus" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vcf_rel" ;
-		pset:value 0.25
-	] , [
+		pset:value 0.25 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_att" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_dec" ;
-		pset:value 0.7
-	] , [
+		pset:value 0.7 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_sus" ;
-		pset:value 0.65
-	] , [
+		pset:value 0.65 ;
+	] ;
+	lv2:port [
 		lv2:symbol "env_rel" ;
-		pset:value 0.18
-	] , [
+		pset:value 0.18 ;
+	] ;
+	lv2:port [
 		lv2:symbol "lfo_rate" ;
-		pset:value 0.32
-	] , [
+		pset:value 0.32 ;
+	] ;
+	lv2:port [
 		lv2:symbol "vibrato" ;
-		pset:value 1.0
-	] , [
+		pset:value 1 ;
+	] ;
+	lv2:port [
 		lv2:symbol "noise" ;
-		pset:value 0.0
-	] , [
+		pset:value 0 ;
+	] ;
+	lv2:port [
 		lv2:symbol "octave" ;
-		pset:value 0.06
-	] , [
+		pset:value 0.06 ;
+	] ;
+	lv2:port [
 		lv2:symbol "tuning" ;
-		pset:value 0.5
+		pset:value 0.5 ;
 	] .

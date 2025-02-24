@@ -21,7 +21,6 @@
 
 #include "audioeffectx.h"
 
-#include <cstdint>
 
 class mdaAmbience : public AudioEffectX
 {
@@ -58,6 +57,7 @@ protected:
   int32_t  pos, den, rdy;
 
   char programName[32];
+private:
 };
 
 #endif

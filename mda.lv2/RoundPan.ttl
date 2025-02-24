@@ -10,7 +10,7 @@ mda:RoundPan
 	lv2:project mda: ;
 	lv2:symbol "RoundPan" ;
 	lv2:microVersion 0 ;
-	lv2:minorVersion 2 ;
+	lv2:minorVersion 3 ;
 	doap:name "MDA RoundPan" ;
 	doap:shortdesc "3D panner" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
@@ -20,23 +20,30 @@ mda:RoundPan
     rdfs:comment "Like all 3D processes the result depends on where you sit relative to the speakers, and mono compatibility is not guaranteed. This plug-in must be used in a stereo channel or bus!" ;
 	lv2:port [
 		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 0 ;
-		lv2:name "Pan" ;
-		lv2:symbol "pan" ;
-		lv2:default 0.5 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
+            lv2:ControlPort ;
+        lv2:index 0 ;
+        lv2:name "Pan" ;
+        lv2:symbol "pan" ;
+        lv2:default 0.0 ;
+        lv2:minimum -180.0 ;
+        lv2:maximum 180.0 ;
+        units:unit units:degree ;
         rdfs:comment "Fixed pan position (when Auto = 0)"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 1 ;
-		lv2:name "Auto" ;
-		lv2:symbol "auto" ;
-		lv2:default 0.8 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 1 ;
+        lv2:name "Rate" ;
+        lv2:symbol "auto" ;
+        lv2:default 309.0 ;
+        lv2:minimum -515.0 ;
+        lv2:maximum 515.0 ;
+        units:unit [
+            a            units:Unit ;
+            rdfs:label   "Degrees/second" ;
+            units:symbol "deg/sec" ;
+            units:render "%f deg/sec"
+        ];
         rdfs:comment "Autopan rate (turn to left for anticlockwise, right for clockwise)"
 	] , [
 		a lv2:InputPort ,

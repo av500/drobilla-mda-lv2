@@ -25,7 +25,6 @@
 
 #include "audioeffectx.h"
 
-#include <cstdint>
 
 class mdaVocoderProgram
 {

@@ -5,17 +5,17 @@
 @prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://drobilla.net/plugins/mda/RezFilter/env>
-	a param:EnvelopeControls ,
-		pg:InputGroup ;
-	rdfs:label "Envelope" ;
-	lv2:symbol "env" .
+<http://moddevices.com/plugins/mda/RezFilter/env>
+    a param:EnvelopeControls ,
+        pg:InputGroup ;
+    lv2:name "Envelope" ;
+    lv2:symbol "env" .
 
-<http://drobilla.net/plugins/mda/RezFilter/filt>
-	a param:FilterControls ,
-		pg:InputGroup ;
-	rdfs:label "Filter" ;
-	lv2:symbol "filt" .
+<http://moddevices.com/plugins/mda/RezFilter/filt>
+    a param:FilterControls ,
+        pg:InputGroup ;
+    lv2:name "Filter" ;
+    lv2:symbol "filt" .
 
 mda:RezFilter
 	a lv2:Plugin ,
@@ -23,7 +23,7 @@ mda:RezFilter
 	lv2:project mda: ;
 	lv2:symbol "RezFilter" ;
 	lv2:microVersion 0 ;
-	lv2:minorVersion 2 ;
+	lv2:minorVersion 3 ;
 	doap:name "MDA RezFilter" ;
 	doap:shortdesc "Resonant filter with LFO and envelope follower" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
@@ -34,111 +34,130 @@ mda:RezFilter
 		a lv2:InputPort ,
 			lv2:ControlPort ;
 		lv2:index 0 ;
-		lv2:name "Freq" ;
-		lv2:symbol "freq" ;
-		lv2:default 0.33 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		lv2:designation param:cutoffFrequency ;
-		pg:group <http://drobilla.net/plugins/mda/RezFilter/filt>
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 1 ;
-		lv2:name "Res" ;
-		lv2:symbol "res" ;
-		lv2:default 0.7 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		lv2:designation param:resonance ;
-		pg:group <http://drobilla.net/plugins/mda/RezFilter/filt>
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 2 ;
-		lv2:name "Output" ;
-		lv2:symbol "output" ;
-		lv2:default 0.5 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "Level trim"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 3 ;
-		lv2:name "Env->VCF" ;
-		lv2:symbol "env_vcf" ;
-		lv2:default 0.85 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "Positive or negative (squelchy!) envelope modulation of cut-off frequency"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 4 ;
-		lv2:name "Attack" ;
-		lv2:symbol "attack" ;
-		lv2:default 0.0 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		lv2:designation param:attack ;
-		pg:group <http://drobilla.net/plugins/mda/RezFilter/env>
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 5 ;
-		lv2:name "Release" ;
-		lv2:symbol "release" ;
-		lv2:default 0.5 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		lv2:designation param:release ;
-		pg:group <http://drobilla.net/plugins/mda/RezFilter/env>
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 6 ;
-		lv2:name "LFO->VCF" ;
-		lv2:symbol "lfo_vcf" ;
-		lv2:default 0.7 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "LFO modulation of cut-off frequency (turn to left for sample & hold LFO, right for sine)"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 7 ;
-		lv2:name "LFO Rate" ;
-		lv2:symbol "lfo_rate" ;
-		lv2:default 0.4 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "LFO modulation speed"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 8 ;
-		lv2:name "Trigger" ;
-		lv2:symbol "trigger" ;
-		lv2:default 0.0 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "Envelope trigger level (normally set to minimum to acts as a free-running envelope follower)"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 9 ;
-		lv2:name "Max Freq" ;
-		lv2:symbol "max_freq" ;
-		lv2:default 0.75 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment """Limit maximum cut-off frequency for a mellower sound (the filter can sound "screechy" at high frequencies)"""
-	] , [
-		a lv2:InputPort ,
-			lv2:AudioPort ;
-		lv2:index 10 ;
-		lv2:symbol "left_in" ;
+        lv2:name "Freq" ;
+        lv2:symbol "freq" ;
+        lv2:default 33.0 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 100.0 ;
+        units:unit units:pc;
+        lv2:designation param:cutoffFrequency ;
+        pg:group <http://moddevices.com/plugins/mda/RezFilter/filt>
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 1 ;
+        lv2:name "Res" ;
+        lv2:symbol "res" ;
+        lv2:default 70.0 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 100.0 ;
+        units:unit units:pc;
+        lv2:designation param:resonance ;
+        pg:group <http://moddevices.com/plugins/mda/RezFilter/filt>
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 2 ;
+        lv2:name "Output" ;
+        lv2:symbol "output" ;
+        lv2:default 0.0 ;
+        lv2:minimum -20.0 ;
+        lv2:maximum 20.0 ;
+        units:unit units:db;
+        rdfs:comment "Level trim"
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 3 ;
+        lv2:name "Env->VCF" ;
+        lv2:symbol "env_vcf" ;
+        lv2:default 70.0 ;
+        lv2:minimum -100.0 ;
+        lv2:maximum 100.0 ;
+        units:unit units:pc;
+        rdfs:comment "Positive or negative (squelchy!) envelope modulation of cut-off frequency"
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 4 ;
+        lv2:name "Attack" ;
+        lv2:symbol "attack" ;
+        lv2:default 0.0 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 160.83 ;
+        units:unit units:ms;
+        lv2:designation param:attack ;
+        pg:group <http://moddevices.com/plugins/mda/RezFilter/env>
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 5 ;
+        lv2:name "Release" ;
+        lv2:symbol "release" ;
+        lv2:default 7250.0 ;
+        lv2:minimum 1.56 ;
+        lv2:maximum 15511.64 ;
+        units:unit units:ms;
+        lv2:designation param:release ;
+        pg:group <http://moddevices.com/plugins/mda/RezFilter/env>
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 6 ;
+        lv2:name "LFO->VCF" ;
+        lv2:symbol "lfo_vcf" ;
+        lv2:default 40.0 ;
+        lv2:minimum -100.0 ;
+        lv2:maximum 100.0 ;
+        units:unit [
+        a            units:Unit ;
+        rdfs:label   "S+H<>Sin" ;
+        units:symbol "S+H<>Sin" ;
+        units:render "%f S+H<>Sin"
+        ];
+        rdfs:comment "LFO modulation of cut-off frequency (turn to left for sample & hold LFO, right for sine)"
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 7 ;
+        lv2:name "LFO Rate" ;
+        lv2:symbol "lfo_rate" ;
+        lv2:default 40.0 ;
+        lv2:minimum 0.01 ;
+        lv2:maximum 100.0 ;
+        units:unit units:hz;
+        rdfs:comment "LFO modulation speed"
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 8 ;
+        lv2:name "Trigger" ;
+        lv2:symbol "trigger" ;
+        lv2:default -37.0 ;
+        lv2:minimum -37.0 ;
+        lv2:maximum 3.0 ;
+        units:unit units:db;
+        lv2:scalePoint [
+            rdfs:label "FREE RUN" ;
+            rdf:value -37.0
+        ];
+        rdfs:comment "Envelope trigger level (normally set to minimum to acts as a free-running envelope follower)"
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 9 ;
+        lv2:name "Max Freq" ;
+        lv2:symbol "max_freq" ;
+        lv2:default 75.0 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 100.0 ;
+        units:unit units:pc;
+        rdfs:comment """Limit maximum cut-off frequency for a mellower sound (the filter can sound "screechy" at high frequencies)"""
+    ] , [
+        a lv2:InputPort ,
+            lv2:AudioPort ;
+        lv2:index 10 ;
+        lv2:symbol "left_in" ;
 		lv2:name "Left In" ;
 		lv2:designation pg:left ;
 		pg:group mda:mainIn

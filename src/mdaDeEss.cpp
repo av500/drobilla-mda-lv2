@@ -18,9 +18,8 @@
 
 #include "mdaDeEss.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstring>
+#include <math.h>
+#include <float.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -30,9 +29,9 @@ AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 mdaDeEss::mdaDeEss(audioMasterCallback audioMaster)	: AudioEffectX(audioMaster, 1, 3)	// programs, parameters
 {
   //inits here!
-  fParam1 = 0.15f; //thresh
-  fParam2 = 0.60f; //f
-  fParam3 = 0.50f; //drive
+  fParam1 = (float)0.15f; //thresh
+  fParam2 = (float)0.60f; //f
+  fParam3 = (float)0.50f; //drive
   fbuf1 = 0.0f;
   fbuf2 = 0.0f;
   gai = 0.0f;
@@ -108,6 +107,7 @@ void mdaDeEss::getParameterName(int32_t index, char *label)
   }
 }
 
+#include <stdio.h>
 static void long2string(long value, char *string) { sprintf(string, "%ld", value); }
 
 void mdaDeEss::getParameterDisplay(int32_t index, char *text)

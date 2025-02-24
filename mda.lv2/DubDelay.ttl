@@ -10,7 +10,7 @@ mda:DubDelay
 	lv2:project mda: ;
 	lv2:symbol "DubDelay" ;
 	lv2:microVersion 0 ;
-	lv2:minorVersion 2 ;
+	lv2:minorVersion 7 ;
 	doap:name "MDA DubDelay" ;
 	doap:shortdesc "Delay with feedback saturation and time/pitch modulation" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
@@ -20,73 +20,92 @@ mda:DubDelay
 	lv2:port [
 		a lv2:InputPort ,
 			lv2:ControlPort ;
-		lv2:index 0 ;
-		lv2:name "Delay" ;
-		lv2:symbol "delay" ;
-		lv2:default 0.5 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "Delay time (delay is mono for authenticity!)"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 1 ;
-		lv2:name "Feedback" ;
-		lv2:symbol "feedback" ;
-		lv2:default 0.7 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "Feedback - with soft saturation at maximum left position, hard clipping at maximum right"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 2 ;
-		lv2:name "Fb Tone" ;
-		lv2:symbol "fb_tone" ;
-		lv2:default 0.4 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "Feedback filtering - low-pass to left, high-pass to right"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 3 ;
-		lv2:name "LFO Depth" ;
-		lv2:symbol "lfo_depth" ;
-		lv2:default 0.0 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "Delay time modulation (sine wave)"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 4 ;
-		lv2:name "LFO Rate" ;
-		lv2:symbol "lfo_rate" ;
-		lv2:default 0.5 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "Modulation rate"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 5 ;
-		lv2:name "FX Mix" ;
-		lv2:symbol "fx_mix" ;
-		lv2:default 0.33 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "Wet / dry mix"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 6 ;
-		lv2:name "Output" ;
-		lv2:symbol "output" ;
-		lv2:default 0.5 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "Level trim"
+        lv2:index 0 ;
+        lv2:name "Delay" ;
+        lv2:shortName "Time" ;
+        lv2:symbol "delay" ;
+        lv2:default 460.0 ;
+        lv2:minimum 1.0 ;
+        lv2:maximum 7500.0 ;
+        lv2:portProperty epp:logarithmic ;
+        units:unit units:ms ;
+        lv2:portProperty  mod:tapTempo , mod:tempoRelatedDynamicScalePoints;
+        rdfs:comment "Delay time (delay is mono for authenticity!)"
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 1 ;
+        lv2:name "Feedback" ;
+        lv2:symbol "feedback" ;
+        lv2:default 55.0 ;
+        lv2:minimum -110.0 ;
+        lv2:maximum 110.0 ;
+        units:unit units:pc ;
+        rdfs:comment "Feedback - with soft saturation at maximum left position, hard clipping at maximum right"
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 2 ;
+        lv2:name "Fb Tone" ;
+        lv2:shortName "Tone" ;
+        lv2:symbol "fb_tone" ;
+        lv2:default 0.0 ;
+        lv2:minimum -100.0 ;
+        lv2:maximum 100.0 ;
+        units:unit units:pc ;
+        rdfs:comment "Feedback filtering - low-pass to left, high-pass to right"
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 3 ;
+        lv2:name "LFO Depth" ;
+        lv2:shortName "Depth" ;
+        lv2:symbol "lfo_depth" ;
+        lv2:default 30.0 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 100.0 ;
+        units:unit units:pc;
+        rdfs:comment "Delay time modulation (sine wave)"
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 4 ;
+        lv2:name "LFO Rate" ;
+        lv2:shortName "Rate" ;
+        lv2:portProperty mod:tapTempo;
+        lv2:symbol "lfo_rate" ;
+        lv2:default 0.05 ;
+        lv2:minimum 0.01 ;
+        lv2:maximum 10.0 ;
+        units:unit units:hz ;
+        rdfs:comment "Modulation rate"
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 5 ;
+        lv2:name "FX Mix" ;
+        lv2:shortName "Mix" ;
+        lv2:symbol "fx_mix" ;
+        lv2:default 50.0 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 100.0 ;
+        units:unit units:pc;
+        rdfs:comment "Wet / dry mix"
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 6 ;
+        lv2:name "Level" ;
+        lv2:symbol "output" ;
+        lv2:default 0.0 ;
+        lv2:minimum -12.0 ;
+        lv2:maximum 6.0 ;
+        #lv2:scalePoint [
+        #    rdfs:label "OFF" ;
+        #    rdf:value -34.0
+        #];
+        units:unit units:db;
+        rdfs:comment "Level trim"
 	] , [
 		a lv2:InputPort ,
 			lv2:AudioPort ;

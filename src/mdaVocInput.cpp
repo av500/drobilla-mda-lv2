@@ -18,10 +18,10 @@
 
 #include "mdaVocInput.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
+#include <stdlib.h>
+#include <stdio.h>
+#include <float.h>
+#include <math.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -208,7 +208,7 @@ void mdaVocInput::midi2string(int32_t n, char *text) //show name of MIDI note nu
 void mdaVocInput::process(float **inputs, float **outputs, int32_t sampleFrames)
 {
   float *in1 = inputs[0];
-  //float *in2 = inputs[1];
+  float *in2 = inputs[1];
   float *out1 = outputs[0];
   float *out2 = outputs[1];
   float a, b, c, d;
@@ -219,7 +219,7 @@ void mdaVocInput::process(float **inputs, float **outputs, int32_t sampleFrames)
   int32_t  tr=track;
 
   --in1;
-  //--in2;
+  --in2;
   --out1;
   --out2;
   while(--sampleFrames >= 0)
@@ -283,7 +283,7 @@ void mdaVocInput::process(float **inputs, float **outputs, int32_t sampleFrames)
 void mdaVocInput::processReplacing(float **inputs, float **outputs, int32_t sampleFrames)
 {
   float *in1 = inputs[0];
-  //float *in2 = inputs[1];
+  float *in2 = inputs[1];
   float *out1 = outputs[0];
   float *out2 = outputs[1];
   float a, b;
@@ -294,7 +294,7 @@ void mdaVocInput::processReplacing(float **inputs, float **outputs, int32_t samp
   int32_t  tr=track;
 
   --in1;
-  //--in2;
+  --in2;
   --out1;
   --out2;
   while(--sampleFrames >= 0)

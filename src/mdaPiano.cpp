@@ -19,12 +19,11 @@
 #include "mdaPianoData.h"
 #include "mdaPiano.h"
 
-#include <lv2/atom/atom.h>
-#include <lv2/atom/util.h>
+#include "lv2/lv2plug.in/ns/ext/atom/util.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstring>
+#include <stdio.h>
+#include <math.h>
+
 
 //#include "AEffEditor.hpp" ////for GUI
 
@@ -364,7 +363,7 @@ void mdaPiano::processReplacing(float **inputs, float **outputs, int32_t sampleF
 
  if(!(l > -2.0f) || !(l < 2.0f))
  {
-   printf("what is this shit?   %d,  %f,  %f\n", i, x, V->f0);
+   // printf("what is this shit?   %d,  %f,  %f\n", i, x, V->f0);
    l = 0.0f;
  }
 if(!(r > -2.0f) || !(r < 2.0f))

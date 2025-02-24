@@ -18,9 +18,10 @@
 
 #include "mdaDetune.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstring>
+#include <stdlib.h>
+#include <stdio.h>
+#include <float.h>
+#include <math.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -92,7 +93,7 @@ void mdaDetune::setProgram(int32_t program)
 		
 		// update
 		float * param = programs[curProgram].param;
-    semi = 3.0f * param[0] * param[0] * param[0];
+    semi = 3.0f * param[0];
     dpos2 = (float)pow(1.0594631f, semi);
     dpos1 = 1.0f / dpos2;
     

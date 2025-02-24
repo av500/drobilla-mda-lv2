@@ -18,9 +18,8 @@
 
 #include "mdaDubDelay.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstring>
+#include <math.h>
+#include <float.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -35,10 +34,10 @@ mdaDubDelay::mdaDubDelay(audioMasterCallback audioMaster)	: AudioEffectX(audioMa
   fParam2 = 0.40f; //tone
   fParam3 = 0.00f; //lfo depth
   fParam4 = 0.50f; //lfo speed
-  fParam5 = 0.33f; //wet mix
-  fParam6 = 0.50f; //output
+  oldwet = fParam5 = 0.33f; //wet mix
+  olddry = fParam6 = 0.50f; //output
          ///CHANGED///too long?
-  size = 323766; //705600; //95998; //32766;  //set max delay time at max sample rate
+  size = 7.5*48000.f; //705600; //95998; //32766;  //set max delay time at max sample rate
 	buffer = new float[size + 2]; //spare just in case!
   ipos = 0;
   fil0 = 0.0f;
@@ -64,7 +63,7 @@ bool  mdaDubDelay::getEffectName(char* name)    { strcpy(name, "DubDelay"); retu
 void mdaDubDelay::setParameter(int32_t index, float value)
 {
   float fs=getSampleRate();
-  if(fs < 8000.0f) fs = 44100.0f; //??? bug somewhere!
+  if(fs < 8000.0f) fs = 48000.0f; //??? bug somewhere!
 
 	switch(index)
   {
@@ -78,7 +77,7 @@ void mdaDubDelay::setParameter(int32_t index, float value)
  }
   //calcs here
   ///CHANGED///del = fParam0 * fParam0 * fParam0 * (float)size;
-  del = fParam0 * fParam0 * (float)size;
+  del = fParam0 * (float)size;
   mod = 0.049f * fParam3 * del;
 
   fil = fParam2;
@@ -99,9 +98,8 @@ void mdaDubDelay::setParameter(int32_t index, float value)
   if(fParam1>0.5f) rel=0.9997f; else rel=0.8f; //limit or clip
 
   wet = 1.0f - fParam5;
-  wet = fParam6 * (1.0f - wet * wet); //-3dB at 50% mix
-  dry = fParam6 * 2.0f * (1.0f - fParam5 * fParam5);
-
+  wet = (float)pow(10.f, (fParam6*18-12)/20) * (1.0f - wet * wet); //-3dB at 50% mix
+  dry = (float)pow(10.f, (fParam6*18-12)/20) * 2.0f * (1.0f - fParam5 * fParam5);
   dphi = 628.31853f * (float)pow(10.0f, 3.0f * fParam4 - 2.0f) / fs; //100-sample steps
 }
 
@@ -166,6 +164,7 @@ void mdaDubDelay::getParameterName(int32_t index, char *label)
   }
 }
 
+#include <stdio.h>
 static void int2strng(int32_t value, char *string) { sprintf(string, "%d", value); }
 static void float2strng(float value, char *string) { sprintf(string, "%.2f", value); }
 
@@ -205,7 +204,8 @@ void mdaDubDelay::process(float **inputs, float **outputs, int32_t sampleFrames)
 	float *in2 = inputs[1];
 	float *out1 = outputs[0];
 	float *out2 = outputs[1];
-	float a, b, c, d, ol, w=wet, y=dry, fb=fbk, dl=dlbuf, db=dlbuf, ddl=0.0f;
+	float a, b, c, d, ol, w=(wet*0.3+oldwet*0.7), y=(dry*0.3+olddry*0.7), fb=fbk, dl=dlbuf, db=dlbuf, ddl=0.0f;
+//  float ow=oldwet, oy=olddry;
   float lx=lmix, hx=hmix, f=fil, f0=fil0, tmp;
   float e=env, g, r=rel; //limiter envelope, gain, release
   float twopi=6.2831853f;
@@ -259,6 +259,10 @@ void mdaDubDelay::process(float **inputs, float **outputs, int32_t sampleFrames)
     *++out1 = c + y * a + ol;                 //dry
 		*++out2 = d + y * b + ol;
 	}
+
+  oldwet=w;                                     //saving old val for smoothing
+  olddry=y;                                     //saving old val for smoothing
+
   ipos = i;
   dlbuf=dl;
   if(fabs(f0)<1.0e-10) { fil0=0.0f; env=0.0f; } else { fil0=f0; env=e; } //trap denormals

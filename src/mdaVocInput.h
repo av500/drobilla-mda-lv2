@@ -24,7 +24,6 @@
 
 #include "audioeffectx.h"
 
-#include <cstdint>
 
 class mdaVocInputProgram
 {

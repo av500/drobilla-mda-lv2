@@ -18,9 +18,8 @@
 
 #include "mdaCombo.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstring>
+#include <math.h>
+#include <float.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -38,7 +37,6 @@ mdaCombo::mdaCombo(audioMasterCallback audioMaster)	: AudioEffectX(audioMaster, 
   fParam6 = 0.00f; //hpf freq
   fParam7 = 0.50f; //hpf reso
 
-  trim = 0.5f;
   size = 1024;
   bufpos = 0;
 	buffer = new float[size];
@@ -223,6 +221,7 @@ void mdaCombo::getParameterName(int32_t index, char *label)
   }
 }
 
+#include <stdio.h>
 static void int2strng(int32_t value, char *string) { sprintf(string, "%d", value); }
 
 void mdaCombo::getParameterDisplay(int32_t index, char *text)

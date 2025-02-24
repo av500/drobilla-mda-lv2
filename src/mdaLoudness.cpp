@@ -20,17 +20,17 @@
 
 #include "mdaLoudness.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstring>
+#include <stdlib.h>
+#include <stdio.h>
+#include <float.h>
+#include <math.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
   return new mdaLoudness(audioMaster);
 }
 
-static float loudness[14][3] = {
-                          {402.f,  0.0025f,  0.00f},  //-60dB
+float loudness[14][3] = { {402.f,  0.0025f,  0.00f},  //-60dB
                           {334.f,  0.0121f,  0.00f},
                           {256.f,  0.0353f,  0.00f},
                           {192.f,  0.0900f,  0.00f},

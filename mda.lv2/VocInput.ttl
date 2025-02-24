@@ -11,7 +11,7 @@ mda:VocInput
 	lv2:project mda: ;
 	lv2:symbol "VocInput" ;
 	lv2:microVersion 0 ;
-	lv2:minorVersion 2 ;
+	lv2:minorVersion 3 ;
 	doap:name "MDA VocInput" ;
 	doap:shortdesc "Pitch tracking oscillator for generating vocoder carrier input" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
@@ -38,7 +38,7 @@ mda:VocInput
 		] , [
 			rdf:value 1.0 ;
 			rdfs:label "Track quantized input pitch"
-		]
+        ] ;
 	] , [
 		a lv2:InputPort ,
 			lv2:ControlPort ;

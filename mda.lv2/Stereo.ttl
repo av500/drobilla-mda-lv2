@@ -9,7 +9,7 @@ mda:Stereo
 	lv2:project mda: ;
 	lv2:symbol "Stereo" ;
 	lv2:microVersion 0 ;
-	lv2:minorVersion 2 ;
+	lv2:minorVersion 3 ;
 	doap:name "MDA Stereo" ;
 	doap:shortdesc "Haas delay and comb filtering" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
@@ -18,55 +18,68 @@ mda:Stereo
 	pg:mainOutput mda:mainOut ;
 	lv2:port [
 		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 0 ;
-		lv2:name "Width" ;
-		lv2:symbol "width" ;
-		lv2:default 0.78 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 1 ;
-		lv2:name "Delay" ;
-		lv2:symbol "delay" ;
-		lv2:default 0.43 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 2 ;
-		lv2:name "Balance" ;
-		lv2:symbol "balance" ;
-		lv2:default 0.5 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 3 ;
-		lv2:name "Mod" ;
-		lv2:symbol "mod" ;
-		lv2:default 0.0 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 4 ;
-		lv2:name "Rate" ;
-		lv2:symbol "rate" ;
-		lv2:default 0.5 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
-	] , [
-		a lv2:InputPort ,
-			lv2:AudioPort ;
-		lv2:index 5 ;
-		lv2:symbol "left_in" ;
-		lv2:name "Left In" ;
+            lv2:ControlPort ;
+        lv2:index 0 ;
+        lv2:name "Width" ;
+        lv2:symbol "width" ;
+        lv2:default 56.0 ;
+        lv2:minimum -100.0 ;
+        lv2:maximum 100.0 ;
+        units:unit [
+        a            units:Unit ;
+        rdfs:label   "Haas/Comb" ;
+        units:symbol "HAAS<>COMB" ;
+        units:render "%f HAAS<>COMB"
+        ];
+
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 1 ;
+        lv2:name "Delay" ;
+        lv2:symbol "delay" ;
+        lv2:default 22.43 ;
+        lv2:minimum 0.45 ;
+        lv2:maximum 47.62 ;
+        units:unit units:ms;
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 2 ;
+        lv2:name "Balance" ;
+        lv2:symbol "balance" ;
+        lv2:default 0.0 ;
+        lv2:minimum -100.0 ;
+        lv2:maximum 100.0 ;
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 3 ;
+        lv2:name "Mod" ;
+        lv2:symbol "mod" ;
+        lv2:default 0.0 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 47.62 ;
+        lv2:scalePoint [
+            rdfs:label "OFF" ;
+            rdf:value 0.0
+        ];
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 4 ;
+        lv2:name "Rate" ;
+        lv2:symbol "rate" ;
+        lv2:default 50.0 ;
+        lv2:minimum 0.10 ;
+        lv2:maximum 100.0 ;
+        units:unit units:s;
+    ] , [
+        a lv2:InputPort ,
+            lv2:AudioPort ;
+        lv2:index 5 ;
+        lv2:symbol "left_in" ;
+        lv2:name "Left In" ;
 		lv2:designation pg:left ;
 		pg:group mda:mainIn
 	] , [

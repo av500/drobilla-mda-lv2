@@ -9,7 +9,7 @@ mda:Transient
 	lv2:project mda: ;
 	lv2:symbol "Transient" ;
 	lv2:microVersion 0 ;
-	lv2:minorVersion 2 ;
+	lv2:minorVersion 3 ;
 	doap:name "MDA Transient" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
 	lv2:optionalFeature lv2:hardRTCapable ;
@@ -17,64 +17,75 @@ mda:Transient
 	pg:mainOutput mda:mainOut ;
 	lv2:port [
 		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 0 ;
-		lv2:name "Attack" ;
-		lv2:symbol "attack" ;
-		lv2:default 0.5 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 1 ;
-		lv2:name "Release" ;
-		lv2:symbol "release" ;
-		lv2:default 0.5 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 2 ;
-		lv2:name "Output" ;
-		lv2:symbol "output" ;
-		lv2:default 0.5 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 3 ;
-		lv2:name "Filter" ;
-		lv2:symbol "filter" ;
-		lv2:default 0.49 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 4 ;
-		lv2:name "Att Hold" ;
-		lv2:symbol "att_hold" ;
-		lv2:default 0.35 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 5 ;
-		lv2:name "Rel Hold" ;
-		lv2:symbol "rel_hold" ;
-		lv2:default 0.35 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0
-	] , [
-		a lv2:InputPort ,
-			lv2:AudioPort ;
-		lv2:index 6 ;
-		lv2:symbol "left_in" ;
-		lv2:name "Left In" ;
+            lv2:ControlPort ;
+        lv2:index 0 ;
+        lv2:name "Attack" ;
+        lv2:symbol "attack" ;
+        lv2:default 50.0 ;
+        lv2:minimum -100.0 ;
+        lv2:maximum 100.0 ;
+        units:unit units:pc
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 1 ;
+        lv2:name "Release" ;
+        lv2:symbol "release" ;
+        lv2:default 50.0 ;
+        lv2:minimum -100.0 ;
+        lv2:maximum 100.0 ;
+        units:unit units:pc
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 2 ;
+        lv2:name "Output" ;
+        lv2:symbol "output" ;
+        lv2:default 0.0 ;
+        lv2:minimum -20.0 ;
+        lv2:maximum 20.0 ;
+        units:unit units:db
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 3 ;
+        lv2:name "Filter" ;
+        lv2:symbol "filter" ;
+        lv2:default 0.0 ;
+        lv2:minimum -10.0 ;
+        lv2:maximum 10.0 ;
+        units:unit [
+        a            units:Unit ;
+        rdfs:label   "Low/High" ;
+        units:symbol "Lo<>Hi" ;
+        units:render "%f Lo<>Hi"
+        ]
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 4 ;
+        lv2:name "Att Hold" ;
+        lv2:symbol "att_hold" ;
+        lv2:default 35.0 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 100.0;
+        units:unit units:pc
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 5 ;
+        lv2:name "Rel Hold" ;
+        lv2:symbol "rel_hold" ;
+        lv2:default 35.0 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 100.0 ;
+        units:unit units:pc
+    ] , [
+        a lv2:InputPort ,
+            lv2:AudioPort ;
+        lv2:index 6 ;
+        lv2:symbol "left_in" ;
+        lv2:name "Left In" ;
 		lv2:designation pg:left ;
 		pg:group mda:mainIn
 	] , [

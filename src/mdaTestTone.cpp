@@ -18,10 +18,8 @@
 
 #include "mdaTestTone.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
+#include <math.h>
+#include <stdlib.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -46,8 +44,8 @@ mdaTestTone::mdaTestTone(audioMasterCallback audioMaster)	: AudioEffectX(audioMa
 	canProcessReplacing();
 	strcpy(programName, "Signal Generator");
 
-  updateRx = 0;
-  updateTx = updateRx;
+  updateTx = updateRx = 0;
+  sw = swx = 0.0f;
 
   suspend();
   setParameter(6, 0.f);
@@ -86,6 +84,7 @@ bool mdaTestTone::getProgramNameIndexed (int32_t category, int32_t index, char* 
 	return false;
 }
 
+#include <stdio.h>
 static void int2strng(int32_t value, char *string) { sprintf(string, "%d", value); }
 static void float2strng(float value, char *string) { sprintf(string, "%.2f", value); }
 
@@ -248,7 +247,7 @@ void mdaTestTone::midi2string(float n, char *text)
   nn = int(n);
   if(nn>99) t[p++] = 48 + (int(0.01*n)%10);
   if(nn>9)  t[p++] = 48 + (int(0.10*n)%10);
-  if(1)     t[p++] = 48 + (int(n)%10);
+  t[p++] = 48 + (int(n)%10);
   t[p++] = ' ';
 
   o = int(nn/12.f); s = nn-(12*o); o -= 2;

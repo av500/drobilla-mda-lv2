@@ -18,9 +18,8 @@
 
 #include "mdaImage.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstring>
+#include <math.h>
+#include <float.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -164,6 +163,7 @@ void mdaImage::getParameterName(int32_t index, char *label)
   }
 }
 
+#include <stdio.h>
 static void int2strng(int32_t value, char *string) { sprintf(string, "%d", value); }
 
 void mdaImage::getParameterDisplay(int32_t index, char *text)

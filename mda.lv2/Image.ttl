@@ -11,7 +11,7 @@ mda:Image
 	lv2:project mda: ;
 	lv2:symbol "Image" ;
 	lv2:microVersion 0 ;
-	lv2:minorVersion 2 ;
+	lv2:minorVersion 3 ;
 	doap:name "MDA Image" ;
 	doap:shortdesc "Stereo image adjustment and M-S matrix" ;
 	doap:license <http://usefulinc.com/doap/licenses/gpl> ;
@@ -38,64 +38,79 @@ mda:Image
 		] , [
 			rdfs:label "Decode from MS" ;
 			rdf:value 0.5
-		] , [
-			rdfs:label "Decode from MS (input channels reversed)" ;
-			rdf:value 0.75
-		]
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 1 ;
-		lv2:name "S Width" ;
-		lv2:symbol "s_width" ;
-		lv2:default 0.75 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "Stereo width (level of stereo component)"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 2 ;
-		lv2:name "S Pan" ;
-		lv2:symbol "s_pan" ;
-		lv2:default 0.5 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "Stereo image skew"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 3 ;
-		lv2:name "M Level" ;
-		lv2:symbol "m_level" ;
-		lv2:default 0.75 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "Centre depth"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 4 ;
-		lv2:name "M Pan" ;
-		lv2:symbol "m_pan" ;
-		lv2:default 0.5 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "Centre pan"
-	] , [
-		a lv2:InputPort ,
-			lv2:ControlPort ;
-		lv2:index 5 ;
-		lv2:name "Output" ;
-		lv2:symbol "output" ;
-		lv2:default 0.5 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 1.0 ;
-		rdfs:comment "Level trim (a 6dB correction may be required for some MS encoded material)"
-	] , [
-		a lv2:InputPort ,
-			lv2:AudioPort ;
-		lv2:index 6 ;
+        ] , [
+            rdfs:label "Decode from MS (input channels reversed)" ;
+            rdf:value 0.75
+        ] ;
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 1 ;
+        lv2:name "S Width" ;
+        lv2:symbol "s_width" ;
+        lv2:default 100.0 ;
+        lv2:minimum -200.0 ;
+        lv2:maximum 200.0 ;
+        units:unit units:pc;
+        rdfs:comment "Stereo width (level of stereo component)"
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 2 ;
+        lv2:name "S Pan" ;
+        lv2:symbol "s_pan" ;
+        lv2:default 0.0 ;
+        lv2:minimum -100.0 ;
+        lv2:maximum 100.0 ;
+        units:unit [
+        a            units:Unit ;
+        rdfs:label   "Left/Right" ;
+        units:symbol "L<>R" ;
+        units:render "%f L<>R"
+        ];
+        rdfs:comment "Stereo image skew"
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 3 ;
+        lv2:name "M Level" ;
+        lv2:symbol "m_level" ;
+        lv2:default 100.0 ;
+        lv2:minimum -200.0 ;
+        lv2:maximum 200.0 ;
+        units:unit units:pc;
+        rdfs:comment "Centre depth"
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 4 ;
+        lv2:name "M Pan" ;
+        lv2:symbol "m_pan" ;
+        lv2:default 0.0 ;
+        lv2:minimum -100.0 ;
+        lv2:maximum 100.0 ;
+        units:unit [
+        a            units:Unit ;
+        rdfs:label   "Left/Right" ;
+        units:symbol "L<>R" ;
+        units:render "%f L<>R"
+        ];
+        rdfs:comment "Centre pan"
+    ] , [
+        a lv2:InputPort ,
+            lv2:ControlPort ;
+        lv2:index 5 ;
+        lv2:name "Output" ;
+        lv2:symbol "output" ;
+        lv2:default 0.0 ;
+        lv2:minimum -20.0 ;
+        lv2:maximum 20.0 ;
+        units:unit units:db;
+        rdfs:comment "Level trim (a 6dB correction may be required for some MS encoded material)"
+    ] , [
+        a lv2:InputPort ,
+            lv2:AudioPort ;
+        lv2:index 6 ;
 		lv2:symbol "left_in" ;
 		lv2:name "Left In" ;
 		lv2:designation pg:left ;

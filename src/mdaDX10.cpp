@@ -18,12 +18,11 @@
 
 #include "mdaDX10.h"
 
-#include <lv2/atom/atom.h>
-#include <lv2/atom/util.h>
+#include "lv2/lv2plug.in/ns/ext/atom/util.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstring>
+#include <stdio.h>
+#include <stdlib.h> //rand()
+#include <math.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -34,7 +33,7 @@ AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 mdaDX10::mdaDX10(audioMasterCallback audioMaster) : AudioEffectX(audioMaster, NPROGS, NPARAMS)
 {
   int32_t i=0;
-  Fs = 44100.0f;
+  Fs = getSampleRate();
 
   programs = new mdaDX10Program[NPROGS];
 	if(programs)
@@ -111,12 +110,14 @@ void mdaDX10::update()  //parameter change //if multitimbral would have to move 
   float * param = programs[curProgram].param;
 
   tune = (float)(8.175798915644 * ifs * pow(2.0, floor(param[11] * 6.9) - 2.0));
+  rati = (float)floorf(40.1f * param[3] * param[3]);
 
-  rati = param[3];
-  rati = (float)floor(40.1f * rati * rati);
-  if(param[4]<0.5f)
+  if (param[4]<0.5f)
+  {
     ratf = 0.2f * param[4] * param[4];
+  }
   else
+  {
     switch((int32_t)(8.9f * param[4]))
     {
       case  4: ratf = 0.25f;       break;
@@ -125,6 +126,8 @@ void mdaDX10::update()  //parameter change //if multitimbral would have to move 
       case  7: ratf = 0.66666667f; break;
       default: ratf = 0.75f;
     }
+  }
+
   ratio = 1.570796326795f * (rati + ratf);
 
   depth = 0.0002f * param[5] * param[5];
@@ -143,7 +146,7 @@ void mdaDX10::update()  //parameter change //if multitimbral would have to move 
   rich = 0.50f - 3.0f * param[13] * param[13];
   //rich = -1.0f + 2 * param[13];
   modmix = 0.25f * param[14] * param[14];
-  dlfo = 628.3f * ifs * 25.0f * param[15] * param[15]; //these params not in original DX10
+  dlfo = 628.3f * ifs * 25.0f * param[15]; //these params not in original DX10
 }
 
 

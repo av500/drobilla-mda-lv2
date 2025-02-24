@@ -19,12 +19,10 @@
 #include "mdaEPianoData.h"
 #include "mdaEPiano.h"
 
-#include <lv2/atom/atom.h>
-#include <lv2/atom/util.h>
+#include "lv2/lv2plug.in/ns/ext/atom/util.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstring>
+#include <stdio.h>
+#include <math.h>
 
 //#include "AEffEditor.hpp" ////for GUI
 
@@ -35,18 +33,18 @@ AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 
 mdaEPiano::mdaEPiano(audioMasterCallback audioMaster) : AudioEffectX(audioMaster, NPROGS, NPARAMS)
 {
-	Fs = 44100.0f;  iFs = 1.0f/Fs;  //just in case...
+	Fs = 48000.f;  iFs = 1.0f/Fs;  //just in case...
 
   programs = new mdaEPianoProgram[NPROGS];
 	if(programs)
   {
     //fill patches...
     int32_t i=0;
-    fillpatch(i++, "Default", 0.500f, 0.500f, 0.500f, 0.500f, 0.500f, 0.650f, 0.250f, 0.500f, 0.50f, 0.500f, 0.146f, 0.000f);
-    fillpatch(i++, "Bright", 0.500f, 0.500f, 1.000f, 0.800f, 0.500f, 0.650f, 0.250f, 0.500f, 0.50f, 0.500f, 0.146f, 0.500f);
-    fillpatch(i++, "Mellow", 0.500f, 0.500f, 0.000f, 0.000f, 0.500f, 0.650f, 0.250f, 0.500f, 0.50f, 0.500f, 0.246f, 0.000f);
-    fillpatch(i++, "Autopan", 0.500f, 0.500f, 0.500f, 0.500f, 0.250f, 0.650f, 0.250f, 0.500f, 0.50f, 0.500f, 0.246f, 0.000f);
-    fillpatch(i++, "Tremolo", 0.500f, 0.500f, 0.500f, 0.500f, 0.750f, 0.650f, 0.250f, 0.500f, 0.50f, 0.500f, 0.246f, 0.000f);
+    fillpatch(i++, "Default", 0.500f, 0.500f, 0.500f, 0.500f, 0.500f, 0.650f, 0.250f, 0.500f, 1.0f, 0.500f, 0.146f, 0.000f);
+    fillpatch(i++, "Bright", 0.500f, 0.500f, 1.000f, 0.800f, 0.500f, 0.650f, 0.250f, 0.500f, 1.0f, 0.500f, 0.146f, 0.500f);
+    fillpatch(i++, "Mellow", 0.500f, 0.500f, 0.000f, 0.000f, 0.500f, 0.650f, 0.250f, 0.500f, 1.0f, 0.500f, 0.246f, 0.000f);
+    fillpatch(i++, "Autopan", 0.500f, 0.500f, 0.500f, 0.500f, 0.250f, 0.650f, 0.250f, 0.500f, 1.0f, 0.500f, 0.246f, 0.000f);
+    fillpatch(i++, "Tremolo", 0.500f, 0.500f, 0.500f, 0.500f, 0.750f, 0.650f, 0.250f, 0.500f, 1.0f, 0.500f, 0.246f, 0.000f);
     setProgram(0);
   }
 
@@ -128,6 +126,7 @@ mdaEPiano::mdaEPiano(audioMasterCallback audioMaster) : AudioEffectX(audioMaster
   }
 
   //initialise...
+  memset(voice, 0, sizeof(voice));
   for(int32_t v=0; v<NVOICES; v++) 
   {
     voice[v].env = 0.0f;
@@ -135,6 +134,7 @@ mdaEPiano::mdaEPiano(audioMasterCallback audioMaster) : AudioEffectX(audioMaster
   }
   volume = 0.2f;
   muff = 160.0f;
+  muffvel = 1.25f;
   sustain = activevoices = 0;
   tl = tr = lfo0 = dlfo = 0.0f;
   lfo1 = 1.0f;
@@ -157,15 +157,15 @@ void mdaEPiano::update()  //parameter change
   rmod = lmod = param[4] + param[4] - 1.0f; //lfo depth
   if(param[4] < 0.5f) rmod = -rmod;
 
-  dlfo = 6.283f * iFs * (float)exp(6.22f * param[5] - 2.61f); //lfo rate
+  dlfo = 6.283f * iFs * expf(6.22f * param[5] - 2.61f); //lfo rate
 
   velsens = 1.0f + param[6] + param[6];
   if(param[6] < 0.25f) velsens -= 0.75f - 3.0f * param[6];
 
   width = 0.03f * param[7];
-  poly = 1 + (int32_t)(31.9f * param[8]);
+  poly = 1 + (int32_t)(31.0f * param[8]);
   fine = param[9] - 0.5f;
-  random = 0.077f * param[10] * param[10];
+  random = 0.077f * param[10];
   stretch = 0.0f; //0.000434f * (param[11] - 0.5f); parameter re-used for overdrive!
   overdrive = 1.8f * param[11];
 }
@@ -176,7 +176,7 @@ void mdaEPiano::setSampleRate(float rate)
     AudioEffectX::setSampleRate(rate);
     Fs = rate;
     iFs = 1.0f / Fs;
-    dlfo = 6.283f * iFs * (float)exp(6.22f * programs[curProgram].param[5] - 2.61f); //lfo rate
+    dlfo = 6.283f * iFs * expf(6.22f * programs[curProgram].param[5] - 2.61f); //lfo rate
 }
 
 
@@ -290,7 +290,7 @@ void mdaEPiano::getParameterName(int32_t index, char *label)
 
     case  6: strcpy(label, "Velocity Sense"); break;
     case  7: strcpy(label, "Stereo Width"); break;
-    case  8: strcpy(label, "Polyphony"); break;
+    case  8: strcpy(label, "Polyphonic"); break;
 
     case  9: strcpy(label, "Fine Tuning"); break;
 		case 10: strcpy(label, "Random Tuning"); break;

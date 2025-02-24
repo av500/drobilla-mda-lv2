@@ -21,8 +21,6 @@
 
 #include "audioeffectx.h"
 
-#include <cstdint>
-
 class mdaRoundPan : public AudioEffectX
 {
 public:

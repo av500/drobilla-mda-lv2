@@ -18,9 +18,8 @@
 
 #include "mdaTracker.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstring>
+#include <math.h>
+#include <float.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -168,6 +167,7 @@ void mdaTracker::getParameterName(int32_t index, char *label)
   }
 }
 
+#include <stdio.h>
 static void int2strng(int32_t value, char *string) { sprintf(string, "%d", value); }
 
 void mdaTracker::getParameterDisplay(int32_t index, char *text)

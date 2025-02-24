@@ -19,10 +19,9 @@
 #ifndef __mdaLooplex__
 #define __mdaLooplex__
 
-#include "audioeffectx.h"
+#include <string.h>
 
-#include <cstdint>
-#include <cstring>
+#include "audioeffectx.h"
 
 #define NPARAMS  7       //number of parameters
 #define NPROGS   1       //number of programs

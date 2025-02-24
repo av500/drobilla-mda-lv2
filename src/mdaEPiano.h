@@ -19,11 +19,9 @@
 #ifndef __mdaEPiano__
 #define __mdaEPiano__
 
+#include <string.h>
+
 #include "audioeffectx.h"
-
-#include <lv2/atom/atom.h>
-
-#include <cstdint>
 
 #define NPARAMS 12       //number of parameters
 #define NPROGS   5       //number of programs
@@ -125,8 +123,8 @@ private:
   int32_t  size, sustain;
   float lfo0, lfo1, dlfo, lmod, rmod;
   float treb, tfrq, tl, tr;
-  float fine, random, stretch, overdrive;
-  float muff, muffvel, velsens, volume, modwhl;
+  float tune, fine, random, stretch, overdrive;
+  float muff, muffvel, sizevel, velsens, volume, modwhl;
 };
 
 #endif

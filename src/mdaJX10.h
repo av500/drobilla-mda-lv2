@@ -19,11 +19,9 @@
 #ifndef __mdaJX10__
 #define __mdaJX10__
 
+#include <string.h>
+
 #include "audioeffectx.h"
-
-#include <lv2/atom/atom.h>
-
-#include <cstdint>
 
 #define NPARAMS  24      //number of parameters
 #define NPROGS   64      //number of programs
@@ -146,7 +144,7 @@ private:
   float oscmix, noisemix;
   float att, dec, sus, rel, fatt, fdec, fsus, frel;
   float lfo, dlfo, modwhl, press, pbend, ipbend, rezwhl;
-  float volume, voltrim;
+  float velsens, volume, voltrim;
   float vibrato, pwmdep, lfoHz, glide, glidedisp;
   int32_t  K, lastnote, veloff, mode;
   unsigned int noise;

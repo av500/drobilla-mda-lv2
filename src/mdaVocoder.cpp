@@ -18,9 +18,10 @@
 
 #include "mdaVocoder.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstring>
+#include <stdlib.h>
+#include <stdio.h>
+#include <float.h>
+#include <math.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -50,6 +51,7 @@ mdaVocoder::mdaVocoder(audioMasterCallback audioMaster): AudioEffectX(audioMaste
   canProcessReplacing();
 
   programs = new mdaVocoderProgram[NPROGS];
+  memset(f, 0, sizeof(f));
   setProgram(0);
 
   ///differences from default program...

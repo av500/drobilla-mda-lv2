@@ -18,9 +18,8 @@
 
 #include "mdaRoundPan.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstring>
+#include <math.h>
+#include <float.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -61,8 +60,10 @@ void mdaRoundPan::setParameter(int32_t index, float value)
 {
 	switch(index)
   {
-    case 0: fParam1 = value; phi = (float)(6.2831853 * (fParam1 - 0.5)); break;
-    case 1: fParam2 = value; break;
+    case 0:
+       fParam1 = value; phi = (float)(6.2831853 * (fParam1 - 0.5)); break;
+    case 1:
+       fParam2 = value; break;
   }
   //calcs here
   if (fParam2>0.55)
@@ -135,6 +136,7 @@ void mdaRoundPan::getParameterName(int32_t index, char *label)
   }
 }
 
+#include <stdio.h>
 static void int2strng(int32_t value, char *string) { sprintf(string, "%d", value); }
 
 void mdaRoundPan::getParameterDisplay(int32_t index, char *text)
@@ -165,7 +167,8 @@ void mdaRoundPan::process(float **inputs, float **outputs, int32_t sampleFrames)
 	float *out1 = outputs[0];
 	float *out2 = outputs[1];
 	float a, c, d, x=0.5, y=(float)0.7854;
-  float ph, dph, fourpi=(float)12.566371;
+  float ph, dph;
+  float fourpi=(float)12.566371;
 
   ph = phi;
   dph = dphi;

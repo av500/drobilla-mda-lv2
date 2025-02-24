@@ -22,8 +22,6 @@
 
 #include "audioeffectx.h"
 
-#include <cstdint>
-
 class mdaTestTone : public AudioEffectX
 {
 public:

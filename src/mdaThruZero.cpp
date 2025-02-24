@@ -18,9 +18,10 @@
 
 #include "mdaThruZero.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstring>
+#include <stdlib.h>
+#include <stdio.h>
+#include <float.h>
+#include <math.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -72,7 +73,12 @@ mdaThruZero::mdaThruZero(audioMasterCallback audioMaster): AudioEffectX(audioMas
   bufpos  = 0;
   buffer  = new float[BUFMAX];
   buffer2 = new float[BUFMAX];
-  phi = fb = fb1 = fb2 = deps = 0.0f;
+  phi = fb = fb1 = fb2 = deps = odeps= 0.0f;
+  orat= (float)(pow(10.0f, 3.f * 0.30f - 2.f) * 2.f / getSampleRate());
+  odep= 2000.0f * 0.43f * 0.43f;
+  odem= odep - odep * 1.00f;
+  owet= 0.47f;
+  odry= 1 - 0.53f;
 
   suspend();
 }
@@ -83,16 +89,20 @@ bool  mdaThruZero::getEffectName(char* name)    { strcpy(name, "ThruZero"); retu
 
 void mdaThruZero::resume() ///update internal parameters...
 {
+
+
+
   float * param = programs[curProgram].param;
   rat = (float)(pow(10.0f, 3.f * param[0] - 2.f) * 2.f / getSampleRate());
-  dep = 2000.0f * param[1] * param[1];
+  dep = 2000.0f * param[1];
   dem = dep - dep * param[4];
   dep -= dem;
 
   wet = param[2];
   dry = 1.f - wet;
-  if(param[0]<0.01f) { rat=0.0f; phi=0.0f; }
+  if(param[0]<0.01f) { rat=0.0f; phi=(float)0.0f; }
   fb = 1.9f * param[3] - 0.95f;
+
 }
 
 
@@ -217,7 +227,7 @@ void mdaThruZero::processReplacing(float **inputs, float **outputs, int32_t samp
   float *out1 = outputs[0];
   float *out2 = outputs[1];
 	float a, b, f=fb, f1=fb1, f2=fb2, ph=phi;
-  float ra=rat, de=dep, we=wet, dr=dry, ds=deps, dm=dem;
+  float ra=(rat+orat)*0.5, de=(dep+odep)*0.5, we=(wet+owet)*0.5, dr=(dry+odry)*0.5, dm=(dem+odem)*0.5;
   int32_t  tmp, tmpi, bp=bufpos;
   float tmpf;
 
@@ -257,6 +267,11 @@ void mdaThruZero::processReplacing(float **inputs, float **outputs, int32_t samp
 	}
   if(fabs(f1)>1.0e-10) { fb1 = f1; fb2 = f2; } else fb1 = fb2 = 0.0f; //catch denormals
   phi = ph;
-  deps = ds;
   bufpos = bp;
+  odeps=deps;
+  orat=rat;
+  odep=dep;
+  odem=dem;
+  owet=wet;
+  odry=dry;
 }

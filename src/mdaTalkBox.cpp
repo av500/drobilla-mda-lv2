@@ -18,10 +18,12 @@
 
 #include "mdaTalkBox.h"
 
-#include <cassert>
-#include <cmath>
-#include <cstdio>
-#include <cstring>
+#include <assert.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <float.h>
+#include <math.h>
+
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -348,8 +350,6 @@ void mdaTalkBox::lpc(float *buf, float *car, int32_t n, int32_t o)
   float z[ORD_MAX], r[ORD_MAX], k[ORD_MAX], G, x;
   int32_t i, j, nn=n;
 
-  r[0] = 0.0f;
-
   for(j=0; j<=o; j++, nn--)  //buf[] is already emphasized and windowed
   {
     z[j] = r[j] = 0.0f;
@@ -385,7 +385,7 @@ void mdaTalkBox::lpc_durbin(float *r, int p, float *k, float *g)
   int i, j;
   float a[ORD_MAX], at[ORD_MAX], e=r[0];
 
-  for(i=0; i<=p; i++) a[i] = at[i] = k[i] = 0.0f;
+  for(i=0; i<=p; i++) a[i] = at[i] = 0.0f; //probably don't need to clear at[] or k[]
 
   for(i=1; i<=p; i++)
   {

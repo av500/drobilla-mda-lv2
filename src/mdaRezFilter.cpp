@@ -18,10 +18,9 @@
 
 #include "mdaRezFilter.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
+#include <math.h>
+#include <float.h>
+#include <stdlib.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -89,7 +88,7 @@ void mdaRezFilter::setParameter(int32_t index, float value)
 
   lfomode=0;
   flfo = 2.f * (fParam6 - 0.5f)*(fParam6 - 0.5f);
-  dphi = 6.2832f * powf(10.0f, 3.f * fParam7 - 1.5f) / getSampleRate();
+  dphi = (float)(6.2832f * (float)pow(10.0f, 3.f * fParam7 - 1.5f) / getSampleRate());
   if(fParam6<0.5) { lfomode=1; dphi *= 0.15915f; flfo *= 0.001f; } //S&H
 
   if(fParam8<0.1f) tthr=0.f; else tthr = 3.f * fParam8 * fParam8;
@@ -168,6 +167,7 @@ void mdaRezFilter::getParameterName(int32_t index, char *label)
   }
 }
 
+#include <stdio.h>
 static void int2strng(int32_t value, char *string) { sprintf(string, "%d", value); }
 static void float2strng(float value, char *string) { sprintf(string, "%.2f", value); }
 

@@ -107,7 +107,9 @@ elif cpp.get_id() == 'gcc'
       '-Wno-unused-parameter',
     ]
   endif
-
+  
+  cpp_suppressions += '-Wno-strict-aliasing'
+   
 elif cpp.get_id() == 'msvc'
   if warning_level == 'everything'
     cpp_suppressions += [
@@ -139,7 +141,7 @@ elif cpp.get_id() == 'msvc'
 
 endif
 
-cpp_suppressions = cpp.get_supported_arguments(cpp_suppressions)
+#cpp_suppressions = cpp.get_supported_arguments(cpp_suppressions)
 
 ################
 # Dependencies #

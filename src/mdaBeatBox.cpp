@@ -18,10 +18,8 @@
 
 #include "mdaBeatBox.h"
 
-#include <cmath>
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
+#include <math.h>
+#include <stdlib.h>
 
 AudioEffect *createEffectInstance(audioMasterCallback audioMaster)
 {
@@ -59,7 +57,8 @@ mdaBeatBox::mdaBeatBox(audioMasterCallback audioMaster)	: AudioEffectX(audioMast
   wwx = 0;
 
   hbuf = new float[hbuflen];
-	sbuf = new float[sbuflen]; sbuf2 = new float[sbuflen];
+  sbuf = new float[sbuflen];
+  sbuf2 = new float[sbuflen];
 	kbuf = new float[kbuflen];
 
   setNumInputs(2);		    // stereo in
@@ -78,9 +77,21 @@ mdaBeatBox::mdaBeatBox(audioMasterCallback audioMaster)	: AudioEffectX(audioMast
   kthr = (float)(220.0 * pow(10.f, 2.f * fParam4 - 2.f));
   kdel = (int32_t)(0.10 * getSampleRate());
 
-  hlev = 0.0001f + fParam3 * fParam3 * 4.f;
-  klev = 0.0001f + fParam6 * fParam6 * 4.f;
-  slev = 0.0001f + fParam9 * fParam9 * 4.f;
+  if(fParam3 == 0.0f) {
+    hlev = 0.f;
+  }else{
+    hlev = (float)(0.0001f + pow(10.f, fParam3*1.8-1.2));
+  }
+  if(fParam6 == 0.0f) {
+    klev = 0.f;
+  }else{
+    klev = (float)(0.0001f + pow(10.f, fParam6*1.8-1.2));
+  }
+  if(fParam9 == 0.0f) {
+    slev = 0.f;
+  }else{
+    slev = (float)(0.0001f + pow(10.f, fParam9*1.8-1.2));
+  }
 
   kww = (float)pow(10.0,-3.0 + 2.2 * fParam5);
   ksf1 = (float)cos(3.1415927 * kww);     //p
@@ -132,7 +143,7 @@ void mdaBeatBox::setParameter(int32_t index, float value)
     case 2: fParam3 = value; break;
     case 3: fParam4 = value; break;
     case 4: fParam5 = value; break;
-    case 5: fParam6 = value; break;
+    case 5: fParam6 = value*0.88; break; // *0.88 to compensate for the previously hacked together ranges in the turtle file so the range can be the same as the snare and hat ranges
     case 6: fParam7 = value; break;
     case 7: fParam8 = value; break;
     case 8: fParam9 = value; break;
@@ -146,9 +157,9 @@ void mdaBeatBox::setParameter(int32_t index, float value)
   sthr = (float)(40.0 * pow(10.f, 2.f * fParam7 - 2.f));
   kthr = (float)(220.0 * pow(10.f, 2.f * fParam4 - 2.f));
 
-  hlev = 0.0001f + fParam3 * fParam3 * 4.f;
-  klev = 0.0001f + fParam6 * fParam6 * 4.f;
-  slev = 0.0001f + fParam9 * fParam9 * 4.f;
+  hlev = (float)(0.0001f + fParam3 * fParam3 * 4.f);
+  klev = (float)(0.0001f + fParam6 * fParam6 * 4.f);
+  slev = (float)(0.0001f + fParam9 * fParam9 * 4.f);
 
   wwx=ww;
   ww = (float)pow(10.0,-3.0 + 2.2 * fParam8);
@@ -195,7 +206,7 @@ void mdaBeatBox::suspend()
 void mdaBeatBox::synth()
 {
 	int32_t t; 
-  float e=0.00012f, de, o=0.0f, o1=0.f, o2=0.f, p=0.2f, dp;
+  float e=0.00012f, de, o, o1=0.f, o2=0.f, p=0.2f, dp;
 
   memset(hbuf, 0, hbuflen * sizeof(float)); //generate hi-hat
   de = (float)pow(10.0,-36.0/getSampleRate());
@@ -216,6 +227,7 @@ void mdaBeatBox::synth()
   }
 
   memset(sbuf, 0, sbuflen * sizeof(float)); //generate snare
+  memset(sbuf2, 0, sbuflen * sizeof(float));
   de = (float)pow(10.0,-15.0/getSampleRate());
   e=0.38f; //dp = 1103.f / getSampleRate();
   for(t=0;t<7000;t++)
@@ -268,6 +280,7 @@ void mdaBeatBox::getParameterName(int32_t index, char *label)
   }
 }
 
+#include <stdio.h>
 static void int2strng(int32_t value, char *string) { sprintf(string, "%d", value); }
 static void float2strng(float value, char *string) { sprintf(string, "%.2f", value); }
 
@@ -468,7 +481,7 @@ void mdaBeatBox::processReplacing(float **inputs, float **outputs, int32_t sampl
       mx4 = 1.f + ym * (ye + ye - 1.f); //dynamics
 
       *++out1 = mx1*a + mx3*s + mx4*(o + slv * *(sbuf  + sp));
-		  *++out2 = mx1*a + mx3*s + mx4*(o + slv * *(sbuf2 + sp));
+      *++out2 = mx1*b + mx3*s + mx4*(o + slv * *(sbuf2 + sp));
 
       hf=e;
     }
@@ -492,7 +505,7 @@ void mdaBeatBox::processReplacing(float **inputs, float **outputs, int32_t sampl
            case 4: if(recpos<sl)
                    { *(sbuf+recpos)=a; *(sbuf2+recpos)=b; recpos++; }
                    else e=0.f;
-                   break;
+				   break;
         }
       }
       *++out1 = e;
